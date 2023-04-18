@@ -130,9 +130,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tB_SecondPassword);
             this.Controls.Add(this.tB_Login);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "RegisterForm";
-            this.Text = "RegisterForm";
+            this.Text = "Создание аккаунта";
             this.ResumeLayout(false);
             this.PerformLayout();
 
