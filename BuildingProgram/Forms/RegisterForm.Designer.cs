@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Create = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tB_SecondPassword = new System.Windows.Forms.TextBox();
@@ -37,20 +37,20 @@
             this.tb_FirstPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button2
+            // btn_Create
             // 
-            this.button2.BackColor = System.Drawing.Color.LightGray;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Yu Gothic UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(353, 278);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 38);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Создать";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_Create.BackColor = System.Drawing.Color.LightGray;
+            this.btn_Create.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Create.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_Create.FlatAppearance.BorderSize = 0;
+            this.btn_Create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Create.Font = new System.Drawing.Font("Yu Gothic UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_Create.Location = new System.Drawing.Point(353, 278);
+            this.btn_Create.Name = "btn_Create";
+            this.btn_Create.Size = new System.Drawing.Size(100, 38);
+            this.btn_Create.TabIndex = 15;
+            this.btn_Create.Text = "Создать";
+            this.btn_Create.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -125,7 +125,7 @@
             this.ClientSize = new System.Drawing.Size(805, 385);
             this.Controls.Add(this.tb_FirstPassword);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_Create);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tB_SecondPassword);
@@ -140,7 +140,7 @@
 
         #endregion
 
-        private Button button2;
+        private Button btn_Create;
         private Label label2;
         private Label label1;
         private TextBox tB_SecondPassword;

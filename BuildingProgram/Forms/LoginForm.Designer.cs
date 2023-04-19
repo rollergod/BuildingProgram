@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_CreateAccount = new System.Windows.Forms.Button();
+            this.btn_Enter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tB_Login
@@ -92,46 +92,47 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Нет аккаунта?";
             // 
-            // button1
+            // btn_CreateAccount
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Location = new System.Drawing.Point(398, 317);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Создай его!";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_CreateAccount.BackColor = System.Drawing.Color.White;
+            this.btn_CreateAccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_CreateAccount.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_CreateAccount.FlatAppearance.BorderSize = 0;
+            this.btn_CreateAccount.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_CreateAccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_CreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CreateAccount.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btn_CreateAccount.Location = new System.Drawing.Point(398, 317);
+            this.btn_CreateAccount.Name = "btn_CreateAccount";
+            this.btn_CreateAccount.Size = new System.Drawing.Size(78, 23);
+            this.btn_CreateAccount.TabIndex = 7;
+            this.btn_CreateAccount.Text = "Создай его!";
+            this.btn_CreateAccount.UseVisualStyleBackColor = false;
+            this.btn_CreateAccount.Click += new System.EventHandler(this.btn_CreateAccount_Click);
             // 
-            // button2
+            // btn_Enter
             // 
-            this.button2.BackColor = System.Drawing.Color.LightGray;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Yu Gothic UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(351, 254);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 38);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Войти";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_Enter.BackColor = System.Drawing.Color.LightGray;
+            this.btn_Enter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Enter.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_Enter.FlatAppearance.BorderSize = 0;
+            this.btn_Enter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Enter.Font = new System.Drawing.Font("Yu Gothic UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_Enter.Location = new System.Drawing.Point(351, 254);
+            this.btn_Enter.Name = "btn_Enter";
+            this.btn_Enter.Size = new System.Drawing.Size(100, 38);
+            this.btn_Enter.TabIndex = 8;
+            this.btn_Enter.Text = "Войти";
+            this.btn_Enter.UseVisualStyleBackColor = false;
+            this.btn_Enter.Click += new System.EventHandler(this.btn_Enter_Click);
             // 
             // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Enter);
+            this.Controls.Add(this.btn_CreateAccount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -152,7 +153,7 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Button button1;
-        private Button button2;
+        private Button btn_CreateAccount;
+        private Button btn_Enter;
     }
 }

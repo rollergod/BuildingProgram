@@ -1,5 +1,4 @@
-﻿using BuildingProgram.Tools;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,12 +10,11 @@ using System.Windows.Forms;
 
 namespace BuildingProgram.Forms
 {
-    public partial class MainMenu : BaseForm
+    public partial class OrganizationForm : BaseForm
     {
-        public MainMenu()
+        public OrganizationForm()
         {
             InitializeComponent();
-            menuStrip1.Renderer = new NoHighlightRenderer();
         }
     }
 }

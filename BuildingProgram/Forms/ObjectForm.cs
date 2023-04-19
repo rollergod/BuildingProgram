@@ -11,12 +11,13 @@ using System.Windows.Forms;
 
 namespace BuildingProgram.Forms
 {
-    public partial class MainMenu : BaseForm
+    public partial class ObjectForm : BaseForm
     {
-        public MainMenu()
+        public ObjectForm()
         {
             InitializeComponent();
             menuStrip1.Renderer = new NoHighlightRenderer();
         }
+        
     }
 }
