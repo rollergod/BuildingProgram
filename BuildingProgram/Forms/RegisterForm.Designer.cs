@@ -51,6 +51,7 @@
             this.btn_Create.TabIndex = 15;
             this.btn_Create.Text = "Создать";
             this.btn_Create.UseVisualStyleBackColor = false;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
             // label2
             // 

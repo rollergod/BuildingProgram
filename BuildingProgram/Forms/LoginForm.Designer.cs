@@ -43,10 +43,9 @@
             this.tB_Login.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tB_Login.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tB_Login.ForeColor = System.Drawing.Color.White;
-            this.tB_Login.Location = new System.Drawing.Point(300, 206);
+            this.tB_Login.Location = new System.Drawing.Point(300, 140);
             this.tB_Login.Multiline = true;
             this.tB_Login.Name = "tB_Login";
-            this.tB_Login.PasswordChar = '*';
             this.tB_Login.Size = new System.Drawing.Size(199, 32);
             this.tB_Login.TabIndex = 0;
             // 
@@ -56,9 +55,10 @@
             this.tB_Password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tB_Password.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tB_Password.ForeColor = System.Drawing.Color.White;
-            this.tB_Password.Location = new System.Drawing.Point(300, 137);
+            this.tB_Password.Location = new System.Drawing.Point(300, 209);
             this.tB_Password.Multiline = true;
             this.tB_Password.Name = "tB_Password";
+            this.tB_Password.PasswordChar = '*';
             this.tB_Password.Size = new System.Drawing.Size(199, 32);
             this.tB_Password.TabIndex = 1;
             // 

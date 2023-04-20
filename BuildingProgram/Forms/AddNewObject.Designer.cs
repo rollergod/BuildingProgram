@@ -1,4 +1,6 @@
-﻿namespace BuildingProgram.Forms
+﻿using BuildingProgram.Controls;
+
+namespace BuildingProgram.Forms
 {
     partial class AddNewObject
     {
@@ -52,13 +54,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.customTextBox2 = new BuildingProgram.Controls.CustomTextBox();
-            this.customTextBox1 = new BuildingProgram.Controls.CustomTextBox();
-            this.customTextBox3 = new BuildingProgram.Controls.CustomTextBox();
-            this.customTextBox4 = new BuildingProgram.Controls.CustomTextBox();
-            this.customTextBox5 = new BuildingProgram.Controls.CustomTextBox();
-            this.customTextBox6 = new BuildingProgram.Controls.CustomTextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -305,117 +300,11 @@
             this.button3.Text = "Выход";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(160, 139);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(95, 15);
-            this.textBox1.TabIndex = 57;
-            // 
-            // customTextBox2
-            // 
-            this.customTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox2.BorderColor = System.Drawing.Color.Black;
-            this.customTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox2.BorderSize = 2;
-            this.customTextBox2.Location = new System.Drawing.Point(155, 195);
-            this.customTextBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.customTextBox2.Multiline = false;
-            this.customTextBox2.Name = "customTextBox2";
-            this.customTextBox2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.customTextBox2.Size = new System.Drawing.Size(175, 21);
-            this.customTextBox2.TabIndex = 66;
-            this.customTextBox2.UnderlinedStyle = true;
-            // 
-            // customTextBox1
-            // 
-            this.customTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox1.BorderColor = System.Drawing.Color.Black;
-            this.customTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox1.BorderSize = 2;
-            this.customTextBox1.Location = new System.Drawing.Point(108, 169);
-            this.customTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.customTextBox1.Multiline = false;
-            this.customTextBox1.Name = "customTextBox1";
-            this.customTextBox1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.customTextBox1.Size = new System.Drawing.Size(234, 21);
-            this.customTextBox1.TabIndex = 67;
-            this.customTextBox1.UnderlinedStyle = true;
-            // 
-            // customTextBox3
-            // 
-            this.customTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox3.BorderColor = System.Drawing.Color.Black;
-            this.customTextBox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox3.BorderSize = 2;
-            this.customTextBox3.Location = new System.Drawing.Point(155, 141);
-            this.customTextBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.customTextBox3.Multiline = false;
-            this.customTextBox3.Name = "customTextBox3";
-            this.customTextBox3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.customTextBox3.Size = new System.Drawing.Size(175, 21);
-            this.customTextBox3.TabIndex = 68;
-            this.customTextBox3.UnderlinedStyle = true;
-            // 
-            // customTextBox4
-            // 
-            this.customTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox4.BorderColor = System.Drawing.Color.Black;
-            this.customTextBox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox4.BorderSize = 2;
-            this.customTextBox4.Location = new System.Drawing.Point(155, 330);
-            this.customTextBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.customTextBox4.Multiline = false;
-            this.customTextBox4.Name = "customTextBox4";
-            this.customTextBox4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.customTextBox4.Size = new System.Drawing.Size(175, 21);
-            this.customTextBox4.TabIndex = 69;
-            this.customTextBox4.UnderlinedStyle = true;
-            // 
-            // customTextBox5
-            // 
-            this.customTextBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox5.BorderColor = System.Drawing.Color.Black;
-            this.customTextBox5.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox5.BorderSize = 2;
-            this.customTextBox5.Location = new System.Drawing.Point(186, 297);
-            this.customTextBox5.Margin = new System.Windows.Forms.Padding(0);
-            this.customTextBox5.Multiline = false;
-            this.customTextBox5.Name = "customTextBox5";
-            this.customTextBox5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.customTextBox5.Size = new System.Drawing.Size(138, 21);
-            this.customTextBox5.TabIndex = 70;
-            this.customTextBox5.UnderlinedStyle = true;
-            // 
-            // customTextBox6
-            // 
-            this.customTextBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextBox6.BorderColor = System.Drawing.Color.Black;
-            this.customTextBox6.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextBox6.BorderSize = 2;
-            this.customTextBox6.Location = new System.Drawing.Point(168, 264);
-            this.customTextBox6.Margin = new System.Windows.Forms.Padding(0);
-            this.customTextBox6.Multiline = false;
-            this.customTextBox6.Name = "customTextBox6";
-            this.customTextBox6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.customTextBox6.Size = new System.Drawing.Size(156, 21);
-            this.customTextBox6.TabIndex = 71;
-            this.customTextBox6.UnderlinedStyle = true;
-            // 
             // AddNewObject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 504);
-            this.Controls.Add(this.customTextBox6);
-            this.Controls.Add(this.customTextBox5);
-            this.Controls.Add(this.customTextBox4);
-            this.Controls.Add(this.customTextBox3);
-            this.Controls.Add(this.customTextBox1);
-            this.Controls.Add(this.customTextBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -471,7 +360,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
-        private TextBox textBox1;
         private Controls.CustomTextBox customTextBox2;
         private Controls.CustomTextBox customTextBox1;
         private Controls.CustomTextBox customTextBox3;

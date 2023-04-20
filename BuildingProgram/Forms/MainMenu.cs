@@ -1,4 +1,5 @@
-﻿using BuildingProgram.Tools;
+﻿using BuildingProgram.Context;
+using BuildingProgram.Tools;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,18 @@ namespace BuildingProgram.Forms
 {
     public partial class MainMenu : BaseForm
     {
+        private AppDbContext _context;
         public MainMenu()
         {
             InitializeComponent();
             menuStrip1.Renderer = new NoHighlightRenderer();
+
+            _context = new AppDbContext();
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = _context.BuildingObjects.ToList();
         }
     }
 }
