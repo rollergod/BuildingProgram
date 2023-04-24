@@ -19,6 +19,7 @@ namespace BuildingProgram.Controls
         private bool underlinedStyle = false;
         private Color borderFocusColor = Color.HotPink;
         private bool isFocused = false;
+        string text = "";
         public CustomTextBox()
         {
             InitializeComponent();
@@ -130,8 +131,6 @@ namespace BuildingProgram.Controls
             }
         }
 
-       
-
         [Category("RJ Code Advance")]
         public bool Multiline
         {
@@ -173,11 +172,14 @@ namespace BuildingProgram.Controls
                     UpdateControlHeight();
             }
         }
-        #endregion
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        [Category("RJ Code Advance")]
+        public string Texts
         {
-
+            get { return textBox1.Text; }
+            set { textBox1.Text = value; }
         }
+        #endregion
+        
     }
 }
