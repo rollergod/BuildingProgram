@@ -37,13 +37,12 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.организацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_Search = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_AddOrg = new System.Windows.Forms.Button();
+            this.btn_ChangeOrg = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -59,7 +58,6 @@
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
             this.земельныеУчасткиToolStripMenuItem,
-            this.организацииToolStripMenuItem,
             this.xToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -95,13 +93,6 @@
             this.земельныеУчасткиToolStripMenuItem.Name = "земельныеУчасткиToolStripMenuItem";
             this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
             this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
-            // 
-            // организацииToolStripMenuItem
-            // 
-            this.организацииToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.организацииToolStripMenuItem.Name = "организацииToolStripMenuItem";
-            this.организацииToolStripMenuItem.Size = new System.Drawing.Size(92, 34);
-            this.организацииToolStripMenuItem.Text = "Организации";
             // 
             // xToolStripMenuItem
             // 
@@ -143,23 +134,26 @@
             this.button3.Text = "Подробная информация";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_AddOrg
             // 
-            this.button1.Location = new System.Drawing.Point(25, 148);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 49);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Добавить оганизацию";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_AddOrg.Location = new System.Drawing.Point(25, 148);
+            this.btn_AddOrg.Name = "btn_AddOrg";
+            this.btn_AddOrg.Size = new System.Drawing.Size(96, 49);
+            this.btn_AddOrg.TabIndex = 8;
+            this.btn_AddOrg.Text = "Добавить оганизацию";
+            this.btn_AddOrg.UseVisualStyleBackColor = true;
+            this.btn_AddOrg.Click += new System.EventHandler(this.btn_AddOrg_Click);
             // 
-            // button2
+            // btn_ChangeOrg
             // 
-            this.button2.Location = new System.Drawing.Point(25, 216);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 48);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Изменить организацию";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_ChangeOrg.Enabled = false;
+            this.btn_ChangeOrg.Location = new System.Drawing.Point(25, 216);
+            this.btn_ChangeOrg.Name = "btn_ChangeOrg";
+            this.btn_ChangeOrg.Size = new System.Drawing.Size(96, 48);
+            this.btn_ChangeOrg.TabIndex = 9;
+            this.btn_ChangeOrg.Text = "Изменить организацию";
+            this.btn_ChangeOrg.UseVisualStyleBackColor = true;
+            this.btn_ChangeOrg.Click += new System.EventHandler(this.btn_ChangeOrg_Click);
             // 
             // dataGridView1
             // 
@@ -203,6 +197,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(576, 419);
             this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // OrganizationForm
             // 
@@ -213,8 +208,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_ChangeOrg);
+            this.Controls.Add(this.btn_AddOrg);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "OrganizationForm";
@@ -235,13 +230,12 @@
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem toolStripMenuItem3;
         private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
-        private ToolStripMenuItem организацииToolStripMenuItem;
         private ToolStripMenuItem xToolStripMenuItem;
         private TextBox textBox1;
         private Button btn_Search;
         private Button button3;
-        private Button button1;
-        private Button button2;
+        private Button btn_AddOrg;
+        private Button btn_ChangeOrg;
         private DataGridView dataGridView1;
     }
 }

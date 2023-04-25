@@ -37,7 +37,6 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.организацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_AddObject = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -59,7 +58,6 @@
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
             this.земельныеУчасткиToolStripMenuItem,
-            this.организацииToolStripMenuItem,
             this.xToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -97,13 +95,6 @@
             this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
             this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
             this.земельныеУчасткиToolStripMenuItem.Click += new System.EventHandler(this.земельныеУчасткиToolStripMenuItem_Click);
-            // 
-            // организацииToolStripMenuItem
-            // 
-            this.организацииToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.организацииToolStripMenuItem.Name = "организацииToolStripMenuItem";
-            this.организацииToolStripMenuItem.Size = new System.Drawing.Size(92, 34);
-            this.организацииToolStripMenuItem.Text = "Организации";
             // 
             // xToolStripMenuItem
             // 
@@ -239,7 +230,6 @@
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem toolStripMenuItem3;
         private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
-        private ToolStripMenuItem организацииToolStripMenuItem;
         private Button btn_AddObject;
         private Button button2;
         private Button button3;

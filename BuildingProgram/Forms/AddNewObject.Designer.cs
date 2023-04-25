@@ -35,7 +35,6 @@ namespace BuildingProgram.Forms
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.организацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -82,7 +81,6 @@ namespace BuildingProgram.Forms
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
             this.земельныеУчасткиToolStripMenuItem,
-            this.организацииToolStripMenuItem,
             this.xToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -118,13 +116,6 @@ namespace BuildingProgram.Forms
             this.земельныеУчасткиToolStripMenuItem.Name = "земельныеУчасткиToolStripMenuItem";
             this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
             this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
-            // 
-            // организацииToolStripMenuItem
-            // 
-            this.организацииToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.организацииToolStripMenuItem.Name = "организацииToolStripMenuItem";
-            this.организацииToolStripMenuItem.Size = new System.Drawing.Size(92, 34);
-            this.организацииToolStripMenuItem.Text = "Организации";
             // 
             // xToolStripMenuItem
             // 
@@ -513,7 +504,6 @@ namespace BuildingProgram.Forms
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem toolStripMenuItem3;
         private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
-        private ToolStripMenuItem организацииToolStripMenuItem;
         private ToolStripMenuItem xToolStripMenuItem;
         private Label label1;
         private PictureBox pictureBox1;
