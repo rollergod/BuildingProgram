@@ -56,5 +56,28 @@ namespace BuildingProgram.Forms
             AddOrgForm changeOrgForm = new AddOrgForm(_orgId);
             changeOrgForm.ShowDialog();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ObjectForm objForm = new ObjectForm();
+            objForm.ShowDialog();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            OrganizationForm orgForm = new OrganizationForm();
+            orgForm.ShowDialog();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void земельныеУчасткиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LandForm landForm = new LandForm();
+            landForm.ShowDialog();
+        }
     }
 }

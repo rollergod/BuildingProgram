@@ -39,7 +39,7 @@
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_AddObject = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_ChangeBtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -72,6 +72,7 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 34);
             this.toolStripMenuItem1.Text = "Объекты";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -114,14 +115,16 @@
             this.btn_AddObject.UseVisualStyleBackColor = true;
             this.btn_AddObject.Click += new System.EventHandler(this.btn_AddObject_Click);
             // 
-            // button2
+            // btn_ChangeBtn
             // 
-            this.button2.Location = new System.Drawing.Point(26, 180);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 48);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Изменить объект";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_ChangeBtn.Enabled = false;
+            this.btn_ChangeBtn.Location = new System.Drawing.Point(26, 180);
+            this.btn_ChangeBtn.Name = "btn_ChangeBtn";
+            this.btn_ChangeBtn.Size = new System.Drawing.Size(96, 48);
+            this.btn_ChangeBtn.TabIndex = 3;
+            this.btn_ChangeBtn.Text = "Изменить объект";
+            this.btn_ChangeBtn.UseVisualStyleBackColor = true;
+            this.btn_ChangeBtn.Click += new System.EventHandler(this.btn_ChangeBtn_Click);
             // 
             // button3
             // 
@@ -197,6 +200,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(576, 419);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // MainMenu
             // 
@@ -206,7 +210,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_ChangeBtn);
             this.Controls.Add(this.btn_AddObject);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
@@ -231,7 +235,7 @@
         private ToolStripMenuItem toolStripMenuItem3;
         private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
         private Button btn_AddObject;
-        private Button button2;
+        private Button btn_ChangeBtn;
         private Button button3;
         private Button btn_Search;
         private TextBox textBox1;

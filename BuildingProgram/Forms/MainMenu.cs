@@ -1,4 +1,5 @@
 ﻿using BuildingProgram.Context;
+using BuildingProgram.Context.Migrations;
 using BuildingProgram.Tools;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -17,6 +18,7 @@ namespace BuildingProgram.Forms
     public partial class MainMenu : BaseForm
     {
         private AppDbContext _context;
+        private int _objId = 0;
         public MainMenu()
         {
             InitializeComponent();
@@ -65,5 +67,26 @@ namespace BuildingProgram.Forms
             landForm.ShowDialog();
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _objId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+
+            if (_objId > 0)
+            {
+                btn_ChangeBtn.Enabled = true;
+            }
+        }
+
+        private void btn_ChangeBtn_Click(object sender, EventArgs e)
+        {
+            AddNewObject addLandForm = new AddNewObject(_objId);
+            addLandForm.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ObjectForm objForm = new ObjectForm();
+            objForm.ShowDialog();
+        }
     }
 }

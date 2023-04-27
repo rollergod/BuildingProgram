@@ -27,5 +27,8 @@ namespace BuildingProgram.Models
         /// </summary>
         public Land Land { get; set; }
         public int LandId { get; set; }
+
+        public Organization? Organization { get; set; }
+        public int? OrganizationId { get; set;}
     }
 }

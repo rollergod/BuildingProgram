@@ -65,8 +65,8 @@ namespace BuildingProgram.Forms
             this.tb_ObjectName = new BuildingProgram.Controls.CustomTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cb_isBuildingChecked = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cb_objectId = new System.Windows.Forms.ComboBox();
+            this.cb_Land = new System.Windows.Forms.ComboBox();
+            this.cb_Organization = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -95,6 +95,7 @@ namespace BuildingProgram.Forms
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 34);
             this.toolStripMenuItem1.Text = "Объекты";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -102,6 +103,7 @@ namespace BuildingProgram.Forms
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(92, 34);
             this.toolStripMenuItem2.Text = "Организации";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
@@ -109,6 +111,7 @@ namespace BuildingProgram.Forms
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(65, 34);
             this.toolStripMenuItem3.Text = "Справка";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // земельныеУчасткиToolStripMenuItem
             // 
@@ -116,6 +119,7 @@ namespace BuildingProgram.Forms
             this.земельныеУчасткиToolStripMenuItem.Name = "земельныеУчасткиToolStripMenuItem";
             this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
             this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
+            this.земельныеУчасткиToolStripMenuItem.Click += new System.EventHandler(this.земельныеУчасткиToolStripMenuItem_Click);
             // 
             // xToolStripMenuItem
             // 
@@ -157,7 +161,7 @@ namespace BuildingProgram.Forms
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label21.Location = new System.Drawing.Point(62, 336);
+            this.label21.Location = new System.Drawing.Point(58, 336);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(90, 15);
             this.label21.TabIndex = 47;
@@ -167,7 +171,7 @@ namespace BuildingProgram.Forms
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(61, 303);
+            this.label19.Location = new System.Drawing.Point(58, 303);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(124, 15);
             this.label19.TabIndex = 45;
@@ -177,7 +181,7 @@ namespace BuildingProgram.Forms
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(61, 270);
+            this.label15.Location = new System.Drawing.Point(58, 270);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(106, 15);
             this.label15.TabIndex = 43;
@@ -197,7 +201,7 @@ namespace BuildingProgram.Forms
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(60, 118);
+            this.label12.Location = new System.Drawing.Point(58, 124);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(139, 19);
             this.label12.TabIndex = 38;
@@ -207,7 +211,7 @@ namespace BuildingProgram.Forms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(62, 484);
+            this.label6.Location = new System.Drawing.Point(58, 499);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 20);
             this.label6.TabIndex = 33;
@@ -217,7 +221,7 @@ namespace BuildingProgram.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(62, 499);
+            this.label4.Location = new System.Drawing.Point(58, 514);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(209, 19);
             this.label4.TabIndex = 32;
@@ -227,7 +231,7 @@ namespace BuildingProgram.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(62, 434);
+            this.label3.Location = new System.Drawing.Point(58, 449);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 20);
             this.label3.TabIndex = 31;
@@ -247,7 +251,7 @@ namespace BuildingProgram.Forms
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(62, 451);
+            this.label17.Location = new System.Drawing.Point(58, 469);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(183, 19);
             this.label17.TabIndex = 53;
@@ -330,7 +334,7 @@ namespace BuildingProgram.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(62, 365);
+            this.label5.Location = new System.Drawing.Point(58, 365);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(117, 15);
             this.label5.TabIndex = 64;
@@ -340,7 +344,7 @@ namespace BuildingProgram.Forms
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(62, 384);
+            this.label8.Location = new System.Drawing.Point(58, 385);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(115, 15);
             this.label8.TabIndex = 66;
@@ -361,7 +365,7 @@ namespace BuildingProgram.Forms
             this.cb_buildingStatus.Items.AddRange(new object[] {
             "строится",
             "сдан под заселение"});
-            this.cb_buildingStatus.Location = new System.Drawing.Point(173, 408);
+            this.cb_buildingStatus.Location = new System.Drawing.Point(159, 408);
             this.cb_buildingStatus.Name = "cb_buildingStatus";
             this.cb_buildingStatus.Size = new System.Drawing.Size(121, 23);
             this.cb_buildingStatus.TabIndex = 67;
@@ -370,7 +374,7 @@ namespace BuildingProgram.Forms
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(70, 411);
+            this.label9.Location = new System.Drawing.Point(60, 411);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 15);
             this.label9.TabIndex = 68;
@@ -427,34 +431,35 @@ namespace BuildingProgram.Forms
             this.cb_isBuildingChecked.TabIndex = 72;
             this.cb_isBuildingChecked.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // cb_Land
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(62, 203);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 15);
-            this.label7.TabIndex = 75;
-            this.label7.Text = "Статус стройки:";
-            // 
-            // cb_objectId
-            // 
-            this.cb_objectId.FormattingEnabled = true;
-            this.cb_objectId.Items.AddRange(new object[] {
+            this.cb_Land.FormattingEnabled = true;
+            this.cb_Land.Items.AddRange(new object[] {
             "строится",
             "сдан под заселение"});
-            this.cb_objectId.Location = new System.Drawing.Point(158, 200);
-            this.cb_objectId.Name = "cb_objectId";
-            this.cb_objectId.Size = new System.Drawing.Size(250, 23);
-            this.cb_objectId.TabIndex = 74;
+            this.cb_Land.Location = new System.Drawing.Point(247, 468);
+            this.cb_Land.Name = "cb_Land";
+            this.cb_Land.Size = new System.Drawing.Size(149, 23);
+            this.cb_Land.TabIndex = 76;
+            // 
+            // cb_Organization
+            // 
+            this.cb_Organization.FormattingEnabled = true;
+            this.cb_Organization.Items.AddRange(new object[] {
+            "строится",
+            "сдан под заселение"});
+            this.cb_Organization.Location = new System.Drawing.Point(273, 513);
+            this.cb_Organization.Name = "cb_Organization";
+            this.cb_Organization.Size = new System.Drawing.Size(149, 23);
+            this.cb_Organization.TabIndex = 77;
             // 
             // AddNewObject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 552);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.cb_objectId);
+            this.Controls.Add(this.cb_Organization);
+            this.Controls.Add(this.cb_Land);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cb_isBuildingChecked);
             this.Controls.Add(this.tb_ObjectName);
@@ -540,7 +545,7 @@ namespace BuildingProgram.Forms
         private CustomTextBox tb_ObjectName;
         private Label label10;
         private CheckBox cb_isBuildingChecked;
-        private Label label7;
-        private ComboBox cb_objectId;
+        private ComboBox cb_Land;
+        private ComboBox cb_Organization;
     }
 }
