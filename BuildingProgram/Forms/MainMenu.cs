@@ -88,5 +88,10 @@ namespace BuildingProgram.Forms
             ObjectForm objForm = new ObjectForm();
             objForm.ShowDialog();
         }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

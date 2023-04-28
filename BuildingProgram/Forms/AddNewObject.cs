@@ -18,16 +18,19 @@ namespace BuildingProgram.Forms
     {
         private AppDbContext _context;
         private int _objectId;
+        public string imagePath;
         public AddNewObject(int objectId = 0)
         {
             InitializeComponent();
             _context = new AppDbContext();
             menuStrip1.Renderer = new NoHighlightRenderer();
             _objectId = objectId;
+            imagePath = null;
         }
 
         private void btn_AddObject_Click(object sender, EventArgs e)
         {
+            string imageName = null;
             int objNumber = Convert.ToInt32(tb_ObjectNum.Texts);
             string objName = tb_ObjectName.Texts;
 
@@ -57,6 +60,11 @@ namespace BuildingProgram.Forms
             }
             var organization = _context.Organizations.FirstOrDefault(x => x.OrganizationName == selectedOrganization);
 
+            if(pictureBox1.Image != null)
+            {
+               imageName = Path.GetFileName(imagePath);
+            }
+
             var addedBuilding = new BuildingObject
             {
                 ObjectName = objName,
@@ -70,16 +78,19 @@ namespace BuildingProgram.Forms
                 IsChecked = isChecked,
                 Land = land,
                 Organization= organization,
+                ImageName = imageName
             };
 
             try
             {
+                File.Copy(imagePath, Path.Combine(@"D:\Projects\2023\BuildingProgram\BuildingProgram\Images\", Path.GetFileName(imagePath)), true);
                 _context.BuildingObjects.Add(addedBuilding);
                 _context.SaveChanges();
             }
             catch (Exception)
             {
                 MessageBox.Show("Произошла какая-то ошибка.");
+                return;
             }
 
             MessageBox.Show($"Объект с номером {objNumber} успешно добавлен ");
@@ -104,15 +115,20 @@ namespace BuildingProgram.Forms
 
                 tb_ObjectNum.Texts = buildingObject.ObjectNumber.ToString();
                 tb_ObjectName.Texts = buildingObject.ObjectName;
-                dtp_StartFact.Value = buildingObject.StartActual.ToDateTime(TimeOnly.Parse("yyyy-MM-dd"));
-                dtp_StartPlan.Value = buildingObject.StartPlanned.ToDateTime(TimeOnly.Parse("yyyy-MM-dd"));
-                dtp_EndDate.Value = buildingObject.EndDate.ToDateTime(TimeOnly.Parse("yyyy-MM-dd"));
+                dtp_StartFact.Value = DateTime.Parse(buildingObject.StartActual.ToString());
+                dtp_StartPlan.Value = DateTime.Parse(buildingObject.StartPlanned.ToString());
+                dtp_EndDate.Value =  DateTime.Parse(buildingObject.EndDate.ToString());
 
                 cb_buildingPermit.Checked = buildingObject.IsBuildPermit;
                 cb_buildingEnded.Checked = buildingObject.IsBuildingEnded;
                 cb_isBuildingChecked.Checked = buildingObject.IsChecked;
 
                 cb_buildingStatus.SelectedIndex = buildingObject.BuildingStatus;
+
+                if(buildingObject.ImageName != null)
+                {
+                    pictureBox1.Image = new Bitmap(@$"D:\Projects\2023\BuildingProgram\BuildingProgram\Images\{buildingObject.ImageName}");
+                }
 
                 btn_AddObject.Text = "Изменить объект";
             }
@@ -137,6 +153,18 @@ namespace BuildingProgram.Forms
         private void земельныеУчасткиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LandForm landForm = new LandForm();
+        }
+
+        private void btn_ChosePhoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files(*.jpg, *.jpeg, *.png)|*.jpg; *.jpeg; *.png";
+
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                imagePath = openFileDialog.FileName;
+                pictureBox1.Image = new Bitmap(openFileDialog.FileName);
+            }
         }
     }
 }

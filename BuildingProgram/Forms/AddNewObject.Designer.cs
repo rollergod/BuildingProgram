@@ -270,6 +270,7 @@ namespace BuildingProgram.Forms
             this.btn_ChosePhoto.TabIndex = 54;
             this.btn_ChosePhoto.Text = "Выбор фото";
             this.btn_ChosePhoto.UseVisualStyleBackColor = false;
+            this.btn_ChosePhoto.Click += new System.EventHandler(this.btn_ChosePhoto_Click);
             // 
             // btn_AddObject
             // 
