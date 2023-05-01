@@ -24,7 +24,7 @@ namespace BuildingProgram.Forms
                 .Select(x => x.OrganizationName)
                 .ToList();
 
-            cb_sellerId.DataSource = organizationNames;
+            cb_SellerId.DataSource = organizationNames;
             cb_Buyer.DataSource = organizationNames;
 
             if (_landId > 0)
@@ -40,10 +40,11 @@ namespace BuildingProgram.Forms
                 cb_IsSold.Checked = land.IsSold;
                 tb_Square.Texts = land.Square.ToString();
 
-                cb_sellerId.Text = land.Seller.OrganizationName;
+                cb_SellerId.Text = land.Seller.OrganizationName;
+                cb_LandType.SelectedIndex = land.LandType.Value;
 
                 if (land.LandType.HasValue) 
-                    cb_buildingStatus.SelectedIndex = land.LandType.Value;
+                    cb_LandType.SelectedIndex = land.LandType.Value;
 
                 if (land.Buyer != null)
                     cb_Buyer.Text = land.Buyer.OrganizationName;
@@ -60,8 +61,8 @@ namespace BuildingProgram.Forms
             decimal buyPrice = Convert.ToDecimal(tb_BuyPrice.Texts);
             decimal sellPrice = Convert.ToDecimal(tb_SellPrice.Texts);
             double square = Convert.ToDouble(tb_Square.Texts);
-            string sellOrgName = cb_sellerId.SelectedValue.ToString();
-            int landType = cb_buildingStatus.SelectedIndex;
+            string sellOrgName = cb_SellerId.SelectedValue.ToString();
+            int landType = cb_LandType.SelectedIndex;
             bool isSold = cb_IsSold.Checked;
 
             string buyOrgName;
@@ -74,23 +75,42 @@ namespace BuildingProgram.Forms
 
             var sellOrganization = _context.Organizations.FirstOrDefault(x => x.OrganizationName == sellOrgName);
 
-            Land landForAdd = new Land
+            if(_landId == 0)
             {
-                CadastralNumber = cadastral,
-                Address= address,
-                BuyPrice= buyPrice,
-                SellPrice = sellPrice,
-                IsSold= isSold,
-                SellerId = sellOrganization.Id,
-                LandType = landType,
-                Square = square,
-                BuyerId = isSold ? buyOrganization.Id : null,
-            };
+                Land landForAdd = new Land
+                {
+                    CadastralNumber = cadastral,
+                    Address = address,
+                    BuyPrice = buyPrice,
+                    SellPrice = sellPrice,
+                    IsSold = isSold,
+                    SellerId = sellOrganization.Id,
+                    LandType = landType,
+                    Square = square,
+                    BuyerId = isSold ? buyOrganization.Id : null,
+                };
 
-            _context.Lands.Add(landForAdd);
+                _context.Lands.Add(landForAdd);
+            }
+            else
+            {
+                var landForChange = _context.Lands.FirstOrDefault(x => x.Id == _landId);
+
+                landForChange.Address = address;
+                landForChange.CadastralNumber= cadastral;
+                landForChange.BuyPrice = buyPrice;
+                landForChange.SellPrice = sellPrice;
+                landForChange.IsSold = isSold;
+                landForChange.LandType = landType;
+                landForChange.Square = square;
+                landForChange.SellerId = sellOrganization.Id;
+                landForChange.BuyerId = isSold ? buyOrganization.Id : null;
+
+                _context.Lands.Update(landForChange);
+            }
             _context.SaveChanges();
-
-            MessageBox.Show($"Земельный участок с кадастровым номером - {cadastral} был добавлен в список.");
+            MessageBox.Show(_landId == 0 ? $"Земельный участок с кадастровым номером - {cadastral} был добавлен в список." :
+                $"Земельный участок с кадастровым номером - {cadastral} был добавлен в список.");
         }
 
         private void cb_IsSold_CheckedChanged(object sender, EventArgs e)

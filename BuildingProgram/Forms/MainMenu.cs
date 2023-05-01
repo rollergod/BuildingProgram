@@ -9,7 +9,7 @@ namespace BuildingProgram.Forms
     public partial class MainMenu : BaseForm
     {
         private AppDbContext _context;
-        private int _objId = 0;
+        private int _objNum = 0;
         public MainMenu()
         {
             InitializeComponent();
@@ -61,9 +61,9 @@ namespace BuildingProgram.Forms
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //objNum
-            _objId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            _objNum = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
 
-            if (_objId > 0)
+            if (_objNum > 0)
             {
                 btn_ChangeBtn.Enabled = true;
                 btn_AboutObject.Enabled = true;
@@ -72,7 +72,7 @@ namespace BuildingProgram.Forms
 
         private void btn_ChangeBtn_Click(object sender, EventArgs e)
         {
-            AddNewObject addLandForm = new AddNewObject(_objId);
+            AddNewObject addLandForm = new AddNewObject(_objNum);
             addLandForm.ShowDialog();
         }
 
@@ -88,7 +88,7 @@ namespace BuildingProgram.Forms
 
         private void btn_AboutObject_Click(object sender, EventArgs e)
         {
-            ObjectForm objForm = new ObjectForm(_objId);
+            ObjectForm objForm = new ObjectForm(_objNum);
             objForm.ShowDialog();
         }
 
@@ -129,6 +129,11 @@ namespace BuildingProgram.Forms
             return _context.BuildingObjects.Include(x => x.Land)
                 .Where(x => isNumber ? x.ObjectNumber.ToString().Contains(searchText) : x.Land.Address.Contains(searchText))
                 .ToList();
+        }
+
+        private void отчетыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

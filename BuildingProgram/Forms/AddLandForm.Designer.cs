@@ -31,7 +31,7 @@
             this.tb_Address = new BuildingProgram.Controls.CustomTextBox();
             this.tb_CadastralNum = new BuildingProgram.Controls.CustomTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cb_buildingStatus = new System.Windows.Forms.ComboBox();
+            this.cb_LandType = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_AddLand = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.cb_sellerId = new System.Windows.Forms.ComboBox();
+            this.cb_SellerId = new System.Windows.Forms.ComboBox();
             this.tb_BuyPrice = new BuildingProgram.Controls.CustomTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tb_Square = new BuildingProgram.Controls.CustomTextBox();
@@ -100,16 +100,17 @@
             this.label9.TabIndex = 95;
             this.label9.Text = "Вид земельного участка:";
             // 
-            // cb_buildingStatus
+            // cb_LandType
             // 
-            this.cb_buildingStatus.FormattingEnabled = true;
-            this.cb_buildingStatus.Items.AddRange(new object[] {
-            "строится",
-            "сдан под заселение"});
-            this.cb_buildingStatus.Location = new System.Drawing.Point(183, 306);
-            this.cb_buildingStatus.Name = "cb_buildingStatus";
-            this.cb_buildingStatus.Size = new System.Drawing.Size(232, 23);
-            this.cb_buildingStatus.TabIndex = 94;
+            this.cb_LandType.FormattingEnabled = true;
+            this.cb_LandType.Items.AddRange(new object[] {
+            "земли сельскохозяйственного назначения",
+            "земли промышленности",
+            "земли населенных пунктов"});
+            this.cb_LandType.Location = new System.Drawing.Point(183, 306);
+            this.cb_LandType.Name = "cb_LandType";
+            this.cb_LandType.Size = new System.Drawing.Size(232, 23);
+            this.cb_LandType.TabIndex = 94;
             // 
             // label7
             // 
@@ -233,16 +234,16 @@
             this.label8.TabIndex = 104;
             this.label8.Text = "Продавец:";
             // 
-            // cb_sellerId
+            // cb_SellerId
             // 
-            this.cb_sellerId.FormattingEnabled = true;
-            this.cb_sellerId.Items.AddRange(new object[] {
+            this.cb_SellerId.FormattingEnabled = true;
+            this.cb_SellerId.Items.AddRange(new object[] {
             "строится",
             "сдан под заселение"});
-            this.cb_sellerId.Location = new System.Drawing.Point(108, 279);
-            this.cb_sellerId.Name = "cb_sellerId";
-            this.cb_sellerId.Size = new System.Drawing.Size(307, 23);
-            this.cb_sellerId.TabIndex = 103;
+            this.cb_SellerId.Location = new System.Drawing.Point(108, 279);
+            this.cb_SellerId.Name = "cb_SellerId";
+            this.cb_SellerId.Size = new System.Drawing.Size(307, 23);
+            this.cb_SellerId.TabIndex = 103;
             // 
             // tb_BuyPrice
             // 
@@ -368,13 +369,13 @@
             this.Controls.Add(this.tb_BuyPrice);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.cb_sellerId);
+            this.Controls.Add(this.cb_SellerId);
             this.Controls.Add(this.btn_AddLand);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tb_Address);
             this.Controls.Add(this.tb_CadastralNum);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.cb_buildingStatus);
+            this.Controls.Add(this.cb_LandType);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
@@ -394,7 +395,7 @@
         private Controls.CustomTextBox tb_Address;
         private Controls.CustomTextBox tb_CadastralNum;
         private Label label9;
-        private ComboBox cb_buildingStatus;
+        private ComboBox cb_LandType;
         private Label label7;
         private Label label11;
         private Label label12;
@@ -408,7 +409,7 @@
         private ToolStripMenuItem xToolStripMenuItem;
         private Button btn_AddLand;
         private Label label8;
-        private ComboBox cb_sellerId;
+        private ComboBox cb_SellerId;
         private Controls.CustomTextBox tb_BuyPrice;
         private Label label3;
         private Controls.CustomTextBox tb_Square;

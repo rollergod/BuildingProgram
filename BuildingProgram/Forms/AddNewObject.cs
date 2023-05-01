@@ -1,37 +1,35 @@
 ﻿using BuildingProgram.Context;
 using BuildingProgram.Models;
 using BuildingProgram.Tools;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BuildingProgram.Forms
 {
     public partial class AddNewObject : BaseForm
     {
         private AppDbContext _context;
-        private int _objectId;
+        private int _objNum;
         public string imagePath;
-        public AddNewObject(int objectId = 0)
+        public AddNewObject(int objNum = 0)
         {
             InitializeComponent();
             _context = new AppDbContext();
             menuStrip1.Renderer = new NoHighlightRenderer();
-            _objectId = objectId;
+            _objNum = objNum;
             imagePath = null;
         }
 
         private void btn_AddObject_Click(object sender, EventArgs e)
         {
             string imageName = null;
-            int objNumber = Convert.ToInt32(tb_ObjectNum.Texts);
+            int objNumber;
+
+            if(!int.TryParse(tb_ObjectNum.Texts,out objNumber))
+            {
+                MessageBox.Show("Номер объекта должен состоять только из цифр");
+                return;
+            }
+
             string objName = tb_ObjectName.Texts;
 
             DateOnly startPlanned = DateOnly.Parse(dtp_StartPlan.Text);
@@ -65,35 +63,53 @@ namespace BuildingProgram.Forms
                imageName = Path.GetFileName(imagePath);
             }
 
-            var addedBuilding = new BuildingObject
+            if(_objNum == 0)
             {
-                ObjectName = objName,
-                ObjectNumber = objNumber,
-                StartPlanned = startPlanned,
-                StartActual = startFact,
-                EndDate = enddate,
-                IsBuildingEnded = isEnded,
-                IsBuildPermit = isPermit, 
-                BuildingStatus = buildingStatus,
-                IsChecked = isChecked,
-                Land = land,
-                Organization= organization,
-                ImageName = imageName
-            };
+                var addedBuilding = new BuildingObject
+                {
+                    ObjectName = objName,
+                    ObjectNumber = objNumber,
+                    StartPlanned = startPlanned,
+                    StartActual = startFact,
+                    EndDate = enddate,
+                    IsBuildingEnded = isEnded,
+                    IsBuildPermit = isPermit,
+                    BuildingStatus = buildingStatus,
+                    IsChecked = isChecked,
+                    Land = land,
+                    Organization = organization,
+                    ImageName = imageName
+                };
 
-            try
-            {
                 File.Copy(imagePath, Path.Combine(@"D:\Projects\2023\BuildingProgram\BuildingProgram\Images\", Path.GetFileName(imagePath)), true);
                 _context.BuildingObjects.Add(addedBuilding);
-                _context.SaveChanges();
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Произошла какая-то ошибка.");
-                return;
-            }
+                var objForChange = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objNum);
 
-            MessageBox.Show($"Объект с номером {objNumber} успешно добавлен ");
+                objForChange.ObjectName = objName;
+                objForChange.ObjectNumber = objNumber;
+                objForChange.StartPlanned = startPlanned;
+                objForChange.StartActual = startFact;
+                objForChange.EndDate = enddate;
+                objForChange.IsBuildingEnded = isEnded;
+                objForChange.IsBuildPermit = isPermit;
+                objForChange.IsChecked = isChecked;
+                objForChange.BuildingStatus= buildingStatus;
+                objForChange.Land = land;
+                objForChange.Organization = organization;
+
+                if(pictureBox1.Image != null)
+                {
+                    objForChange.ImageName = imageName;
+                    File.Copy(imagePath, Path.Combine(@"D:\Projects\2023\BuildingProgram\BuildingProgram\Images\", Path.GetFileName(imagePath)), true);
+                }
+
+                _context.BuildingObjects.Update(objForChange);
+            }
+            _context.SaveChanges();
+            MessageBox.Show(_objNum == 0 ? $"Объект с номером {objNumber} успешно добавлен" : $"Объект с номером {objNumber} успешно изменён");
         }
 
         private void AddNewObject_Load(object sender, EventArgs e)
@@ -110,11 +126,11 @@ namespace BuildingProgram.Forms
                 .Select(x => x.OrganizationName)
                 .ToList();
 
-            if(_objectId > 0)
+            if(_objNum > 0)
             {
                 this.Text = "Изменение объекта";
 
-                var buildingObject = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objectId);
+                var buildingObject = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objNum);
 
                 tb_ObjectNum.Texts = buildingObject.ObjectNumber.ToString();
                 tb_ObjectName.Texts = buildingObject.ObjectName;

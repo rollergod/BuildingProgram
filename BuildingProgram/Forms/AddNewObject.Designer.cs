@@ -365,7 +365,8 @@ namespace BuildingProgram.Forms
             this.cb_buildingStatus.FormattingEnabled = true;
             this.cb_buildingStatus.Items.AddRange(new object[] {
             "строится",
-            "сдан под заселение"});
+            "сдан под заселение",
+            "подготовка участка"});
             this.cb_buildingStatus.Location = new System.Drawing.Point(159, 408);
             this.cb_buildingStatus.Name = "cb_buildingStatus";
             this.cb_buildingStatus.Size = new System.Drawing.Size(175, 23);

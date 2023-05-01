@@ -18,12 +18,12 @@ namespace BuildingProgram.Forms
     {
         private int _objNum;
         private AppDbContext _context;
-        public ObjectForm(int objId = 0)
+        public ObjectForm(int objNum = 0)
         {
             InitializeComponent();
             menuStrip1.Renderer = new NoHighlightRenderer();
             _context = new AppDbContext();
-            _objNum = objId;
+            _objNum = objNum;
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
