@@ -1,17 +1,8 @@
 ﻿using BuildingProgram.Context;
-using BuildingProgram.Context.Migrations;
+using BuildingProgram.Models;
 using BuildingProgram.Tools;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BuildingProgram.Forms
 {
@@ -69,11 +60,13 @@ namespace BuildingProgram.Forms
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //objNum
             _objId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
 
             if (_objId > 0)
             {
                 btn_ChangeBtn.Enabled = true;
+                btn_AboutObject.Enabled = true;
             }
         }
 
@@ -85,13 +78,57 @@ namespace BuildingProgram.Forms
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ObjectForm objForm = new ObjectForm();
-            objForm.ShowDialog();
+            //Main Menu
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
+            // справка
+        }
 
+        private void btn_AboutObject_Click(object sender, EventArgs e)
+        {
+            ObjectForm objForm = new ObjectForm(_objId);
+            objForm.ShowDialog();
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string searchText = tb_Search.Text;
+
+            var data = _context.BuildingObjects.Include(x => x.Land)
+                    .Select(x => new
+                    {
+                        x.ObjectNumber,
+                        x.Land.Address,
+                        isChecked = x.IsChecked ? "Да" : "Нет",
+                        isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                    });
+
+            if (string.IsNullOrEmpty(searchText))
+
+                dataGridView1.DataSource = data.ToList();
+
+            var searchedObjects = SearchData(searchText)
+                .Select(x => new
+                {
+                    x.ObjectNumber,
+                    x.Land.Address,
+                    isChecked = x.IsChecked ? "Да" : "Нет",
+                    isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                }).ToList();
+
+            dataGridView1.DataSource = searchedObjects;
+        }
+
+        private List<BuildingObject> SearchData(string searchText)
+        {
+            int objectNumber;
+            bool isNumber = int.TryParse(searchText, out objectNumber);
+
+            return _context.BuildingObjects.Include(x => x.Land)
+                .Where(x => isNumber ? x.ObjectNumber.ToString().Contains(searchText) : x.Land.Address.Contains(searchText))
+                .ToList();
         }
     }
 }

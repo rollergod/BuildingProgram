@@ -98,8 +98,11 @@ namespace BuildingProgram.Forms
 
         private void AddNewObject_Load(object sender, EventArgs e)
         {
+            //Занятые земельные уастки
+            var buildingObjectsWithLands = _context.BuildingObjects.Where(x => x.LandId > 0).Select(x => x.LandId).ToList();
+
             cb_Land.DataSource = _context.Lands
-                .Where(x => !x.IsSold)
+                .Where(x => !x.IsSold && !buildingObjectsWithLands.Contains(x.Id))
                 .Select(x => x.Address)
                 .ToList();
 

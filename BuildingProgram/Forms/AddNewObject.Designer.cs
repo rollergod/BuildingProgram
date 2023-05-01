@@ -241,7 +241,7 @@ namespace BuildingProgram.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(60, 174);
+            this.label2.Location = new System.Drawing.Point(59, 177);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 15);
             this.label2.TabIndex = 51;
@@ -368,7 +368,7 @@ namespace BuildingProgram.Forms
             "сдан под заселение"});
             this.cb_buildingStatus.Location = new System.Drawing.Point(159, 408);
             this.cb_buildingStatus.Name = "cb_buildingStatus";
-            this.cb_buildingStatus.Size = new System.Drawing.Size(121, 23);
+            this.cb_buildingStatus.Size = new System.Drawing.Size(175, 23);
             this.cb_buildingStatus.TabIndex = 67;
             // 
             // label9
@@ -384,10 +384,10 @@ namespace BuildingProgram.Forms
             // tb_ObjectNum
             // 
             this.tb_ObjectNum.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_ObjectNum.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tb_ObjectNum.BorderColor = System.Drawing.Color.Black;
             this.tb_ObjectNum.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_ObjectNum.BorderSize = 2;
-            this.tb_ObjectNum.Location = new System.Drawing.Point(158, 147);
+            this.tb_ObjectNum.Location = new System.Drawing.Point(158, 144);
             this.tb_ObjectNum.Margin = new System.Windows.Forms.Padding(0);
             this.tb_ObjectNum.Multiline = false;
             this.tb_ObjectNum.Name = "tb_ObjectNum";
@@ -395,15 +395,15 @@ namespace BuildingProgram.Forms
             this.tb_ObjectNum.Size = new System.Drawing.Size(250, 21);
             this.tb_ObjectNum.TabIndex = 69;
             this.tb_ObjectNum.Texts = "";
-            this.tb_ObjectNum.UnderlinedStyle = false;
+            this.tb_ObjectNum.UnderlinedStyle = true;
             // 
             // tb_ObjectName
             // 
             this.tb_ObjectName.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_ObjectName.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tb_ObjectName.BorderColor = System.Drawing.Color.Black;
             this.tb_ObjectName.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_ObjectName.BorderSize = 2;
-            this.tb_ObjectName.Location = new System.Drawing.Point(158, 174);
+            this.tb_ObjectName.Location = new System.Drawing.Point(158, 171);
             this.tb_ObjectName.Margin = new System.Windows.Forms.Padding(0);
             this.tb_ObjectName.Multiline = false;
             this.tb_ObjectName.Name = "tb_ObjectName";
@@ -411,7 +411,7 @@ namespace BuildingProgram.Forms
             this.tb_ObjectName.Size = new System.Drawing.Size(250, 21);
             this.tb_ObjectName.TabIndex = 71;
             this.tb_ObjectName.Texts = "";
-            this.tb_ObjectName.UnderlinedStyle = false;
+            this.tb_ObjectName.UnderlinedStyle = true;
             // 
             // label10
             // 
@@ -440,8 +440,9 @@ namespace BuildingProgram.Forms
             "сдан под заселение"});
             this.cb_Land.Location = new System.Drawing.Point(247, 468);
             this.cb_Land.Name = "cb_Land";
-            this.cb_Land.Size = new System.Drawing.Size(149, 23);
+            this.cb_Land.Size = new System.Drawing.Size(175, 23);
             this.cb_Land.TabIndex = 76;
+            this.cb_Land.Text = "Нет свободных земельных участков";
             // 
             // cb_Organization
             // 

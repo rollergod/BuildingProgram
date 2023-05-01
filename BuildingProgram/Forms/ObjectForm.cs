@@ -1,4 +1,7 @@
-﻿using BuildingProgram.Tools;
+﻿using BuildingProgram.Context;
+using BuildingProgram.Models.Enum;
+using BuildingProgram.Tools;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +16,14 @@ namespace BuildingProgram.Forms
 {
     public partial class ObjectForm : BaseForm
     {
-        public ObjectForm()
+        private int _objNum;
+        private AppDbContext _context;
+        public ObjectForm(int objId = 0)
         {
             InitializeComponent();
             menuStrip1.Renderer = new NoHighlightRenderer();
+            _context = new AppDbContext();
+            _objNum = objId;
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -40,6 +47,27 @@ namespace BuildingProgram.Forms
         {
             LandForm landForm = new LandForm();
             landForm.ShowDialog();  
+        }
+
+        private void ObjectForm_Load(object sender, EventArgs e)
+        {
+            var buildingObject = _context.BuildingObjects.Include(x => x. Land).FirstOrDefault(x => x.ObjectNumber == _objNum);
+
+            lb_Address.Text = buildingObject.Land.Address;
+            lb_objectNum.Text = buildingObject.ObjectNumber.ToString();
+            lb_IsBuildingPermit.Text = buildingObject.IsBuildPermit == true ? "Да" : "Нет";
+            lb_DateStartFact.Text = buildingObject.StartActual.ToString();
+            lb_DateStartPlan.Text = buildingObject.StartPlanned.ToString();
+            lb_EndDate.Text = buildingObject.EndDate.ToString();
+
+            BuildingStatus buildingStatus = (BuildingStatus)buildingObject.BuildingStatus;
+            lb_BuildingStatus.Text = buildingStatus.ToString();
+
+            if (buildingObject.ImageName != null)
+            {
+                pictureBox1.Image = new Bitmap(@$"D:\Projects\2023\BuildingProgram\BuildingProgram\Images\{buildingObject.ImageName}");
+            }
+
         }
     }
 }

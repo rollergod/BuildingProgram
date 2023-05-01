@@ -61,7 +61,7 @@
             // tb_Address
             // 
             this.tb_Address.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_Address.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tb_Address.BorderColor = System.Drawing.Color.Black;
             this.tb_Address.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_Address.BorderSize = 2;
             this.tb_Address.Location = new System.Drawing.Point(87, 192);
@@ -72,12 +72,12 @@
             this.tb_Address.Size = new System.Drawing.Size(328, 21);
             this.tb_Address.TabIndex = 97;
             this.tb_Address.Texts = "";
-            this.tb_Address.UnderlinedStyle = false;
+            this.tb_Address.UnderlinedStyle = true;
             // 
             // tb_CadastralNum
             // 
             this.tb_CadastralNum.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_CadastralNum.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tb_CadastralNum.BorderColor = System.Drawing.Color.Black;
             this.tb_CadastralNum.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_CadastralNum.BorderSize = 2;
             this.tb_CadastralNum.Location = new System.Drawing.Point(165, 164);
@@ -88,7 +88,7 @@
             this.tb_CadastralNum.Size = new System.Drawing.Size(250, 21);
             this.tb_CadastralNum.TabIndex = 96;
             this.tb_CadastralNum.Texts = "";
-            this.tb_CadastralNum.UnderlinedStyle = false;
+            this.tb_CadastralNum.UnderlinedStyle = true;
             // 
             // label9
             // 
@@ -247,7 +247,7 @@
             // tb_BuyPrice
             // 
             this.tb_BuyPrice.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_BuyPrice.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tb_BuyPrice.BorderColor = System.Drawing.Color.Black;
             this.tb_BuyPrice.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_BuyPrice.BorderSize = 2;
             this.tb_BuyPrice.Location = new System.Drawing.Point(165, 226);
@@ -258,7 +258,7 @@
             this.tb_BuyPrice.Size = new System.Drawing.Size(250, 21);
             this.tb_BuyPrice.TabIndex = 106;
             this.tb_BuyPrice.Texts = "";
-            this.tb_BuyPrice.UnderlinedStyle = false;
+            this.tb_BuyPrice.UnderlinedStyle = true;
             // 
             // label3
             // 
@@ -273,7 +273,7 @@
             // tb_Square
             // 
             this.tb_Square.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_Square.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tb_Square.BorderColor = System.Drawing.Color.Black;
             this.tb_Square.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_Square.BorderSize = 2;
             this.tb_Square.Location = new System.Drawing.Point(142, 334);
@@ -284,7 +284,7 @@
             this.tb_Square.Size = new System.Drawing.Size(269, 21);
             this.tb_Square.TabIndex = 108;
             this.tb_Square.Texts = "";
-            this.tb_Square.UnderlinedStyle = false;
+            this.tb_Square.UnderlinedStyle = true;
             // 
             // label4
             // 
@@ -299,7 +299,7 @@
             // tb_SellPrice
             // 
             this.tb_SellPrice.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_SellPrice.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tb_SellPrice.BorderColor = System.Drawing.Color.Black;
             this.tb_SellPrice.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_SellPrice.BorderSize = 2;
             this.tb_SellPrice.Location = new System.Drawing.Point(146, 252);
@@ -310,7 +310,7 @@
             this.tb_SellPrice.Size = new System.Drawing.Size(269, 21);
             this.tb_SellPrice.TabIndex = 112;
             this.tb_SellPrice.Texts = "";
-            this.tb_SellPrice.UnderlinedStyle = false;
+            this.tb_SellPrice.UnderlinedStyle = true;
             // 
             // label6
             // 

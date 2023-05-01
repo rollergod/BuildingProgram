@@ -39,32 +39,32 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lb_Name = new System.Windows.Forms.Label();
+            this.lb_BuildingCompany = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lb_IsBuildingPermit = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btn_AddNote = new System.Windows.Forms.Button();
             this.btn_DeleteNote = new System.Windows.Forms.Button();
             this.btn_ChangeNote = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lb_objectNum = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lb_BuildingStatus = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lb_DateStartPlan = new System.Windows.Forms.Label();
+            this.lb_DateStartFact = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lb_EndDate = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lb_Address = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_InfoLand = new System.Windows.Forms.Button();
+            this.btn_ObjectOrg = new System.Windows.Forms.Button();
+            this.btn_Smeta = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -144,9 +144,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(61, 345);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 15);
+            this.label2.Size = new System.Drawing.Size(96, 15);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Список объектов:";
+            this.label2.Text = "Список заметок:";
             // 
             // dataGridView1
             // 
@@ -171,23 +171,23 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Название:";
             // 
-            // label4
+            // lb_Name
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(510, 188);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 15);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Жилой комплекс “River Park”";
+            this.lb_Name.AutoSize = true;
+            this.lb_Name.Location = new System.Drawing.Point(510, 188);
+            this.lb_Name.Name = "lb_Name";
+            this.lb_Name.Size = new System.Drawing.Size(164, 15);
+            this.lb_Name.TabIndex = 8;
+            this.lb_Name.Text = "Жилой комплекс “River Park”";
             // 
-            // label5
+            // lb_BuildingCompany
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(510, 230);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 15);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Ферро-Строй";
+            this.lb_BuildingCompany.AutoSize = true;
+            this.lb_BuildingCompany.Location = new System.Drawing.Point(510, 230);
+            this.lb_BuildingCompany.Name = "lb_BuildingCompany";
+            this.lb_BuildingCompany.Size = new System.Drawing.Size(81, 15);
+            this.lb_BuildingCompany.TabIndex = 10;
+            this.lb_BuildingCompany.Text = "Ферро-Строй";
             // 
             // label6
             // 
@@ -218,14 +218,14 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Контроль выполняет:";
             // 
-            // label9
+            // lb_IsBuildingPermit
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(706, 123);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(21, 15);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Да";
+            this.lb_IsBuildingPermit.AutoSize = true;
+            this.lb_IsBuildingPermit.Location = new System.Drawing.Point(706, 123);
+            this.lb_IsBuildingPermit.Name = "lb_IsBuildingPermit";
+            this.lb_IsBuildingPermit.Size = new System.Drawing.Size(21, 15);
+            this.lb_IsBuildingPermit.TabIndex = 14;
+            this.lb_IsBuildingPermit.Text = "Да";
             // 
             // label10
             // 
@@ -281,14 +281,14 @@
             this.btn_ChangeNote.Text = "Изменить заметку";
             this.btn_ChangeNote.UseVisualStyleBackColor = false;
             // 
-            // label11
+            // lb_objectNum
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(510, 123);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(31, 15);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "1000";
+            this.lb_objectNum.AutoSize = true;
+            this.lb_objectNum.Location = new System.Drawing.Point(510, 123);
+            this.lb_objectNum.Name = "lb_objectNum";
+            this.lb_objectNum.Size = new System.Drawing.Size(31, 15);
+            this.lb_objectNum.TabIndex = 19;
+            this.lb_objectNum.Text = "1000";
             // 
             // label12
             // 
@@ -300,14 +300,14 @@
             this.label12.TabIndex = 18;
             this.label12.Text = "Номер объекта:";
             // 
-            // label13
+            // lb_BuildingStatus
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(706, 156);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(57, 15);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Строится";
+            this.lb_BuildingStatus.AutoSize = true;
+            this.lb_BuildingStatus.Location = new System.Drawing.Point(706, 156);
+            this.lb_BuildingStatus.Name = "lb_BuildingStatus";
+            this.lb_BuildingStatus.Size = new System.Drawing.Size(57, 15);
+            this.lb_BuildingStatus.TabIndex = 21;
+            this.lb_BuildingStatus.Text = "Строится";
             // 
             // label14
             // 
@@ -338,23 +338,23 @@
             this.label16.TabIndex = 22;
             this.label16.Text = "Даты строительства:";
             // 
-            // label17
+            // lb_DateStartPlan
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(706, 203);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 15);
-            this.label17.TabIndex = 24;
-            this.label17.Text = "01.06.2023";
+            this.lb_DateStartPlan.AutoSize = true;
+            this.lb_DateStartPlan.Location = new System.Drawing.Point(706, 203);
+            this.lb_DateStartPlan.Name = "lb_DateStartPlan";
+            this.lb_DateStartPlan.Size = new System.Drawing.Size(61, 15);
+            this.lb_DateStartPlan.TabIndex = 24;
+            this.lb_DateStartPlan.Text = "01.06.2023";
             // 
-            // label18
+            // lb_DateStartFact
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(706, 233);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(61, 15);
-            this.label18.TabIndex = 26;
-            this.label18.Text = "01.06.2023";
+            this.lb_DateStartFact.AutoSize = true;
+            this.lb_DateStartFact.Location = new System.Drawing.Point(706, 233);
+            this.lb_DateStartFact.Name = "lb_DateStartFact";
+            this.lb_DateStartFact.Size = new System.Drawing.Size(61, 15);
+            this.lb_DateStartFact.TabIndex = 26;
+            this.lb_DateStartFact.Text = "01.06.2023";
             // 
             // label19
             // 
@@ -365,14 +365,14 @@
             this.label19.TabIndex = 25;
             this.label19.Text = "начало фактическое:";
             // 
-            // label20
+            // lb_EndDate
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(706, 263);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(61, 15);
-            this.label20.TabIndex = 28;
-            this.label20.Text = "01.06.2023";
+            this.lb_EndDate.AutoSize = true;
+            this.lb_EndDate.Location = new System.Drawing.Point(706, 263);
+            this.lb_EndDate.Name = "lb_EndDate";
+            this.lb_EndDate.Size = new System.Drawing.Size(61, 15);
+            this.lb_EndDate.TabIndex = 28;
+            this.lb_EndDate.Text = "01.06.2023";
             // 
             // label21
             // 
@@ -383,14 +383,14 @@
             this.label21.TabIndex = 27;
             this.label21.Text = "сдача объекта:";
             // 
-            // label22
+            // lb_Address
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(510, 156);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(103, 15);
-            this.label22.TabIndex = 30;
-            this.label22.Text = "Проспект Мира 1";
+            this.lb_Address.AutoSize = true;
+            this.lb_Address.Location = new System.Drawing.Point(510, 156);
+            this.lb_Address.Name = "lb_Address";
+            this.lb_Address.Size = new System.Drawing.Size(103, 15);
+            this.lb_Address.TabIndex = 30;
+            this.lb_Address.Text = "Проспект Мира 1";
             // 
             // label23
             // 
@@ -402,79 +402,79 @@
             this.label23.TabIndex = 29;
             this.label23.Text = "Адрес:";
             // 
-            // button1
+            // btn_InfoLand
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(509, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 52);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Информация о земельном участке";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_InfoLand.BackColor = System.Drawing.Color.Black;
+            this.btn_InfoLand.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_InfoLand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_InfoLand.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_InfoLand.ForeColor = System.Drawing.Color.White;
+            this.btn_InfoLand.Location = new System.Drawing.Point(509, 305);
+            this.btn_InfoLand.Name = "btn_InfoLand";
+            this.btn_InfoLand.Size = new System.Drawing.Size(97, 52);
+            this.btn_InfoLand.TabIndex = 31;
+            this.btn_InfoLand.Text = "Информация о земельном участке";
+            this.btn_InfoLand.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_ObjectOrg
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(612, 305);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 52);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Задействованные организации";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_ObjectOrg.BackColor = System.Drawing.Color.Black;
+            this.btn_ObjectOrg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ObjectOrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ObjectOrg.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_ObjectOrg.ForeColor = System.Drawing.Color.White;
+            this.btn_ObjectOrg.Location = new System.Drawing.Point(612, 305);
+            this.btn_ObjectOrg.Name = "btn_ObjectOrg";
+            this.btn_ObjectOrg.Size = new System.Drawing.Size(114, 52);
+            this.btn_ObjectOrg.TabIndex = 32;
+            this.btn_ObjectOrg.Text = "Задействованные организации";
+            this.btn_ObjectOrg.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btn_Smeta
             // 
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(732, 305);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 52);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "Смета объекта";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_Smeta.BackColor = System.Drawing.Color.Black;
+            this.btn_Smeta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Smeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Smeta.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_Smeta.ForeColor = System.Drawing.Color.White;
+            this.btn_Smeta.Location = new System.Drawing.Point(732, 305);
+            this.btn_Smeta.Name = "btn_Smeta";
+            this.btn_Smeta.Size = new System.Drawing.Size(95, 52);
+            this.btn_Smeta.TabIndex = 33;
+            this.btn_Smeta.Text = "Смета объекта";
+            this.btn_Smeta.UseVisualStyleBackColor = false;
             // 
             // ObjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 590);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label22);
+            this.Controls.Add(this.btn_Smeta);
+            this.Controls.Add(this.btn_ObjectOrg);
+            this.Controls.Add(this.btn_InfoLand);
+            this.Controls.Add(this.lb_Address);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.label20);
+            this.Controls.Add(this.lb_EndDate);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.label18);
+            this.Controls.Add(this.lb_DateStartFact);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.label17);
+            this.Controls.Add(this.lb_DateStartPlan);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.lb_BuildingStatus);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lb_objectNum);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btn_ChangeNote);
             this.Controls.Add(this.btn_DeleteNote);
             this.Controls.Add(this.btn_AddNote);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lb_IsBuildingPermit);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lb_BuildingCompany);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lb_Name);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
@@ -484,6 +484,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "ObjectForm";
             this.Text = " Объект";
+            this.Load += new System.EventHandler(this.ObjectForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -505,31 +506,31 @@
         private Label label2;
         private DataGridView dataGridView1;
         private Label label3;
-        private Label label4;
-        private Label label5;
+        private Label lb_Name;
+        private Label lb_BuildingCompany;
         private Label label6;
         private Label label7;
         private Label label8;
-        private Label label9;
+        private Label lb_IsBuildingPermit;
         private Label label10;
         private Button btn_AddNote;
         private Button btn_DeleteNote;
         private Button btn_ChangeNote;
-        private Label label11;
+        private Label lb_objectNum;
         private Label label12;
-        private Label label13;
+        private Label lb_BuildingStatus;
         private Label label14;
         private Label label15;
         private Label label16;
-        private Label label17;
-        private Label label18;
+        private Label lb_DateStartPlan;
+        private Label lb_DateStartFact;
         private Label label19;
-        private Label label20;
+        private Label lb_EndDate;
         private Label label21;
-        private Label label22;
+        private Label lb_Address;
         private Label label23;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btn_InfoLand;
+        private Button btn_ObjectOrg;
+        private Button btn_Smeta;
     }
 }

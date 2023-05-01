@@ -72,5 +72,28 @@ namespace BuildingProgram.Forms
             AddLandForm changeLandForm = new AddLandForm(_landId);
             changeLandForm.ShowDialog();
         }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string cadastralNum = tb_Search.Text;
+
+            var data = _context.Lands.Select(x => new
+            {
+                x.Id,
+                x.CadastralNumber,
+                x.Square,
+                x.Seller.OrganizationName,
+                isSold = x.IsSold ? "Да" : "Нет"
+            });
+
+            if (string.IsNullOrEmpty(cadastralNum))
+                dataGridView1.DataSource = data.ToList();
+
+            var lands = data
+                .Where(x => x.CadastralNumber.Contains(cadastralNum))
+                .ToList();
+
+            dataGridView1.DataSource = lands;
+        }
     }
 }

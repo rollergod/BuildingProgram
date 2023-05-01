@@ -103,7 +103,7 @@
             // tb_OrgName
             // 
             this.tb_OrgName.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_OrgName.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tb_OrgName.BorderColor = System.Drawing.Color.Black;
             this.tb_OrgName.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_OrgName.BorderSize = 2;
             this.tb_OrgName.Location = new System.Drawing.Point(100, 117);
@@ -114,7 +114,7 @@
             this.tb_OrgName.Size = new System.Drawing.Size(250, 21);
             this.tb_OrgName.TabIndex = 2;
             this.tb_OrgName.Texts = "";
-            this.tb_OrgName.UnderlinedStyle = false;
+            this.tb_OrgName.UnderlinedStyle = true;
             // 
             // label1
             // 
@@ -137,7 +137,7 @@
             // tb_Director
             // 
             this.tb_Director.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_Director.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.tb_Director.BorderColor = System.Drawing.Color.Black;
             this.tb_Director.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_Director.BorderSize = 2;
             this.tb_Director.Location = new System.Drawing.Point(100, 168);
@@ -148,7 +148,7 @@
             this.tb_Director.Size = new System.Drawing.Size(250, 21);
             this.tb_Director.TabIndex = 4;
             this.tb_Director.Texts = "";
-            this.tb_Director.UnderlinedStyle = false;
+            this.tb_Director.UnderlinedStyle = true;
             // 
             // btn_AddOrg
             // 

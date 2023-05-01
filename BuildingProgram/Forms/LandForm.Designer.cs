@@ -39,7 +39,7 @@
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_Search = new System.Windows.Forms.TextBox();
             this.btn_Search = new System.Windows.Forms.Button();
             this.btn_ChangeOrganization = new System.Windows.Forms.Button();
             this.btn_AddOrganization = new System.Windows.Forms.Button();
@@ -145,15 +145,15 @@
             this.dataGridView1.TabIndex = 19;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // textBox1
+            // tb_Search
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(388, 75);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 13);
-            this.textBox1.TabIndex = 18;
+            this.tb_Search.BackColor = System.Drawing.Color.LightGray;
+            this.tb_Search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_Search.Location = new System.Drawing.Point(388, 75);
+            this.tb_Search.Multiline = true;
+            this.tb_Search.Name = "tb_Search";
+            this.tb_Search.Size = new System.Drawing.Size(196, 13);
+            this.tb_Search.TabIndex = 18;
             // 
             // btn_Search
             // 
@@ -167,6 +167,7 @@
             this.btn_Search.TabIndex = 17;
             this.btn_Search.Text = "Поиск";
             this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // btn_ChangeOrganization
             // 
@@ -195,7 +196,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 592);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_Search);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.btn_ChangeOrganization);
             this.Controls.Add(this.btn_AddOrganization);
@@ -221,7 +222,7 @@
         private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
         private ToolStripMenuItem xToolStripMenuItem;
         private DataGridView dataGridView1;
-        private TextBox textBox1;
+        private TextBox tb_Search;
         private Button btn_Search;
         private Button btn_ChangeOrganization;
         private Button btn_AddOrganization;

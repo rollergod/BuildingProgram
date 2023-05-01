@@ -1,5 +1,7 @@
 ﻿using BuildingProgram.Context;
+using BuildingProgram.Models;
 using BuildingProgram.Tools;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,6 +80,24 @@ namespace BuildingProgram.Forms
         {
             LandForm landForm = new LandForm();
             landForm.ShowDialog();
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            string searchText = tb_Search.Text;
+
+            if (string.IsNullOrEmpty(searchText))
+                dataGridView1.DataSource = _context.Organizations.ToList();
+
+            var searchedObjects = SearchData(searchText);
+
+            dataGridView1.DataSource = searchedObjects;
+        }
+        private List<Organization> SearchData(string searchText)
+        {
+            return _context.Organizations
+                .Where(x => x.OrganizationName.Contains(searchText) || x.DirectorName.Contains(searchText))
+                .ToList();
         }
     }
 }
