@@ -99,5 +99,10 @@ namespace BuildingProgram.Forms
                 .Where(x => x.OrganizationName.Contains(searchText) || x.DirectorName.Contains(searchText))
                 .ToList();
         }
+
+        private void xToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

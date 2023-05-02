@@ -128,6 +128,7 @@ namespace BuildingProgram.Forms
             this.xToolStripMenuItem.Name = "xToolStripMenuItem";
             this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 34);
             this.xToolStripMenuItem.Text = "X";
+            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -493,7 +494,6 @@ namespace BuildingProgram.Forms
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddNewObject";
             this.Text = "Добавление объекта";
             this.Load += new System.EventHandler(this.AddNewObject_Load);

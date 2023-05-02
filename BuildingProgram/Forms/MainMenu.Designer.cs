@@ -38,13 +38,13 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_AddObject = new System.Windows.Forms.Button();
             this.btn_ChangeBtn = new System.Windows.Forms.Button();
             this.btn_AboutObject = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
             this.tb_Search = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +107,16 @@
             this.xToolStripMenuItem.Name = "xToolStripMenuItem";
             this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 34);
             this.xToolStripMenuItem.Text = "X";
+            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click);
+            // 
+            // отчетыToolStripMenuItem
+            // 
+            this.отчетыToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.отчетыToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
+            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 34);
+            this.отчетыToolStripMenuItem.Text = "Отчеты";
+            this.отчетыToolStripMenuItem.Click += new System.EventHandler(this.отчетыToolStripMenuItem_Click);
             // 
             // btn_AddObject
             // 
@@ -207,15 +217,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(576, 419);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // отчетыToolStripMenuItem
-            // 
-            this.отчетыToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.отчетыToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
-            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 34);
-            this.отчетыToolStripMenuItem.Text = "Отчеты";
-            this.отчетыToolStripMenuItem.Click += new System.EventHandler(this.отчетыToolStripMenuItem_Click);
             // 
             // MainMenu
             // 

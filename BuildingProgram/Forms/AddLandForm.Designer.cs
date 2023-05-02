@@ -213,6 +213,7 @@
             this.xToolStripMenuItem.Name = "xToolStripMenuItem";
             this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 34);
             this.xToolStripMenuItem.Text = "X";
+            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click);
             // 
             // btn_AddLand
             // 
@@ -380,7 +381,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "AddLandForm";
             this.Text = "Добавление земельного участка";
             this.Load += new System.EventHandler(this.AddLandForm_Load);

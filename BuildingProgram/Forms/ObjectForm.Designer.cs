@@ -65,6 +65,7 @@
             this.btn_InfoLand = new System.Windows.Forms.Button();
             this.btn_ObjectOrg = new System.Windows.Forms.Button();
             this.btn_Smeta = new System.Windows.Forms.Button();
+            this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -79,7 +80,8 @@
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
-            this.земельныеУчасткиToolStripMenuItem});
+            this.земельныеУчасткиToolStripMenuItem,
+            this.xToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -444,6 +446,15 @@
             this.btn_Smeta.Text = "Смета объекта";
             this.btn_Smeta.UseVisualStyleBackColor = false;
             // 
+            // xToolStripMenuItem
+            // 
+            this.xToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.xToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.xToolStripMenuItem.Name = "xToolStripMenuItem";
+            this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 34);
+            this.xToolStripMenuItem.Text = "X";
+            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click);
+            // 
             // ObjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -481,7 +492,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "ObjectForm";
             this.Text = " Объект";
             this.Load += new System.EventHandler(this.ObjectForm_Load);
@@ -532,5 +542,6 @@
         private Button btn_InfoLand;
         private Button btn_ObjectOrg;
         private Button btn_Smeta;
+        private ToolStripMenuItem xToolStripMenuItem;
     }
 }

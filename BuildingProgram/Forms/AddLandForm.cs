@@ -126,5 +126,10 @@ namespace BuildingProgram.Forms
                 cb_Buyer.Visible = false;
             }
         }
+
+        private void xToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

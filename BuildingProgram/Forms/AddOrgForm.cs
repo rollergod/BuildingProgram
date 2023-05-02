@@ -91,5 +91,11 @@ namespace BuildingProgram.Forms
             LandForm landForm = new LandForm();
             landForm.ShowDialog();
         }
+
+        private void xToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        
     }
 }

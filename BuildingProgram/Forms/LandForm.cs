@@ -95,5 +95,15 @@ namespace BuildingProgram.Forms
 
             dataGridView1.DataSource = lands;
         }
+
+        private void xToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void xToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -40,6 +40,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BaseForm";
             this.Text = "BaseForm";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BaseForm_MouseDown);
             this.ResumeLayout(false);
 
         }

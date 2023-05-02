@@ -48,6 +48,7 @@ namespace BuildingProgram.Forms
                 MessageBox.Show("Выберите земельный участок");
                 return;
             }
+
             var land = _context.Lands.FirstOrDefault(x => x.Address == selectedBuilding);
 
             var selectedOrganization = cb_Organization.SelectedValue.ToString();
@@ -184,6 +185,11 @@ namespace BuildingProgram.Forms
                 imagePath = openFileDialog.FileName;
                 pictureBox1.Image = new Bitmap(openFileDialog.FileName);
             }
+        }
+
+        private void xToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
