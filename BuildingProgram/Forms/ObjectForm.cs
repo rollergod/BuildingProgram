@@ -2,21 +2,13 @@
 using BuildingProgram.Models.Enum;
 using BuildingProgram.Tools;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BuildingProgram.Forms
 {
     public partial class ObjectForm : BaseForm
     {
         private int _objNum;
+        private int _noteId;
         private AppDbContext _context;
         public ObjectForm(int objNum = 0)
         {
@@ -68,11 +60,58 @@ namespace BuildingProgram.Forms
                 pictureBox1.Image = new Bitmap(@$"D:\Projects\2023\BuildingProgram\BuildingProgram\Images\{buildingObject.ImageName}");
             }
 
+            var notes = _context.Notes.ToList();
+
+            dataGridView1.DataSource = notes;
+
+            dataGridView1.Columns[0].HeaderText = "Номер заметки";
+            dataGridView1.Columns[1].HeaderText = "Важность";
+            dataGridView1.Columns[2].HeaderText = "Текст заметки";
         }
 
         private void xToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_AddNote_Click(object sender, EventArgs e)
+        {
+            AddNoteForm addNoteForm = new AddNoteForm(_objNum);
+            addNoteForm.ShowDialog();
+        }
+
+        private void btn_ChangeNote_Click(object sender, EventArgs e)
+        {
+            AddNoteForm addNoteForm = new AddNoteForm(_objNum,_noteId);
+            addNoteForm.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _noteId  = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+
+            if(_noteId > 0)
+            {
+                btn_ChangeNote.Enabled = true;
+                btn_DeleteNote.Enabled = true;
+            }
+        }
+
+        private void btn_DeleteNote_Click(object sender, EventArgs e)
+        {
+            var noteForDelete = _context.Notes.FirstOrDefault(x => x.Id == _noteId);
+
+            var confirmResult = MessageBox.Show("Вы действительно хотите удалить записку?","Подтвердите удаление",MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                _context.Notes.Remove(noteForDelete);
+                _context.SaveChanges();
+                MessageBox.Show("Записка удалена");
+
+                var notes = _context.Notes.ToList();
+
+                dataGridView1.DataSource = notes;
+            }
         }
     }
 }

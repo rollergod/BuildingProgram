@@ -67,6 +67,8 @@ namespace BuildingProgram.Forms
             this.cb_isBuildingChecked = new System.Windows.Forms.CheckBox();
             this.cb_Land = new System.Windows.Forms.ComboBox();
             this.cb_Organization = new System.Windows.Forms.ComboBox();
+            this.cb_BuildingCompany = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -457,11 +459,34 @@ namespace BuildingProgram.Forms
             this.cb_Organization.Size = new System.Drawing.Size(149, 23);
             this.cb_Organization.TabIndex = 77;
             // 
+            // cb_BuildingCompany
+            // 
+            this.cb_BuildingCompany.FormattingEnabled = true;
+            this.cb_BuildingCompany.Items.AddRange(new object[] {
+            "строится",
+            "сдан под заселение"});
+            this.cb_BuildingCompany.Location = new System.Drawing.Point(596, 514);
+            this.cb_BuildingCompany.Name = "cb_BuildingCompany";
+            this.cb_BuildingCompany.Size = new System.Drawing.Size(149, 23);
+            this.cb_BuildingCompany.TabIndex = 80;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(427, 515);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(167, 19);
+            this.label13.TabIndex = 78;
+            this.label13.Text = "Строительная компания:";
+            // 
             // AddNewObject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 552);
+            this.Controls.Add(this.cb_BuildingCompany);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.cb_Organization);
             this.Controls.Add(this.cb_Land);
             this.Controls.Add(this.label10);
@@ -550,5 +575,7 @@ namespace BuildingProgram.Forms
         private CheckBox cb_isBuildingChecked;
         private ComboBox cb_Land;
         private ComboBox cb_Organization;
+        private ComboBox cb_BuildingCompany;
+        private Label label13;
     }
 }

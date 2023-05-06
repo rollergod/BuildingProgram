@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BuildingProgram.Models
+﻿namespace BuildingProgram.Models
 {
     public class Organization
     {

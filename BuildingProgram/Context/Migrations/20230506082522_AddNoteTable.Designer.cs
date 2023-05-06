@@ -3,6 +3,7 @@ using System;
 using BuildingProgram.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BuildingProgram.Context.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230506082522_AddNoteTable")]
+    partial class AddNoteTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,23 +24,6 @@ namespace BuildingProgram.Context.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("BuildingProgram.Models.BuildingCompany", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BuildingCompanies");
-                });
-
             modelBuilder.Entity("BuildingProgram.Models.BuildingObject", b =>
                 {
                     b.Property<int>("Id")
@@ -46,9 +31,6 @@ namespace BuildingProgram.Context.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("BuildingCompanyId")
-                        .HasColumnType("integer");
 
                     b.Property<int>("BuildingStatus")
                         .HasColumnType("integer");
@@ -91,8 +73,6 @@ namespace BuildingProgram.Context.Migrations
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BuildingCompanyId");
 
                     b.HasIndex("LandId");
 
@@ -221,10 +201,6 @@ namespace BuildingProgram.Context.Migrations
 
             modelBuilder.Entity("BuildingProgram.Models.BuildingObject", b =>
                 {
-                    b.HasOne("BuildingProgram.Models.BuildingCompany", "BuildingCompany")
-                        .WithMany()
-                        .HasForeignKey("BuildingCompanyId");
-
                     b.HasOne("BuildingProgram.Models.Land", "Land")
                         .WithMany()
                         .HasForeignKey("LandId")
@@ -238,8 +214,6 @@ namespace BuildingProgram.Context.Migrations
                     b.HasOne("BuildingProgram.Models.User", null)
                         .WithMany("BuildingObjects")
                         .HasForeignKey("UserId");
-
-                    b.Navigation("BuildingCompany");
 
                     b.Navigation("Land");
 

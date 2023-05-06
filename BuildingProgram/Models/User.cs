@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BuildingProgram.Models
+﻿namespace BuildingProgram.Models
 {
     public class User
     {
@@ -13,6 +7,7 @@ namespace BuildingProgram.Models
         public string Password { get; set; }
         public bool IsAdmin { get; set; } = false;
 
+        // TODO : показывать только свои объекты
         public ICollection<BuildingObject> BuildingObjects { get; set; }
     }
 }

@@ -133,12 +133,18 @@ namespace BuildingProgram.Forms
 
         private void отчетыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ReportForm reportForm = new ReportForm();
+            reportForm.ShowDialog();
         }
 
         private void xToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void строительныеКомпанииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

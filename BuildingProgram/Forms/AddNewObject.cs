@@ -1,6 +1,7 @@
 ﻿using BuildingProgram.Context;
 using BuildingProgram.Models;
 using BuildingProgram.Tools;
+using Microsoft.EntityFrameworkCore;
 using System.Data;
 
 namespace BuildingProgram.Forms
@@ -59,6 +60,14 @@ namespace BuildingProgram.Forms
             }
             var organization = _context.Organizations.FirstOrDefault(x => x.OrganizationName == selectedOrganization);
 
+            var selectedBuildingCompany = cb_BuildingCompany.SelectedValue.ToString();
+            if(selectedBuildingCompany == null)
+            {
+                MessageBox.Show("Выберите строительную компаниюорганизацию");
+                return;
+            }
+            var buildingCompany = _context.BuildingCompanies.FirstOrDefault(x => x.Name == selectedBuildingCompany);
+
             if(pictureBox1.Image != null)
             {
                imageName = Path.GetFileName(imagePath);
@@ -79,6 +88,7 @@ namespace BuildingProgram.Forms
                     IsChecked = isChecked,
                     Land = land,
                     Organization = organization,
+                    BuildingCompany = buildingCompany,
                     ImageName = imageName
                 };
 
@@ -100,6 +110,7 @@ namespace BuildingProgram.Forms
                 objForChange.BuildingStatus= buildingStatus;
                 objForChange.Land = land;
                 objForChange.Organization = organization;
+                objForChange.BuildingCompany = buildingCompany;
 
                 if(pictureBox1.Image != null)
                 {
@@ -127,11 +138,18 @@ namespace BuildingProgram.Forms
                 .Select(x => x.OrganizationName)
                 .ToList();
 
+            cb_BuildingCompany.DataSource = _context.BuildingCompanies
+                .Select(x => x.Name)
+                .ToList();
+
             if(_objNum > 0)
             {
                 this.Text = "Изменение объекта";
 
-                var buildingObject = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objNum);
+                var buildingObject = _context.BuildingObjects
+                    .Include(x => x.Organization)
+                    .Include(x => x.BuildingCompany)
+                    .FirstOrDefault(x => x.ObjectNumber == _objNum);
 
                 tb_ObjectNum.Texts = buildingObject.ObjectNumber.ToString();
                 tb_ObjectName.Texts = buildingObject.ObjectName;
@@ -144,6 +162,8 @@ namespace BuildingProgram.Forms
                 cb_isBuildingChecked.Checked = buildingObject.IsChecked;
 
                 cb_buildingStatus.SelectedIndex = buildingObject.BuildingStatus;
+                cb_Organization.Text = buildingObject.Organization.OrganizationName;
+                cb_BuildingCompany.Text = buildingObject.BuildingCompany.Name;
 
                 if(buildingObject.ImageName != null)
                 {
