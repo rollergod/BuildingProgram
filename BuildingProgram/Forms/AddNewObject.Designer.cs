@@ -136,7 +136,7 @@ namespace BuildingProgram.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(251, 74);
+            this.label1.Location = new System.Drawing.Point(258, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(267, 25);
             this.label1.TabIndex = 3;
@@ -154,7 +154,7 @@ namespace BuildingProgram.Forms
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.Location = new System.Drawing.Point(60, 240);
+            this.label23.Location = new System.Drawing.Point(57, 241);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(152, 20);
             this.label23.TabIndex = 49;
@@ -194,7 +194,7 @@ namespace BuildingProgram.Forms
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(58, 147);
+            this.label11.Location = new System.Drawing.Point(58, 149);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(94, 15);
             this.label11.TabIndex = 39;
@@ -214,7 +214,7 @@ namespace BuildingProgram.Forms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(58, 499);
+            this.label6.Location = new System.Drawing.Point(58, 497);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 20);
             this.label6.TabIndex = 33;
@@ -244,7 +244,7 @@ namespace BuildingProgram.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(59, 177);
+            this.label2.Location = new System.Drawing.Point(59, 178);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 15);
             this.label2.TabIndex = 51;
@@ -267,7 +267,7 @@ namespace BuildingProgram.Forms
             this.btn_ChosePhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ChosePhoto.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_ChosePhoto.ForeColor = System.Drawing.Color.White;
-            this.btn_ChosePhoto.Location = new System.Drawing.Point(521, 328);
+            this.btn_ChosePhoto.Location = new System.Drawing.Point(525, 328);
             this.btn_ChosePhoto.Name = "btn_ChosePhoto";
             this.btn_ChosePhoto.Size = new System.Drawing.Size(101, 30);
             this.btn_ChosePhoto.TabIndex = 54;
@@ -306,16 +306,16 @@ namespace BuildingProgram.Forms
             // 
             // dtp_StartPlan
             // 
-            this.dtp_StartPlan.Location = new System.Drawing.Point(173, 264);
+            this.dtp_StartPlan.Location = new System.Drawing.Point(170, 264);
             this.dtp_StartPlan.Name = "dtp_StartPlan";
-            this.dtp_StartPlan.Size = new System.Drawing.Size(200, 23);
+            this.dtp_StartPlan.Size = new System.Drawing.Size(203, 23);
             this.dtp_StartPlan.TabIndex = 60;
             // 
             // dtp_StartFact
             // 
-            this.dtp_StartFact.Location = new System.Drawing.Point(191, 297);
+            this.dtp_StartFact.Location = new System.Drawing.Point(186, 297);
             this.dtp_StartFact.Name = "dtp_StartFact";
-            this.dtp_StartFact.Size = new System.Drawing.Size(182, 23);
+            this.dtp_StartFact.Size = new System.Drawing.Size(187, 23);
             this.dtp_StartFact.TabIndex = 61;
             // 
             // dtp_EndDate
@@ -442,7 +442,7 @@ namespace BuildingProgram.Forms
             this.cb_Land.Items.AddRange(new object[] {
             "строится",
             "сдан под заселение"});
-            this.cb_Land.Location = new System.Drawing.Point(247, 468);
+            this.cb_Land.Location = new System.Drawing.Point(247, 469);
             this.cb_Land.Name = "cb_Land";
             this.cb_Land.Size = new System.Drawing.Size(175, 23);
             this.cb_Land.TabIndex = 76;

@@ -133,32 +133,41 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(25, 293);
+            this.button3.BackColor = System.Drawing.Color.Black;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(30, 343);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 50);
             this.button3.TabIndex = 10;
             this.button3.Text = "Подробная информация";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // btn_AddOrg
             // 
-            this.btn_AddOrg.Location = new System.Drawing.Point(25, 148);
+            this.btn_AddOrg.BackColor = System.Drawing.Color.Black;
+            this.btn_AddOrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddOrg.ForeColor = System.Drawing.Color.White;
+            this.btn_AddOrg.Location = new System.Drawing.Point(30, 204);
             this.btn_AddOrg.Name = "btn_AddOrg";
             this.btn_AddOrg.Size = new System.Drawing.Size(96, 49);
             this.btn_AddOrg.TabIndex = 8;
             this.btn_AddOrg.Text = "Добавить оганизацию";
-            this.btn_AddOrg.UseVisualStyleBackColor = true;
+            this.btn_AddOrg.UseVisualStyleBackColor = false;
             this.btn_AddOrg.Click += new System.EventHandler(this.btn_AddOrg_Click);
             // 
             // btn_ChangeOrg
             // 
+            this.btn_ChangeOrg.BackColor = System.Drawing.Color.Black;
             this.btn_ChangeOrg.Enabled = false;
-            this.btn_ChangeOrg.Location = new System.Drawing.Point(25, 216);
+            this.btn_ChangeOrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ChangeOrg.ForeColor = System.Drawing.Color.White;
+            this.btn_ChangeOrg.Location = new System.Drawing.Point(30, 272);
             this.btn_ChangeOrg.Name = "btn_ChangeOrg";
             this.btn_ChangeOrg.Size = new System.Drawing.Size(96, 48);
             this.btn_ChangeOrg.TabIndex = 9;
             this.btn_ChangeOrg.Text = "Изменить организацию";
-            this.btn_ChangeOrg.UseVisualStyleBackColor = true;
+            this.btn_ChangeOrg.UseVisualStyleBackColor = false;
             this.btn_ChangeOrg.Click += new System.EventHandler(this.btn_ChangeOrg_Click);
             // 
             // dataGridView1

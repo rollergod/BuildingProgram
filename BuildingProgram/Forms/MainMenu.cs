@@ -144,7 +144,209 @@ namespace BuildingProgram.Forms
 
         private void строительныеКомпанииToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            BuildingCompanyForm buildingCompanyForm = new BuildingCompanyForm();
+            buildingCompanyForm.ShowDialog();
+        }
 
+        private void cb_IsBuildingEnded_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_IsBuildingEnded.Checked && !string.IsNullOrEmpty(tb_Search.Text))
+            {
+                string searchText = tb_Search.Text;
+                var searchedObjects = SearchData(searchText)
+                    .Select(x => new
+                    {
+                        x.ObjectNumber,
+                        x.Land.Address,
+                        isChecked = x.IsChecked ? "Да" : "Нет",
+                        isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                    }).ToList();
+
+                searchedObjects = searchedObjects.Where(x => x.isEnded == "Да").ToList();
+
+                dataGridView1.DataSource = searchedObjects;
+            }
+            else if (cb_IsCheckedObject.Checked && cb_IsBuildingEnded.Checked && string.IsNullOrEmpty(tb_Search.Text))
+            {
+                var searchedObjects = _context.BuildingObjects
+                    .Include(x => x.Land)
+                    .Select(x => new
+                    {
+                        x.ObjectNumber,
+                        x.Land.Address,
+                        isChecked = x.IsChecked ? "Да" : "Нет",
+                        isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                    }).ToList();
+
+                searchedObjects = searchedObjects.Where(x => x.isEnded == "Да" && x.isChecked == "Да").ToList();
+
+                dataGridView1.DataSource = searchedObjects;
+            }
+            else if(cb_IsBuildingEnded.Checked && string.IsNullOrEmpty(tb_Search.Text))
+            {
+                var searchedObjects = _context.BuildingObjects
+                    .Include(x => x.Land)
+                    .Select(x => new
+                    {
+                        x.ObjectNumber,
+                        x.Land.Address,
+                        isChecked = x.IsChecked ? "Да" : "Нет",
+                        isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                    }).ToList();
+
+                searchedObjects = searchedObjects.Where(x => x.isEnded == "Да").ToList();
+
+                dataGridView1.DataSource = searchedObjects;
+            }
+            
+            else if (cb_IsCheckedObject.Checked && !cb_IsBuildingEnded.Checked && string.IsNullOrEmpty(tb_Search.Text))
+            {
+                var searchedObjects = _context.BuildingObjects
+                    .Include(x => x.Land)
+                    .Select(x => new
+                    {
+                        x.ObjectNumber,
+                        x.Land.Address,
+                        isChecked = x.IsChecked ? "Да" : "Нет",
+                        isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                    }).ToList();
+
+                searchedObjects = searchedObjects.Where(x => x.isChecked == "Да").ToList();
+
+                dataGridView1.DataSource = searchedObjects;
+            }
+            else if (cb_IsCheckedObject.Checked && !cb_IsBuildingEnded.Checked && !string.IsNullOrEmpty(tb_Search.Text))
+            {
+                string searchText = tb_Search.Text;
+                var searchedObjects = SearchData(searchText)
+                     .Select(x => new
+                     {
+                         x.ObjectNumber,
+                         x.Land.Address,
+                         isChecked = x.IsChecked ? "Да" : "Нет",
+                         isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                     }).ToList();
+
+                searchedObjects = searchedObjects.Where(x => x.isEnded == "Да").ToList();
+
+                dataGridView1.DataSource = searchedObjects;
+            }
+            else
+            {
+                var data = _context.BuildingObjects.
+                    Include(x => x.Land)
+                    .Select(x => new
+                    {
+                        x.ObjectNumber,
+                        x.Land.Address,
+                        isChecked = x.IsChecked ? "Да" : "Нет",
+                        isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                    })
+                    .ToList();
+
+                dataGridView1.DataSource = data;
+            }
+        }
+
+        private void cb_IsCheckedObject_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cb_IsCheckedObject.Checked && cb_IsBuildingEnded.Checked && !string.IsNullOrEmpty(tb_Search.Text)) 
+            {
+                string searchText = tb_Search.Text;
+                var searchedObjects = SearchData(searchText)
+                    .Select(x => new
+                    {
+                        x.ObjectNumber,
+                        x.Land.Address,
+                        isChecked = x.IsChecked ? "Да" : "Нет",
+                        isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                    }).ToList();
+
+                searchedObjects = searchedObjects.Where(x => x.isEnded == "Да" && x.isChecked == "Да").ToList();
+
+                dataGridView1.DataSource = searchedObjects;
+            }
+            else if (cb_IsCheckedObject.Checked && cb_IsBuildingEnded.Checked && string.IsNullOrEmpty(tb_Search.Text))
+            {
+                string searchText = tb_Search.Text;
+                var searchedObjects = _context.BuildingObjects
+                    .Include(x => x.Land)
+                    .Select(x => new
+                    {
+                        x.ObjectNumber,
+                        x.Land.Address,
+                        isChecked = x.IsChecked ? "Да" : "Нет",
+                        isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                    }).ToList();
+
+                searchedObjects = searchedObjects.Where(x => x.isEnded == "Да" && x.isChecked == "Да").ToList();
+
+                dataGridView1.DataSource = searchedObjects;
+            }
+            else if (cb_IsCheckedObject.Checked && !cb_IsBuildingEnded.Checked && string.IsNullOrEmpty(tb_Search.Text))
+            {
+                string searchText = tb_Search.Text;
+                var searchedObjects = _context.BuildingObjects
+                    .Include(x => x.Land)
+                    .Select(x => new
+                    {
+                        x.ObjectNumber,
+                        x.Land.Address,
+                        isChecked = x.IsChecked ? "Да" : "Нет",
+                        isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                    }).ToList();
+
+                searchedObjects = searchedObjects.Where(x => x.isChecked == "Да").ToList();
+
+                dataGridView1.DataSource = searchedObjects;
+            }
+            else if (!cb_IsCheckedObject.Checked && cb_IsBuildingEnded.Checked && string.IsNullOrEmpty(tb_Search.Text))
+            {
+                var searchedObjects = _context.BuildingObjects
+                    .Include(x => x.Land)
+                    .Select(x => new
+                    {
+                        x.ObjectNumber,
+                        x.Land.Address,
+                        isChecked = x.IsChecked ? "Да" : "Нет",
+                        isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                    }).ToList();
+
+                searchedObjects = searchedObjects.Where(x => x.isEnded == "Да").ToList();
+
+                dataGridView1.DataSource = searchedObjects;
+            }
+            else if (!cb_IsCheckedObject.Checked && cb_IsBuildingEnded.Checked && !string.IsNullOrEmpty(tb_Search.Text))
+            {
+                string searchText = tb_Search.Text;
+                var searchedObjects = SearchData(searchText)
+                     .Select(x => new
+                     {
+                         x.ObjectNumber,
+                         x.Land.Address,
+                         isChecked = x.IsChecked ? "Да" : "Нет",
+                         isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                     }).ToList();
+
+                searchedObjects = searchedObjects.Where(x => x.isEnded == "Да").ToList();
+
+                dataGridView1.DataSource = searchedObjects;
+            }
+            else
+            {
+                var data = _context.BuildingObjects.
+                    Include(x => x.Land)
+                    .Select(x => new
+                    {
+                        x.ObjectNumber,
+                        x.Land.Address,
+                        isChecked = x.IsChecked ? "Да" : "Нет",
+                        isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                    })
+                    .ToList();
+
+                dataGridView1.DataSource = data;
+            }
         }
     }
 }

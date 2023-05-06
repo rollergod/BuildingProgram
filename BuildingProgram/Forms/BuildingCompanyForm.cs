@@ -29,6 +29,8 @@ namespace BuildingProgram.Forms
 
             dataGridView1.Columns[0].HeaderText = "Номер строительной компании";
             dataGridView1.Columns[1].HeaderText = "Название";
+
+            dataGridView1.Columns[1].Width = 200;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -54,6 +56,11 @@ namespace BuildingProgram.Forms
             var buildingCompanies = _context.BuildingCompanies.Where(x => x.Name.Contains(textToSearch)).ToList();
 
             dataGridView1.DataSource = buildingCompanies;
+        }
+
+        private void xToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

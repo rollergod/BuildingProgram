@@ -43,7 +43,10 @@ namespace BuildingProgram.Forms
 
         private void ObjectForm_Load(object sender, EventArgs e)
         {
-            var buildingObject = _context.BuildingObjects.Include(x => x. Land).FirstOrDefault(x => x.ObjectNumber == _objNum);
+            var buildingObject = _context.BuildingObjects
+                .Include(x => x. Land)
+                .Include(x => x.BuildingCompany)
+                .FirstOrDefault(x => x.ObjectNumber == _objNum);
 
             lb_Address.Text = buildingObject.Land.Address;
             lb_objectNum.Text = buildingObject.ObjectNumber.ToString();
@@ -51,6 +54,7 @@ namespace BuildingProgram.Forms
             lb_DateStartFact.Text = buildingObject.StartActual.ToString();
             lb_DateStartPlan.Text = buildingObject.StartPlanned.ToString();
             lb_EndDate.Text = buildingObject.EndDate.ToString();
+            lb_BuildingCompany.Text = buildingObject.BuildingCompany.Name;
 
             BuildingStatus buildingStatus = (BuildingStatus)buildingObject.BuildingStatus;
             lb_BuildingStatus.Text = buildingStatus.ToString();

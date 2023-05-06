@@ -172,23 +172,29 @@
             // 
             // btn_ChangeOrganization
             // 
+            this.btn_ChangeOrganization.BackColor = System.Drawing.Color.Black;
             this.btn_ChangeOrganization.Enabled = false;
+            this.btn_ChangeOrganization.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ChangeOrganization.ForeColor = System.Drawing.Color.White;
             this.btn_ChangeOrganization.Location = new System.Drawing.Point(49, 234);
             this.btn_ChangeOrganization.Name = "btn_ChangeOrganization";
             this.btn_ChangeOrganization.Size = new System.Drawing.Size(96, 62);
             this.btn_ChangeOrganization.TabIndex = 15;
             this.btn_ChangeOrganization.Text = "Изменить земельный участок";
-            this.btn_ChangeOrganization.UseVisualStyleBackColor = true;
+            this.btn_ChangeOrganization.UseVisualStyleBackColor = false;
             this.btn_ChangeOrganization.Click += new System.EventHandler(this.btn_ChangeOrganization_Click);
             // 
             // btn_AddOrganization
             // 
+            this.btn_AddOrganization.BackColor = System.Drawing.Color.Black;
+            this.btn_AddOrganization.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddOrganization.ForeColor = System.Drawing.Color.White;
             this.btn_AddOrganization.Location = new System.Drawing.Point(49, 157);
             this.btn_AddOrganization.Name = "btn_AddOrganization";
             this.btn_AddOrganization.Size = new System.Drawing.Size(96, 62);
             this.btn_AddOrganization.TabIndex = 14;
             this.btn_AddOrganization.Text = "Добавить земельный участок";
-            this.btn_AddOrganization.UseVisualStyleBackColor = true;
+            this.btn_AddOrganization.UseVisualStyleBackColor = false;
             this.btn_AddOrganization.Click += new System.EventHandler(this.btn_AddOrganization_Click);
             // 
             // LandForm

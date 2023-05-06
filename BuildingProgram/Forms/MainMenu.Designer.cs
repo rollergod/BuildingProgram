@@ -38,6 +38,7 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_AddObject = new System.Windows.Forms.Button();
             this.btn_ChangeBtn = new System.Windows.Forms.Button();
@@ -45,7 +46,8 @@
             this.btn_Search = new System.Windows.Forms.Button();
             this.tb_Search = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cb_IsBuildingEnded = new System.Windows.Forms.CheckBox();
+            this.cb_IsCheckedObject = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -111,6 +113,14 @@
             this.xToolStripMenuItem.Text = "X";
             this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click);
             // 
+            // строительныеКомпанииToolStripMenuItem
+            // 
+            this.строительныеКомпанииToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.строительныеКомпанииToolStripMenuItem.Name = "строительныеКомпанииToolStripMenuItem";
+            this.строительныеКомпанииToolStripMenuItem.Size = new System.Drawing.Size(158, 34);
+            this.строительныеКомпанииToolStripMenuItem.Text = "Строительные компании";
+            this.строительныеКомпанииToolStripMenuItem.Click += new System.EventHandler(this.строительныеКомпанииToolStripMenuItem_Click);
+            // 
             // отчетыToolStripMenuItem
             // 
             this.отчетыToolStripMenuItem.BackColor = System.Drawing.Color.Black;
@@ -158,7 +168,7 @@
             this.btn_Search.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Search.Location = new System.Drawing.Point(269, 46);
+            this.btn_Search.Location = new System.Drawing.Point(209, 46);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(53, 27);
             this.btn_Search.TabIndex = 5;
@@ -170,7 +180,7 @@
             // 
             this.tb_Search.BackColor = System.Drawing.Color.LightGray;
             this.tb_Search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_Search.Location = new System.Drawing.Point(336, 53);
+            this.tb_Search.Location = new System.Drawing.Point(276, 53);
             this.tb_Search.Multiline = true;
             this.tb_Search.Name = "tb_Search";
             this.tb_Search.Size = new System.Drawing.Size(196, 13);
@@ -220,19 +230,35 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // строительныеКомпанииToolStripMenuItem
+            // cb_IsBuildingEnded
             // 
-            this.строительныеКомпанииToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.строительныеКомпанииToolStripMenuItem.Name = "строительныеКомпанииToolStripMenuItem";
-            this.строительныеКомпанииToolStripMenuItem.Size = new System.Drawing.Size(158, 34);
-            this.строительныеКомпанииToolStripMenuItem.Text = "Строительные компании";
-            this.строительныеКомпанииToolStripMenuItem.Click += new System.EventHandler(this.строительныеКомпанииToolStripMenuItem_Click);
+            this.cb_IsBuildingEnded.AutoSize = true;
+            this.cb_IsBuildingEnded.Location = new System.Drawing.Point(487, 51);
+            this.cb_IsBuildingEnded.Name = "cb_IsBuildingEnded";
+            this.cb_IsBuildingEnded.Size = new System.Drawing.Size(131, 19);
+            this.cb_IsBuildingEnded.TabIndex = 7;
+            this.cb_IsBuildingEnded.Text = "Закончена стройка";
+            this.cb_IsBuildingEnded.UseVisualStyleBackColor = true;
+            this.cb_IsBuildingEnded.CheckedChanged += new System.EventHandler(this.cb_IsBuildingEnded_CheckedChanged);
+            // 
+            // cb_IsCheckedObject
+            // 
+            this.cb_IsCheckedObject.AutoSize = true;
+            this.cb_IsCheckedObject.Location = new System.Drawing.Point(621, 51);
+            this.cb_IsCheckedObject.Name = "cb_IsCheckedObject";
+            this.cb_IsCheckedObject.Size = new System.Drawing.Size(122, 19);
+            this.cb_IsCheckedObject.TabIndex = 8;
+            this.cb_IsCheckedObject.Text = "Объект проверен";
+            this.cb_IsCheckedObject.UseVisualStyleBackColor = true;
+            this.cb_IsCheckedObject.CheckedChanged += new System.EventHandler(this.cb_IsCheckedObject_CheckedChanged);
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 525);
+            this.Controls.Add(this.cb_IsCheckedObject);
+            this.Controls.Add(this.cb_IsBuildingEnded);
             this.Controls.Add(this.tb_Search);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.btn_AboutObject);
@@ -268,5 +294,7 @@
         private ToolStripMenuItem xToolStripMenuItem;
         private ToolStripMenuItem отчетыToolStripMenuItem;
         private ToolStripMenuItem строительныеКомпанииToolStripMenuItem;
+        private CheckBox cb_IsBuildingEnded;
+        private CheckBox cb_IsCheckedObject;
     }
 }

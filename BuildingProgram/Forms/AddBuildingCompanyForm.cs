@@ -42,7 +42,16 @@ namespace BuildingProgram.Forms
             if(_companyId > 0)
             {
                 btn_AddOrg.Text = "Изменить строительную компанию";
+
+                var buildingCompany = _context.BuildingCompanies.FirstOrDefault(x => x.Id == _companyId);
+
+                tb_BuildingCompanyName.Texts = buildingCompany.Name;
             }
+        }
+
+        private void xToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

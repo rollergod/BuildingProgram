@@ -64,12 +64,12 @@
             this.tb_Address.BorderColor = System.Drawing.Color.Black;
             this.tb_Address.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_Address.BorderSize = 2;
-            this.tb_Address.Location = new System.Drawing.Point(87, 192);
+            this.tb_Address.Location = new System.Drawing.Point(84, 192);
             this.tb_Address.Margin = new System.Windows.Forms.Padding(0);
             this.tb_Address.Multiline = false;
             this.tb_Address.Name = "tb_Address";
             this.tb_Address.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.tb_Address.Size = new System.Drawing.Size(328, 21);
+            this.tb_Address.Size = new System.Drawing.Size(283, 21);
             this.tb_Address.TabIndex = 97;
             this.tb_Address.Texts = "";
             this.tb_Address.UnderlinedStyle = true;
@@ -80,12 +80,12 @@
             this.tb_CadastralNum.BorderColor = System.Drawing.Color.Black;
             this.tb_CadastralNum.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_CadastralNum.BorderSize = 2;
-            this.tb_CadastralNum.Location = new System.Drawing.Point(165, 164);
+            this.tb_CadastralNum.Location = new System.Drawing.Point(161, 164);
             this.tb_CadastralNum.Margin = new System.Windows.Forms.Padding(0);
             this.tb_CadastralNum.Multiline = false;
             this.tb_CadastralNum.Name = "tb_CadastralNum";
             this.tb_CadastralNum.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.tb_CadastralNum.Size = new System.Drawing.Size(250, 21);
+            this.tb_CadastralNum.Size = new System.Drawing.Size(206, 21);
             this.tb_CadastralNum.TabIndex = 96;
             this.tb_CadastralNum.Texts = "";
             this.tb_CadastralNum.UnderlinedStyle = true;
@@ -109,7 +109,7 @@
             "земли населенных пунктов"});
             this.cb_LandType.Location = new System.Drawing.Point(183, 306);
             this.cb_LandType.Name = "cb_LandType";
-            this.cb_LandType.Size = new System.Drawing.Size(232, 23);
+            this.cb_LandType.Size = new System.Drawing.Size(184, 23);
             this.cb_LandType.TabIndex = 94;
             // 
             // label7
@@ -146,7 +146,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(260, 84);
+            this.label1.Location = new System.Drawing.Point(203, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(305, 25);
             this.label1.TabIndex = 74;
@@ -167,7 +167,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(800, 38);
+            this.menuStrip1.Size = new System.Drawing.Size(710, 38);
             this.menuStrip1.TabIndex = 101;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -217,12 +217,15 @@
             // 
             // btn_AddLand
             // 
-            this.btn_AddLand.Location = new System.Drawing.Point(39, 425);
+            this.btn_AddLand.BackColor = System.Drawing.Color.Black;
+            this.btn_AddLand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddLand.ForeColor = System.Drawing.Color.White;
+            this.btn_AddLand.Location = new System.Drawing.Point(284, 396);
             this.btn_AddLand.Name = "btn_AddLand";
-            this.btn_AddLand.Size = new System.Drawing.Size(75, 63);
+            this.btn_AddLand.Size = new System.Drawing.Size(140, 42);
             this.btn_AddLand.TabIndex = 102;
             this.btn_AddLand.Text = "Добавить земельный участок";
-            this.btn_AddLand.UseVisualStyleBackColor = true;
+            this.btn_AddLand.UseVisualStyleBackColor = false;
             this.btn_AddLand.Click += new System.EventHandler(this.btn_AddLand_Click);
             // 
             // label8
@@ -241,9 +244,9 @@
             this.cb_SellerId.Items.AddRange(new object[] {
             "строится",
             "сдан под заселение"});
-            this.cb_SellerId.Location = new System.Drawing.Point(108, 279);
+            this.cb_SellerId.Location = new System.Drawing.Point(183, 279);
             this.cb_SellerId.Name = "cb_SellerId";
-            this.cb_SellerId.Size = new System.Drawing.Size(307, 23);
+            this.cb_SellerId.Size = new System.Drawing.Size(184, 23);
             this.cb_SellerId.TabIndex = 103;
             // 
             // tb_BuyPrice
@@ -252,12 +255,12 @@
             this.tb_BuyPrice.BorderColor = System.Drawing.Color.Black;
             this.tb_BuyPrice.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_BuyPrice.BorderSize = 2;
-            this.tb_BuyPrice.Location = new System.Drawing.Point(165, 226);
+            this.tb_BuyPrice.Location = new System.Drawing.Point(164, 226);
             this.tb_BuyPrice.Margin = new System.Windows.Forms.Padding(0);
             this.tb_BuyPrice.Multiline = false;
             this.tb_BuyPrice.Name = "tb_BuyPrice";
             this.tb_BuyPrice.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.tb_BuyPrice.Size = new System.Drawing.Size(250, 21);
+            this.tb_BuyPrice.Size = new System.Drawing.Size(203, 21);
             this.tb_BuyPrice.TabIndex = 106;
             this.tb_BuyPrice.Texts = "";
             this.tb_BuyPrice.UnderlinedStyle = true;
@@ -278,12 +281,12 @@
             this.tb_Square.BorderColor = System.Drawing.Color.Black;
             this.tb_Square.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_Square.BorderSize = 2;
-            this.tb_Square.Location = new System.Drawing.Point(142, 334);
+            this.tb_Square.Location = new System.Drawing.Point(139, 337);
             this.tb_Square.Margin = new System.Windows.Forms.Padding(0);
             this.tb_Square.Multiline = false;
             this.tb_Square.Name = "tb_Square";
             this.tb_Square.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.tb_Square.Size = new System.Drawing.Size(269, 21);
+            this.tb_Square.Size = new System.Drawing.Size(228, 21);
             this.tb_Square.TabIndex = 108;
             this.tb_Square.Texts = "";
             this.tb_Square.UnderlinedStyle = true;
@@ -304,12 +307,12 @@
             this.tb_SellPrice.BorderColor = System.Drawing.Color.Black;
             this.tb_SellPrice.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_SellPrice.BorderSize = 2;
-            this.tb_SellPrice.Location = new System.Drawing.Point(146, 252);
+            this.tb_SellPrice.Location = new System.Drawing.Point(143, 252);
             this.tb_SellPrice.Margin = new System.Windows.Forms.Padding(0);
             this.tb_SellPrice.Multiline = false;
             this.tb_SellPrice.Name = "tb_SellPrice";
             this.tb_SellPrice.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.tb_SellPrice.Size = new System.Drawing.Size(269, 21);
+            this.tb_SellPrice.Size = new System.Drawing.Size(224, 21);
             this.tb_SellPrice.TabIndex = 112;
             this.tb_SellPrice.Texts = "";
             this.tb_SellPrice.UnderlinedStyle = true;
@@ -327,16 +330,16 @@
             // cb_Buyer
             // 
             this.cb_Buyer.FormattingEnabled = true;
-            this.cb_Buyer.Location = new System.Drawing.Point(570, 202);
+            this.cb_Buyer.Location = new System.Drawing.Point(506, 207);
             this.cb_Buyer.Name = "cb_Buyer";
-            this.cb_Buyer.Size = new System.Drawing.Size(121, 23);
+            this.cb_Buyer.Size = new System.Drawing.Size(161, 23);
             this.cb_Buyer.TabIndex = 113;
             this.cb_Buyer.Visible = false;
             // 
             // cb_IsSold
             // 
             this.cb_IsSold.AutoSize = true;
-            this.cb_IsSold.Location = new System.Drawing.Point(570, 158);
+            this.cb_IsSold.Location = new System.Drawing.Point(506, 163);
             this.cb_IsSold.Name = "cb_IsSold";
             this.cb_IsSold.Size = new System.Drawing.Size(69, 19);
             this.cb_IsSold.TabIndex = 114;
@@ -348,7 +351,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(570, 180);
+            this.label2.Location = new System.Drawing.Point(506, 185);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 15);
             this.label2.TabIndex = 115;
@@ -359,7 +362,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 531);
+            this.ClientSize = new System.Drawing.Size(710, 479);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cb_IsSold);
             this.Controls.Add(this.cb_Buyer);
