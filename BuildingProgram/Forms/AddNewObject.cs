@@ -43,7 +43,7 @@ namespace BuildingProgram.Forms
 
             int buildingStatus = cb_buildingStatus.SelectedIndex;
 
-            var selectedBuilding = cb_Land.SelectedValue.ToString();
+            var selectedBuilding = cb_Land.Text;
             if(selectedBuilding == null)
             {
                 MessageBox.Show("Выберите земельный участок");
@@ -112,7 +112,7 @@ namespace BuildingProgram.Forms
                 objForChange.Organization = organization;
                 objForChange.BuildingCompany = buildingCompany;
 
-                if(pictureBox1.Image != null)
+                if(pictureBox1.Image != null && imageName != null)
                 {
                     objForChange.ImageName = imageName;
                     File.Copy(imagePath, Path.Combine(@"D:\Projects\2023\BuildingProgram\BuildingProgram\Images\", Path.GetFileName(imagePath)), true);
@@ -149,6 +149,7 @@ namespace BuildingProgram.Forms
                 var buildingObject = _context.BuildingObjects
                     .Include(x => x.Organization)
                     .Include(x => x.BuildingCompany)
+                    .Include(x => x.Land)
                     .FirstOrDefault(x => x.ObjectNumber == _objNum);
 
                 tb_ObjectNum.Texts = buildingObject.ObjectNumber.ToString();
@@ -164,6 +165,7 @@ namespace BuildingProgram.Forms
                 cb_buildingStatus.SelectedIndex = buildingObject.BuildingStatus;
                 cb_Organization.Text = buildingObject.Organization.OrganizationName;
                 cb_BuildingCompany.Text = buildingObject.BuildingCompany.Name;
+                cb_Land.Text = buildingObject.Land.Address;
 
                 if(buildingObject.ImageName != null)
                 {

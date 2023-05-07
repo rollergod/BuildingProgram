@@ -20,7 +20,7 @@ namespace BuildingProgram.Forms
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ObjectForm objForm = new ObjectForm();
+            MainMenu objForm = new MainMenu();
             objForm.ShowDialog();
         }
 
@@ -90,17 +90,6 @@ namespace BuildingProgram.Forms
             addNoteForm.ShowDialog();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            _noteId  = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-
-            if(_noteId > 0)
-            {
-                btn_ChangeNote.Enabled = true;
-                btn_DeleteNote.Enabled = true;
-            }
-        }
-
         private void btn_DeleteNote_Click(object sender, EventArgs e)
         {
             var noteForDelete = _context.Notes.FirstOrDefault(x => x.Id == _noteId);
@@ -134,6 +123,17 @@ namespace BuildingProgram.Forms
         {
             BuildingCompanyForm buildingCompanyForm = new BuildingCompanyForm();
             buildingCompanyForm.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            _noteId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+
+            if (_noteId > 0)
+            {
+                btn_ChangeNote.Enabled = true;
+                btn_DeleteNote.Enabled = true;
+            }
         }
     }
 }

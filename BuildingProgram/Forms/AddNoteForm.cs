@@ -52,7 +52,8 @@ namespace BuildingProgram.Forms
 
         private void AddNoteForm_Load(object sender, EventArgs e)
         {
-            if(_noteId > 0)
+            label3.Text = $"Добавление заметки для учатска №{_objNum}";
+            if (_noteId > 0)
             {
                 label3.Text = $"Изменение заметки для учатска №{_objNum}";
 
@@ -63,7 +64,6 @@ namespace BuildingProgram.Forms
 
                 btn_Add.Text = "Изменить";
             }
-            label3.Text = $"Добавление заметки для учатска №{_objNum}";
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)

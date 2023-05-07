@@ -384,21 +384,14 @@ namespace BuildingProgram.Forms
             // cb_Land
             // 
             this.cb_Land.FormattingEnabled = true;
-            this.cb_Land.Items.AddRange(new object[] {
-            "строится",
-            "сдан под заселение"});
             this.cb_Land.Location = new System.Drawing.Point(247, 469);
             this.cb_Land.Name = "cb_Land";
             this.cb_Land.Size = new System.Drawing.Size(175, 23);
             this.cb_Land.TabIndex = 76;
-            this.cb_Land.Text = "Нет свободных земельных участков";
             // 
             // cb_Organization
             // 
             this.cb_Organization.FormattingEnabled = true;
-            this.cb_Organization.Items.AddRange(new object[] {
-            "строится",
-            "сдан под заселение"});
             this.cb_Organization.Location = new System.Drawing.Point(273, 513);
             this.cb_Organization.Name = "cb_Organization";
             this.cb_Organization.Size = new System.Drawing.Size(149, 23);
@@ -407,9 +400,6 @@ namespace BuildingProgram.Forms
             // cb_BuildingCompany
             // 
             this.cb_BuildingCompany.FormattingEnabled = true;
-            this.cb_BuildingCompany.Items.AddRange(new object[] {
-            "строится",
-            "сдан под заселение"});
             this.cb_BuildingCompany.Location = new System.Drawing.Point(596, 514);
             this.cb_BuildingCompany.Name = "cb_BuildingCompany";
             this.cb_BuildingCompany.Size = new System.Drawing.Size(149, 23);

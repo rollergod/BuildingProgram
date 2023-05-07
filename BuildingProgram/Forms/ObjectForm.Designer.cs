@@ -296,6 +296,7 @@
             // 
             this.btn_DeleteNote.BackColor = System.Drawing.Color.Black;
             this.btn_DeleteNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_DeleteNote.Enabled = false;
             this.btn_DeleteNote.FlatAppearance.BorderSize = 0;
             this.btn_DeleteNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DeleteNote.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -312,6 +313,7 @@
             // 
             this.btn_ChangeNote.BackColor = System.Drawing.Color.Black;
             this.btn_ChangeNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ChangeNote.Enabled = false;
             this.btn_ChangeNote.FlatAppearance.BorderSize = 0;
             this.btn_ChangeNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ChangeNote.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -529,6 +531,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(767, 171);
             this.dataGridView1.TabIndex = 34;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // ObjectForm
             // 
