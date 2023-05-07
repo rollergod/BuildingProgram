@@ -102,8 +102,47 @@ namespace BuildingProgram.Forms
                    }).ToList();
                     break;
             }
-
           
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MainMenu objForm = new MainMenu();
+            objForm.ShowDialog();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            OrganizationForm orgForm = new OrganizationForm();
+            orgForm.ShowDialog();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            //справка
+        }
+
+        private void земельныеУчасткиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LandForm landForm = new LandForm();
+            landForm.ShowDialog();  
+        }
+
+        private void строительныеКомпанииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuildingCompanyForm buildingCompanyForm = new BuildingCompanyForm();
+            buildingCompanyForm.ShowDialog();
+        }
+
+        private void поСтроительнымКомпаниямToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuildingCompanyReportForm buildingCompanyReportForm = new BuildingCompanyReportForm();
+            buildingCompanyReportForm.ShowDialog();
+        }
+
+        private void xToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

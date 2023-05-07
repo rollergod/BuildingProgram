@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace BuildingProgram.Tools
 {
     internal class MenuBarColor : ProfessionalColorTable
@@ -11,7 +6,7 @@ namespace BuildingProgram.Tools
         // mainmenutirp bg color
         Color ManuBarCommonColor = Color.Transparent;
         // all items border
-        Color MenuBorderColor = Color.Black;
+        Color MenuBorderColor = Color.White;
         // mianmenutrip border
         Color MenuItemBorderColor = Color.White;
         public MenuBarColor()
@@ -44,10 +39,11 @@ namespace BuildingProgram.Tools
         {
             get
             {
-                return MenuItemBorderColor;
+                return Color.White;
             }
         }
-       
+        public override Color MenuItemPressedGradientBegin => Color.Black;
+        public override Color MenuItemPressedGradientEnd => Color.Black;
         #endregion
     }
 }

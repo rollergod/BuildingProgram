@@ -28,89 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tb_Search = new System.Windows.Forms.TextBox();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.btn_ChangeBtn = new System.Windows.Forms.Button();
+            this.btn_AddBuildingCompany = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tb_Search = new System.Windows.Forms.TextBox();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.btn_ChangeBtn = new System.Windows.Forms.Button();
-            this.btn_AddBuildingCompany = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1.SuspendLayout();
+            this.поЗемельнымУчасткамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поСтроительнымКомпаниямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.Black;
-            this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
-            this.земельныеУчасткиToolStripMenuItem,
-            this.xToolStripMenuItem,
-            this.отчетыToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(800, 38);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 34);
-            this.toolStripMenuItem1.Text = "Объекты";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(92, 34);
-            this.toolStripMenuItem2.Text = "Организации";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(65, 34);
-            this.toolStripMenuItem3.Text = "Справка";
-            // 
-            // земельныеУчасткиToolStripMenuItem
-            // 
-            this.земельныеУчасткиToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.земельныеУчасткиToolStripMenuItem.Name = "земельныеУчасткиToolStripMenuItem";
-            this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
-            this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
-            // 
-            // xToolStripMenuItem
-            // 
-            this.xToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.xToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.xToolStripMenuItem.Name = "xToolStripMenuItem";
-            this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 34);
-            this.xToolStripMenuItem.Text = "X";
-            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click);
-            // 
-            // отчетыToolStripMenuItem
-            // 
-            this.отчетыToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.отчетыToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
-            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 34);
-            this.отчетыToolStripMenuItem.Text = "Отчеты";
             // 
             // tb_Search
             // 
@@ -162,38 +101,38 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle34;
             this.dataGridView1.Location = new System.Drawing.Point(183, 93);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.LightGray;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle36;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -201,41 +140,137 @@
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.Black;
+            this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
+            this.земельныеУчасткиToolStripMenuItem,
+            this.xToolStripMenuItem,
+            this.строительныеКомпанииToolStripMenuItem,
+            this.отчетыToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(800, 38);
+            this.menuStrip1.TabIndex = 13;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 34);
+            this.toolStripMenuItem1.Text = "Объекты";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(92, 34);
+            this.toolStripMenuItem2.Text = "Организации";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(65, 34);
+            this.toolStripMenuItem3.Text = "Справка";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // земельныеУчасткиToolStripMenuItem
+            // 
+            this.земельныеУчасткиToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.земельныеУчасткиToolStripMenuItem.Name = "земельныеУчасткиToolStripMenuItem";
+            this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
+            this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
+            this.земельныеУчасткиToolStripMenuItem.Click += new System.EventHandler(this.земельныеУчасткиToolStripMenuItem_Click);
+            // 
+            // xToolStripMenuItem
+            // 
+            this.xToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.xToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.xToolStripMenuItem.Name = "xToolStripMenuItem";
+            this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 34);
+            this.xToolStripMenuItem.Text = "X";
+            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click_1);
+            // 
+            // строительныеКомпанииToolStripMenuItem
+            // 
+            this.строительныеКомпанииToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.строительныеКомпанииToolStripMenuItem.Name = "строительныеКомпанииToolStripMenuItem";
+            this.строительныеКомпанииToolStripMenuItem.Size = new System.Drawing.Size(158, 34);
+            this.строительныеКомпанииToolStripMenuItem.Text = "Строительные компании";
+            this.строительныеКомпанииToolStripMenuItem.Click += new System.EventHandler(this.строительныеКомпанииToolStripMenuItem_Click);
+            // 
+            // отчетыToolStripMenuItem
+            // 
+            this.отчетыToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.поЗемельнымУчасткамToolStripMenuItem,
+            this.поСтроительнымКомпаниямToolStripMenuItem});
+            this.отчетыToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
+            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 34);
+            this.отчетыToolStripMenuItem.Text = "Отчеты";
+            // 
+            // поЗемельнымУчасткамToolStripMenuItem
+            // 
+            this.поЗемельнымУчасткамToolStripMenuItem.Name = "поЗемельнымУчасткамToolStripMenuItem";
+            this.поЗемельнымУчасткамToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.поЗемельнымУчасткамToolStripMenuItem.Text = "По земельным участкам";
+            this.поЗемельнымУчасткамToolStripMenuItem.Click += new System.EventHandler(this.поЗемельнымУчасткамToolStripMenuItem_Click);
+            // 
+            // поСтроительнымКомпаниямToolStripMenuItem
+            // 
+            this.поСтроительнымКомпаниямToolStripMenuItem.Name = "поСтроительнымКомпаниямToolStripMenuItem";
+            this.поСтроительнымКомпаниямToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.поСтроительнымКомпаниямToolStripMenuItem.Text = "По строительным компаниям";
+            this.поСтроительнымКомпаниямToolStripMenuItem.Click += new System.EventHandler(this.поСтроительнымКомпаниямToolStripMenuItem_Click);
+            // 
             // BuildingCompanyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 338);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tb_Search);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.btn_ChangeBtn);
             this.Controls.Add(this.btn_AddBuildingCompany);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.menuStrip1);
             this.Name = "BuildingCompanyForm";
             this.Text = "BuildingCompanyForm";
             this.Load += new System.EventHandler(this.BuildingCompanyForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private TextBox tb_Search;
+        private Button btn_Search;
+        private Button btn_ChangeBtn;
+        private Button btn_AddBuildingCompany;
+        private DataGridView dataGridView1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem toolStripMenuItem3;
         private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
         private ToolStripMenuItem xToolStripMenuItem;
+        private ToolStripMenuItem строительныеКомпанииToolStripMenuItem;
         private ToolStripMenuItem отчетыToolStripMenuItem;
-        private TextBox tb_Search;
-        private Button btn_Search;
-        private Button btn_ChangeBtn;
-        private Button btn_AddBuildingCompany;
-        private DataGridView dataGridView1;
+        private ToolStripMenuItem поЗемельнымУчасткамToolStripMenuItem;
+        private ToolStripMenuItem поСтроительнымКомпаниямToolStripMenuItem;
     }
 }

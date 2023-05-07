@@ -19,8 +19,6 @@ namespace BuildingProgram.Context
             modelBuilder.Entity<BuildingObject>()
                 .Property(x => x.LandId)
                 .IsRequired();
-
-           
         }
         public DbSet<User> Users { get; set; }
         public DbSet<BuildingObject> BuildingObjects { get; set; }

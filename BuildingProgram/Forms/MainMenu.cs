@@ -133,8 +133,7 @@ namespace BuildingProgram.Forms
 
         private void отчетыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReportForm reportForm = new ReportForm();
-            reportForm.ShowDialog();
+            
         }
 
         private void xToolStripMenuItem_Click(object sender, EventArgs e)
@@ -347,6 +346,18 @@ namespace BuildingProgram.Forms
 
                 dataGridView1.DataSource = data;
             }
+        }
+
+        private void поЗемельнымУчасткамToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportForm reportForm = new ReportForm();
+            reportForm.ShowDialog();
+        }
+
+        private void поСтроительнымКомпаниямToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuildingCompanyReportForm buildingCompanyReportForm = new BuildingCompanyReportForm();
+            buildingCompanyReportForm.ShowDialog();
         }
     }
 }

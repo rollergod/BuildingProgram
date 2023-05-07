@@ -39,6 +39,7 @@
             this.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BaseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BaseForm";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BaseForm_MouseDown);
             this.ResumeLayout(false);

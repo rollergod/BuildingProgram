@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BuildingProgram.Tools
+﻿namespace BuildingProgram.Tools
 {
     internal class NoHighlightRenderer : ToolStripProfessionalRenderer
     {
@@ -15,10 +9,10 @@ namespace BuildingProgram.Tools
         public NoHighlightRenderer() : base(new MenuBarColor())
         {
             // item bg color
-            this.menuItemSelectedColor = Color.White;
+            this.menuItemSelectedColor = Color.Red;
             // item border
-            this.menuItemBorderColor = Color.White;
-            this.textColor = Color.White;
+            this.menuItemBorderColor = Color.Black;
+            this.textColor = Color.Black;
 
         }
     }

@@ -36,13 +36,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.организацииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_AddLand = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.cb_SellerId = new System.Windows.Forms.ComboBox();
@@ -55,6 +48,16 @@
             this.cb_Buyer = new System.Windows.Forms.ComboBox();
             this.cb_IsSold = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поЗемельнымУчасткамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поСтроительнымКомпаниямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,69 +154,6 @@
             this.label1.Size = new System.Drawing.Size(305, 25);
             this.label1.TabIndex = 74;
             this.label1.Text = "Добавление земельного участка";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.Black;
-            this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
-            this.земельныеУчасткиToolStripMenuItem,
-            this.организацииToolStripMenuItem,
-            this.xToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(710, 38);
-            this.menuStrip1.TabIndex = 101;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 34);
-            this.toolStripMenuItem1.Text = "Объекты";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(92, 34);
-            this.toolStripMenuItem2.Text = "Организации";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(65, 34);
-            this.toolStripMenuItem3.Text = "Справка";
-            // 
-            // земельныеУчасткиToolStripMenuItem
-            // 
-            this.земельныеУчасткиToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.земельныеУчасткиToolStripMenuItem.Name = "земельныеУчасткиToolStripMenuItem";
-            this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
-            this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
-            // 
-            // организацииToolStripMenuItem
-            // 
-            this.организацииToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.организацииToolStripMenuItem.Name = "организацииToolStripMenuItem";
-            this.организацииToolStripMenuItem.Size = new System.Drawing.Size(92, 34);
-            this.организацииToolStripMenuItem.Text = "Организации";
-            // 
-            // xToolStripMenuItem
-            // 
-            this.xToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.xToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.xToolStripMenuItem.Name = "xToolStripMenuItem";
-            this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 34);
-            this.xToolStripMenuItem.Text = "X";
-            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click);
             // 
             // btn_AddLand
             // 
@@ -358,11 +298,106 @@
             this.label2.Text = "Покупатель:";
             this.label2.Visible = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.Black;
+            this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
+            this.земельныеУчасткиToolStripMenuItem,
+            this.xToolStripMenuItem,
+            this.строительныеКомпанииToolStripMenuItem,
+            this.отчетыToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(710, 38);
+            this.menuStrip1.TabIndex = 116;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 34);
+            this.toolStripMenuItem1.Text = "Объекты";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(92, 34);
+            this.toolStripMenuItem2.Text = "Организации";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(65, 34);
+            this.toolStripMenuItem3.Text = "Справка";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // земельныеУчасткиToolStripMenuItem
+            // 
+            this.земельныеУчасткиToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.земельныеУчасткиToolStripMenuItem.Name = "земельныеУчасткиToolStripMenuItem";
+            this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
+            this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
+            this.земельныеУчасткиToolStripMenuItem.Click += new System.EventHandler(this.земельныеУчасткиToolStripMenuItem_Click);
+            // 
+            // xToolStripMenuItem
+            // 
+            this.xToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.xToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.xToolStripMenuItem.Name = "xToolStripMenuItem";
+            this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 34);
+            this.xToolStripMenuItem.Text = "X";
+            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click_1);
+            // 
+            // строительныеКомпанииToolStripMenuItem
+            // 
+            this.строительныеКомпанииToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.строительныеКомпанииToolStripMenuItem.Name = "строительныеКомпанииToolStripMenuItem";
+            this.строительныеКомпанииToolStripMenuItem.Size = new System.Drawing.Size(158, 34);
+            this.строительныеКомпанииToolStripMenuItem.Text = "Строительные компании";
+            this.строительныеКомпанииToolStripMenuItem.Click += new System.EventHandler(this.строительныеКомпанииToolStripMenuItem_Click);
+            // 
+            // отчетыToolStripMenuItem
+            // 
+            this.отчетыToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.поЗемельнымУчасткамToolStripMenuItem,
+            this.поСтроительнымКомпаниямToolStripMenuItem});
+            this.отчетыToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
+            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 34);
+            this.отчетыToolStripMenuItem.Text = "Отчеты";
+            // 
+            // поЗемельнымУчасткамToolStripMenuItem
+            // 
+            this.поЗемельнымУчасткамToolStripMenuItem.Name = "поЗемельнымУчасткамToolStripMenuItem";
+            this.поЗемельнымУчасткамToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.поЗемельнымУчасткамToolStripMenuItem.Text = "По земельным участкам";
+            this.поЗемельнымУчасткамToolStripMenuItem.Click += new System.EventHandler(this.поЗемельнымУчасткамToolStripMenuItem_Click);
+            // 
+            // поСтроительнымКомпаниямToolStripMenuItem
+            // 
+            this.поСтроительнымКомпаниямToolStripMenuItem.Name = "поСтроительнымКомпаниямToolStripMenuItem";
+            this.поСтроительнымКомпаниямToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.поСтроительнымКомпаниямToolStripMenuItem.Text = "По строительным компаниям";
+            this.поСтроительнымКомпаниямToolStripMenuItem.Click += new System.EventHandler(this.поСтроительнымКомпаниямToolStripMenuItem_Click);
+            // 
             // AddLandForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 479);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cb_IsSold);
             this.Controls.Add(this.cb_Buyer);
@@ -375,7 +410,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cb_SellerId);
             this.Controls.Add(this.btn_AddLand);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tb_Address);
             this.Controls.Add(this.tb_CadastralNum);
             this.Controls.Add(this.label9);
@@ -403,13 +437,6 @@
         private Label label11;
         private Label label12;
         private Label label1;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem toolStripMenuItem3;
-        private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
-        private ToolStripMenuItem организацииToolStripMenuItem;
-        private ToolStripMenuItem xToolStripMenuItem;
         private Button btn_AddLand;
         private Label label8;
         private ComboBox cb_SellerId;
@@ -422,5 +449,15 @@
         private ComboBox cb_Buyer;
         private CheckBox cb_IsSold;
         private Label label2;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem toolStripMenuItem2;
+        private ToolStripMenuItem toolStripMenuItem3;
+        private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
+        private ToolStripMenuItem xToolStripMenuItem;
+        private ToolStripMenuItem строительныеКомпанииToolStripMenuItem;
+        private ToolStripMenuItem отчетыToolStripMenuItem;
+        private ToolStripMenuItem поЗемельнымУчасткамToolStripMenuItem;
+        private ToolStripMenuItem поСтроительнымКомпаниямToolStripMenuItem;
     }
 }

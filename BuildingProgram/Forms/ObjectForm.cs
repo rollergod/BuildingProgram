@@ -117,5 +117,23 @@ namespace BuildingProgram.Forms
                 dataGridView1.DataSource = notes;
             }
         }
+
+        private void поЗемельнымУчасткамToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportForm repForm = new ReportForm();
+            repForm.ShowDialog();
+        }
+
+        private void поСтроительнымКомпаниямToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuildingCompanyReportForm buildingCompanyReportForm = new BuildingCompanyReportForm();
+            buildingCompanyReportForm.ShowDialog();
+        }
+
+        private void строительныеКомпанииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuildingCompanyForm buildingCompanyForm = new BuildingCompanyForm();
+            buildingCompanyForm.ShowDialog();
+        }
     }
 }

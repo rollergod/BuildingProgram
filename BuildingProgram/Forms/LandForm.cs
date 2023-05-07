@@ -1,15 +1,7 @@
 ﻿using BuildingProgram.Context;
 using BuildingProgram.Tools;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BuildingProgram.Forms
 {
@@ -96,12 +88,49 @@ namespace BuildingProgram.Forms
             dataGridView1.DataSource = lands;
         }
 
-        private void xToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            MainMenu objForm = new MainMenu();
+            objForm.ShowDialog();
         }
 
-        private void xToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            OrganizationForm organizationForm = new OrganizationForm();
+            organizationForm.ShowDialog();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            //справка
+        }
+
+        private void земельныеУчасткиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LandForm landForm = new LandForm();
+            landForm.ShowDialog();
+        }
+
+        private void строительныеКомпанииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuildingCompanyForm buildingCompanyForm = new BuildingCompanyForm();
+            buildingCompanyForm.ShowDialog();
+        }
+
+        private void поЗемельнымУчасткамToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportForm reportForm = new ReportForm();
+            reportForm.ShowDialog();
+        }
+
+        private void поСтроительнымКомпаниямToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuildingCompanyReportForm buildingCompanyReportForm = new BuildingCompanyReportForm();
+            buildingCompanyReportForm.ShowDialog();
+        }
+
+        private void xToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
             this.Close();
         }

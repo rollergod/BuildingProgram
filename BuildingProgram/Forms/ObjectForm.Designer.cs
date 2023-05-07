@@ -39,6 +39,10 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поЗемельнымУчасткамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поСтроительнымКомпаниямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -85,7 +89,9 @@
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
             this.земельныеУчасткиToolStripMenuItem,
-            this.xToolStripMenuItem});
+            this.xToolStripMenuItem,
+            this.строительныеКомпанииToolStripMenuItem,
+            this.отчетыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -133,6 +139,38 @@
             this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 34);
             this.xToolStripMenuItem.Text = "X";
             this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click);
+            // 
+            // строительныеКомпанииToolStripMenuItem
+            // 
+            this.строительныеКомпанииToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.строительныеКомпанииToolStripMenuItem.Name = "строительныеКомпанииToolStripMenuItem";
+            this.строительныеКомпанииToolStripMenuItem.Size = new System.Drawing.Size(158, 34);
+            this.строительныеКомпанииToolStripMenuItem.Text = "Строительные компании";
+            this.строительныеКомпанииToolStripMenuItem.Click += new System.EventHandler(this.строительныеКомпанииToolStripMenuItem_Click);
+            // 
+            // отчетыToolStripMenuItem
+            // 
+            this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.поЗемельнымУчасткамToolStripMenuItem,
+            this.поСтроительнымКомпаниямToolStripMenuItem});
+            this.отчетыToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
+            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 34);
+            this.отчетыToolStripMenuItem.Text = "Отчеты";
+            // 
+            // поЗемельнымУчасткамToolStripMenuItem
+            // 
+            this.поЗемельнымУчасткамToolStripMenuItem.Name = "поЗемельнымУчасткамToolStripMenuItem";
+            this.поЗемельнымУчасткамToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.поЗемельнымУчасткамToolStripMenuItem.Text = "По земельным участкам";
+            this.поЗемельнымУчасткамToolStripMenuItem.Click += new System.EventHandler(this.поЗемельнымУчасткамToolStripMenuItem_Click);
+            // 
+            // поСтроительнымКомпаниямToolStripMenuItem
+            // 
+            this.поСтроительнымКомпаниямToolStripMenuItem.Name = "поСтроительнымКомпаниямToolStripMenuItem";
+            this.поСтроительнымКомпаниямToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.поСтроительнымКомпаниямToolStripMenuItem.Text = "По строительным компаниям";
+            this.поСтроительнымКомпаниямToolStripMenuItem.Click += new System.EventHandler(this.поСтроительнымКомпаниямToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -580,5 +618,9 @@
         private Button btn_Smeta;
         private ToolStripMenuItem xToolStripMenuItem;
         private DataGridView dataGridView1;
+        private ToolStripMenuItem строительныеКомпанииToolStripMenuItem;
+        private ToolStripMenuItem отчетыToolStripMenuItem;
+        private ToolStripMenuItem поЗемельнымУчасткамToolStripMenuItem;
+        private ToolStripMenuItem поСтроительнымКомпаниямToolStripMenuItem;
     }
 }

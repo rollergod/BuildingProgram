@@ -1,6 +1,6 @@
 ﻿namespace BuildingProgram.Forms
 {
-    partial class OrganizationForm
+    partial class BuildingCompanyReportForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,10 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tb_Search = new System.Windows.Forms.TextBox();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.btn_AddOrg = new System.Windows.Forms.Button();
-            this.btn_ChangeOrg = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cb_BuildingCompanies = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,66 +45,34 @@
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поЗемельнымУчасткамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поСтроительнымКомпаниямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lb_OrgName = new System.Windows.Forms.Label();
-            this.lb_ObjectsNum = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lb_TotalSum = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tb_Search
+            // label1
             // 
-            this.tb_Search.BackColor = System.Drawing.Color.LightGray;
-            this.tb_Search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_Search.Location = new System.Drawing.Point(364, 66);
-            this.tb_Search.Multiline = true;
-            this.tb_Search.Name = "tb_Search";
-            this.tb_Search.Size = new System.Drawing.Size(196, 13);
-            this.tb_Search.TabIndex = 12;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(189, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(213, 19);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Выбор строительной компании:";
             // 
-            // btn_Search
+            // cb_BuildingCompanies
             // 
-            this.btn_Search.BackColor = System.Drawing.Color.Black;
-            this.btn_Search.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Search.Location = new System.Drawing.Point(293, 60);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(53, 27);
-            this.btn_Search.TabIndex = 11;
-            this.btn_Search.Text = "Поиск";
-            this.btn_Search.UseVisualStyleBackColor = false;
-            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
-            // btn_AddOrg
-            // 
-            this.btn_AddOrg.BackColor = System.Drawing.Color.Black;
-            this.btn_AddOrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddOrg.ForeColor = System.Drawing.Color.White;
-            this.btn_AddOrg.Location = new System.Drawing.Point(30, 204);
-            this.btn_AddOrg.Name = "btn_AddOrg";
-            this.btn_AddOrg.Size = new System.Drawing.Size(96, 49);
-            this.btn_AddOrg.TabIndex = 8;
-            this.btn_AddOrg.Text = "Добавить оганизацию";
-            this.btn_AddOrg.UseVisualStyleBackColor = false;
-            this.btn_AddOrg.Click += new System.EventHandler(this.btn_AddOrg_Click);
-            // 
-            // btn_ChangeOrg
-            // 
-            this.btn_ChangeOrg.BackColor = System.Drawing.Color.Black;
-            this.btn_ChangeOrg.Enabled = false;
-            this.btn_ChangeOrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ChangeOrg.ForeColor = System.Drawing.Color.White;
-            this.btn_ChangeOrg.Location = new System.Drawing.Point(30, 272);
-            this.btn_ChangeOrg.Name = "btn_ChangeOrg";
-            this.btn_ChangeOrg.Size = new System.Drawing.Size(96, 48);
-            this.btn_ChangeOrg.TabIndex = 9;
-            this.btn_ChangeOrg.Text = "Изменить организацию";
-            this.btn_ChangeOrg.UseVisualStyleBackColor = false;
-            this.btn_ChangeOrg.Click += new System.EventHandler(this.btn_ChangeOrg_Click);
+            this.cb_BuildingCompanies.FormattingEnabled = true;
+            this.cb_BuildingCompanies.Items.AddRange(new object[] {
+            "земли сельскохозяйственного назначения",
+            "земли промышленности",
+            "земли населенных пунктов",
+            "продан",
+            "не продан"});
+            this.cb_BuildingCompanies.Location = new System.Drawing.Point(411, 109);
+            this.cb_BuildingCompanies.Name = "cb_BuildingCompanies";
+            this.cb_BuildingCompanies.Size = new System.Drawing.Size(160, 23);
+            this.cb_BuildingCompanies.TabIndex = 18;
+            this.cb_BuildingCompanies.SelectedIndexChanged += new System.EventHandler(this.cb_BuildingCompanies_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -130,8 +96,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(167, 107);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 152);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -145,15 +110,12 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(576, 328);
-            this.dataGridView1.TabIndex = 13;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.Size = new System.Drawing.Size(776, 437);
+            this.dataGridView1.TabIndex = 17;
             // 
             // menuStrip1
             // 
@@ -172,7 +134,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.menuStrip1.Size = new System.Drawing.Size(800, 38);
-            this.menuStrip1.TabIndex = 14;
+            this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItem1
@@ -181,7 +143,7 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 34);
             this.toolStripMenuItem1.Text = "Объекты";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click_1);
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -189,7 +151,7 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(92, 34);
             this.toolStripMenuItem2.Text = "Организации";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click_1);
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
@@ -197,7 +159,7 @@
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(65, 34);
             this.toolStripMenuItem3.Text = "Справка";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click_1);
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // земельныеУчасткиToolStripMenuItem
             // 
@@ -205,7 +167,7 @@
             this.земельныеУчасткиToolStripMenuItem.Name = "земельныеУчасткиToolStripMenuItem";
             this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
             this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
-            this.земельныеУчасткиToolStripMenuItem.Click += new System.EventHandler(this.земельныеУчасткиToolStripMenuItem_Click_1);
+            this.земельныеУчасткиToolStripMenuItem.Click += new System.EventHandler(this.земельныеУчасткиToolStripMenuItem_Click);
             // 
             // xToolStripMenuItem
             // 
@@ -214,7 +176,7 @@
             this.xToolStripMenuItem.Name = "xToolStripMenuItem";
             this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 34);
             this.xToolStripMenuItem.Text = "X";
-            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click_1);
+            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click);
             // 
             // строительныеКомпанииToolStripMenuItem
             // 
@@ -240,7 +202,7 @@
             this.поЗемельнымУчасткамToolStripMenuItem.Name = "поЗемельнымУчасткамToolStripMenuItem";
             this.поЗемельнымУчасткамToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this.поЗемельнымУчасткамToolStripMenuItem.Text = "По земельным участкам";
-            this.поЗемельнымУчасткамToolStripMenuItem.Click += new System.EventHandler(this.поЗемельнымУчасткамToolStripMenuItem_Click);
+            this.поЗемельнымУчасткамToolStripMenuItem.Click += new System.EventHandler(this.поЗемельнымУчасткамToolStripMenuItem_Click_1);
             // 
             // поСтроительнымКомпаниямToolStripMenuItem
             // 
@@ -249,83 +211,18 @@
             this.поСтроительнымКомпаниямToolStripMenuItem.Text = "По строительным компаниям";
             this.поСтроительнымКомпаниямToolStripMenuItem.Click += new System.EventHandler(this.поСтроительнымКомпаниямToolStripMenuItem_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(167, 450);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 15);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Дата окончания последнего объекта:";
-            this.label1.Visible = false;
-            // 
-            // lb_OrgName
-            // 
-            this.lb_OrgName.AutoSize = true;
-            this.lb_OrgName.Location = new System.Drawing.Point(385, 450);
-            this.lb_OrgName.Name = "lb_OrgName";
-            this.lb_OrgName.Size = new System.Drawing.Size(0, 15);
-            this.lb_OrgName.TabIndex = 16;
-            this.lb_OrgName.Visible = false;
-            // 
-            // lb_ObjectsNum
-            // 
-            this.lb_ObjectsNum.AutoSize = true;
-            this.lb_ObjectsNum.Location = new System.Drawing.Point(301, 475);
-            this.lb_ObjectsNum.Name = "lb_ObjectsNum";
-            this.lb_ObjectsNum.Size = new System.Drawing.Size(0, 15);
-            this.lb_ObjectsNum.TabIndex = 18;
-            this.lb_ObjectsNum.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(167, 475);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 15);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Количество объектов:";
-            this.label3.Visible = false;
-            // 
-            // lb_TotalSum
-            // 
-            this.lb_TotalSum.AutoSize = true;
-            this.lb_TotalSum.Location = new System.Drawing.Point(302, 501);
-            this.lb_TotalSum.Name = "lb_TotalSum";
-            this.lb_TotalSum.Size = new System.Drawing.Size(0, 15);
-            this.lb_TotalSum.TabIndex = 20;
-            this.lb_TotalSum.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(167, 501);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 15);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Общая сумма покупок:";
-            this.label4.Visible = false;
-            // 
-            // OrganizationForm
+            // BuildingCompanyReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 578);
-            this.Controls.Add(this.lb_TotalSum);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lb_ObjectsNum);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lb_OrgName);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(800, 605);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cb_BuildingCompanies);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.tb_Search);
-            this.Controls.Add(this.btn_Search);
-            this.Controls.Add(this.btn_ChangeOrg);
-            this.Controls.Add(this.btn_AddOrg);
-            this.Name = "OrganizationForm";
-            this.Text = "Организации";
-            this.Load += new System.EventHandler(this.OrganizationForm_Load);
+            this.Name = "BuildingCompanyReportForm";
+            this.Text = "BuildingCompanyReportForm";
+            this.Load += new System.EventHandler(this.BuildingCompanyReportForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -335,10 +232,8 @@
         }
 
         #endregion
-        private TextBox tb_Search;
-        private Button btn_Search;
-        private Button btn_AddOrg;
-        private Button btn_ChangeOrg;
+        private Label label1;
+        private ComboBox cb_BuildingCompanies;
         private DataGridView dataGridView1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
@@ -350,11 +245,5 @@
         private ToolStripMenuItem отчетыToolStripMenuItem;
         private ToolStripMenuItem поЗемельнымУчасткамToolStripMenuItem;
         private ToolStripMenuItem поСтроительнымКомпаниямToolStripMenuItem;
-        private Label label1;
-        private Label lb_OrgName;
-        private Label lb_ObjectsNum;
-        private Label label3;
-        private Label lb_TotalSum;
-        private Label label4;
     }
 }

@@ -40,6 +40,8 @@
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поЗемельнымУчасткамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поСтроительнымКомпаниямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_AddObject = new System.Windows.Forms.Button();
             this.btn_ChangeBtn = new System.Windows.Forms.Button();
             this.btn_AboutObject = new System.Windows.Forms.Button();
@@ -124,42 +126,68 @@
             // отчетыToolStripMenuItem
             // 
             this.отчетыToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.поЗемельнымУчасткамToolStripMenuItem,
+            this.поСтроительнымКомпаниямToolStripMenuItem});
             this.отчетыToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
             this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 34);
             this.отчетыToolStripMenuItem.Text = "Отчеты";
             this.отчетыToolStripMenuItem.Click += new System.EventHandler(this.отчетыToolStripMenuItem_Click);
             // 
+            // поЗемельнымУчасткамToolStripMenuItem
+            // 
+            this.поЗемельнымУчасткамToolStripMenuItem.Name = "поЗемельнымУчасткамToolStripMenuItem";
+            this.поЗемельнымУчасткамToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.поЗемельнымУчасткамToolStripMenuItem.Text = "По земельным участкам";
+            this.поЗемельнымУчасткамToolStripMenuItem.Click += new System.EventHandler(this.поЗемельнымУчасткамToolStripMenuItem_Click);
+            // 
+            // поСтроительнымКомпаниямToolStripMenuItem
+            // 
+            this.поСтроительнымКомпаниямToolStripMenuItem.Name = "поСтроительнымКомпаниямToolStripMenuItem";
+            this.поСтроительнымКомпаниямToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.поСтроительнымКомпаниямToolStripMenuItem.Text = "По строительным компаниям";
+            this.поСтроительнымКомпаниямToolStripMenuItem.Click += new System.EventHandler(this.поСтроительнымКомпаниямToolStripMenuItem_Click);
+            // 
             // btn_AddObject
             // 
-            this.btn_AddObject.Location = new System.Drawing.Point(26, 112);
+            this.btn_AddObject.BackColor = System.Drawing.Color.White;
+            this.btn_AddObject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddObject.ForeColor = System.Drawing.Color.Black;
+            this.btn_AddObject.Location = new System.Drawing.Point(35, 182);
             this.btn_AddObject.Name = "btn_AddObject";
             this.btn_AddObject.Size = new System.Drawing.Size(96, 49);
             this.btn_AddObject.TabIndex = 2;
             this.btn_AddObject.Text = "Добавить объект";
-            this.btn_AddObject.UseVisualStyleBackColor = true;
+            this.btn_AddObject.UseVisualStyleBackColor = false;
             this.btn_AddObject.Click += new System.EventHandler(this.btn_AddObject_Click);
             // 
             // btn_ChangeBtn
             // 
+            this.btn_ChangeBtn.BackColor = System.Drawing.Color.White;
             this.btn_ChangeBtn.Enabled = false;
-            this.btn_ChangeBtn.Location = new System.Drawing.Point(26, 180);
+            this.btn_ChangeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ChangeBtn.ForeColor = System.Drawing.Color.Black;
+            this.btn_ChangeBtn.Location = new System.Drawing.Point(35, 250);
             this.btn_ChangeBtn.Name = "btn_ChangeBtn";
             this.btn_ChangeBtn.Size = new System.Drawing.Size(96, 48);
             this.btn_ChangeBtn.TabIndex = 3;
             this.btn_ChangeBtn.Text = "Изменить объект";
-            this.btn_ChangeBtn.UseVisualStyleBackColor = true;
+            this.btn_ChangeBtn.UseVisualStyleBackColor = false;
             this.btn_ChangeBtn.Click += new System.EventHandler(this.btn_ChangeBtn_Click);
             // 
             // btn_AboutObject
             // 
+            this.btn_AboutObject.BackColor = System.Drawing.Color.White;
             this.btn_AboutObject.Enabled = false;
-            this.btn_AboutObject.Location = new System.Drawing.Point(26, 246);
+            this.btn_AboutObject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AboutObject.ForeColor = System.Drawing.Color.Black;
+            this.btn_AboutObject.Location = new System.Drawing.Point(35, 316);
             this.btn_AboutObject.Name = "btn_AboutObject";
             this.btn_AboutObject.Size = new System.Drawing.Size(96, 50);
             this.btn_AboutObject.TabIndex = 4;
             this.btn_AboutObject.Text = "Подробная информация";
-            this.btn_AboutObject.UseVisualStyleBackColor = true;
+            this.btn_AboutObject.UseVisualStyleBackColor = false;
             this.btn_AboutObject.Click += new System.EventHandler(this.btn_AboutObject_Click);
             // 
             // btn_Search
@@ -222,6 +250,8 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -233,7 +263,7 @@
             // cb_IsBuildingEnded
             // 
             this.cb_IsBuildingEnded.AutoSize = true;
-            this.cb_IsBuildingEnded.Location = new System.Drawing.Point(487, 51);
+            this.cb_IsBuildingEnded.Location = new System.Drawing.Point(612, 51);
             this.cb_IsBuildingEnded.Name = "cb_IsBuildingEnded";
             this.cb_IsBuildingEnded.Size = new System.Drawing.Size(131, 19);
             this.cb_IsBuildingEnded.TabIndex = 7;
@@ -244,7 +274,7 @@
             // cb_IsCheckedObject
             // 
             this.cb_IsCheckedObject.AutoSize = true;
-            this.cb_IsCheckedObject.Location = new System.Drawing.Point(621, 51);
+            this.cb_IsCheckedObject.Location = new System.Drawing.Point(484, 51);
             this.cb_IsCheckedObject.Name = "cb_IsCheckedObject";
             this.cb_IsCheckedObject.Size = new System.Drawing.Size(122, 19);
             this.cb_IsCheckedObject.TabIndex = 8;
@@ -296,5 +326,7 @@
         private ToolStripMenuItem строительныеКомпанииToolStripMenuItem;
         private CheckBox cb_IsBuildingEnded;
         private CheckBox cb_IsCheckedObject;
+        private ToolStripMenuItem поЗемельнымУчасткамToolStripMenuItem;
+        private ToolStripMenuItem поСтроительнымКомпаниямToolStripMenuItem;
     }
 }
