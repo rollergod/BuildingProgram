@@ -38,20 +38,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_AddLand = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.cb_SellerId = new System.Windows.Forms.ComboBox();
+            this.cb_OwnerId = new System.Windows.Forms.ComboBox();
             this.tb_BuyPrice = new BuildingProgram.Controls.CustomTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tb_Square = new BuildingProgram.Controls.CustomTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tb_SellPrice = new BuildingProgram.Controls.CustomTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cb_Buyer = new System.Windows.Forms.ComboBox();
-            this.cb_IsSold = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -174,20 +170,20 @@
             this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(37, 284);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 15);
+            this.label8.Size = new System.Drawing.Size(61, 15);
             this.label8.TabIndex = 104;
-            this.label8.Text = "Продавец:";
+            this.label8.Text = "Владелец:";
             // 
-            // cb_SellerId
+            // cb_OwnerId
             // 
-            this.cb_SellerId.FormattingEnabled = true;
-            this.cb_SellerId.Items.AddRange(new object[] {
+            this.cb_OwnerId.FormattingEnabled = true;
+            this.cb_OwnerId.Items.AddRange(new object[] {
             "строится",
             "сдан под заселение"});
-            this.cb_SellerId.Location = new System.Drawing.Point(183, 279);
-            this.cb_SellerId.Name = "cb_SellerId";
-            this.cb_SellerId.Size = new System.Drawing.Size(184, 23);
-            this.cb_SellerId.TabIndex = 103;
+            this.cb_OwnerId.Location = new System.Drawing.Point(183, 279);
+            this.cb_OwnerId.Name = "cb_OwnerId";
+            this.cb_OwnerId.Size = new System.Drawing.Size(184, 23);
+            this.cb_OwnerId.TabIndex = 103;
             // 
             // tb_BuyPrice
             // 
@@ -267,37 +263,6 @@
             this.label6.TabIndex = 111;
             this.label6.Text = "Продажная цена:";
             // 
-            // cb_Buyer
-            // 
-            this.cb_Buyer.FormattingEnabled = true;
-            this.cb_Buyer.Location = new System.Drawing.Point(506, 207);
-            this.cb_Buyer.Name = "cb_Buyer";
-            this.cb_Buyer.Size = new System.Drawing.Size(161, 23);
-            this.cb_Buyer.TabIndex = 113;
-            this.cb_Buyer.Visible = false;
-            // 
-            // cb_IsSold
-            // 
-            this.cb_IsSold.AutoSize = true;
-            this.cb_IsSold.Location = new System.Drawing.Point(506, 163);
-            this.cb_IsSold.Name = "cb_IsSold";
-            this.cb_IsSold.Size = new System.Drawing.Size(69, 19);
-            this.cb_IsSold.TabIndex = 114;
-            this.cb_IsSold.Text = "Продан";
-            this.cb_IsSold.UseVisualStyleBackColor = true;
-            this.cb_IsSold.CheckedChanged += new System.EventHandler(this.cb_IsSold_CheckedChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(506, 185);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 15);
-            this.label2.TabIndex = 115;
-            this.label2.Text = "Покупатель:";
-            this.label2.Visible = false;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.AutoSize = false;
@@ -306,7 +271,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
             this.земельныеУчасткиToolStripMenuItem,
             this.xToolStripMenuItem,
             this.строительныеКомпанииToolStripMenuItem,
@@ -333,14 +297,6 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(92, 34);
             this.toolStripMenuItem2.Text = "Организации";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(65, 34);
-            this.toolStripMenuItem3.Text = "Справка";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // земельныеУчасткиToolStripMenuItem
             // 
@@ -398,9 +354,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 479);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.cb_IsSold);
-            this.Controls.Add(this.cb_Buyer);
             this.Controls.Add(this.tb_SellPrice);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tb_Square);
@@ -408,7 +361,7 @@
             this.Controls.Add(this.tb_BuyPrice);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.cb_SellerId);
+            this.Controls.Add(this.cb_OwnerId);
             this.Controls.Add(this.btn_AddLand);
             this.Controls.Add(this.tb_Address);
             this.Controls.Add(this.tb_CadastralNum);
@@ -439,20 +392,16 @@
         private Label label1;
         private Button btn_AddLand;
         private Label label8;
-        private ComboBox cb_SellerId;
+        private ComboBox cb_OwnerId;
         private Controls.CustomTextBox tb_BuyPrice;
         private Label label3;
         private Controls.CustomTextBox tb_Square;
         private Label label4;
         private Controls.CustomTextBox tb_SellPrice;
         private Label label6;
-        private ComboBox cb_Buyer;
-        private CheckBox cb_IsSold;
-        private Label label2;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem toolStripMenuItem3;
         private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
         private ToolStripMenuItem xToolStripMenuItem;
         private ToolStripMenuItem строительныеКомпанииToolStripMenuItem;

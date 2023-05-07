@@ -103,8 +103,6 @@ namespace BuildingProgram.Forms
 
         private void поСтроительнымКомпаниямToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BuildingCompanyReportForm buildingCompanyReportForm = new BuildingCompanyReportForm();
-            buildingCompanyReportForm.ShowDialog();
         }
     }
 }

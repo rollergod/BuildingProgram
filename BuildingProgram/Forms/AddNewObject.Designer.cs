@@ -66,13 +66,14 @@ namespace BuildingProgram.Forms
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поЗемельнымУчасткамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поСтроительнымКомпаниямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lb_LandOrg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -159,7 +160,7 @@ namespace BuildingProgram.Forms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(58, 497);
+            this.label6.Location = new System.Drawing.Point(433, 449);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 20);
             this.label6.TabIndex = 33;
@@ -169,7 +170,7 @@ namespace BuildingProgram.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(58, 514);
+            this.label4.Location = new System.Drawing.Point(433, 466);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(209, 19);
             this.label4.TabIndex = 32;
@@ -388,11 +389,12 @@ namespace BuildingProgram.Forms
             this.cb_Land.Name = "cb_Land";
             this.cb_Land.Size = new System.Drawing.Size(175, 23);
             this.cb_Land.TabIndex = 76;
+            this.cb_Land.SelectedIndexChanged += new System.EventHandler(this.cb_Land_SelectedIndexChanged);
             // 
             // cb_Organization
             // 
             this.cb_Organization.FormattingEnabled = true;
-            this.cb_Organization.Location = new System.Drawing.Point(273, 513);
+            this.cb_Organization.Location = new System.Drawing.Point(648, 465);
             this.cb_Organization.Name = "cb_Organization";
             this.cb_Organization.Size = new System.Drawing.Size(149, 23);
             this.cb_Organization.TabIndex = 77;
@@ -423,7 +425,6 @@ namespace BuildingProgram.Forms
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
             this.земельныеУчасткиToolStripMenuItem,
             this.xToolStripMenuItem,
             this.строительныеКомпанииToolStripMenuItem,
@@ -450,14 +451,6 @@ namespace BuildingProgram.Forms
             this.toolStripMenuItem2.Size = new System.Drawing.Size(92, 34);
             this.toolStripMenuItem2.Text = "Организации";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click_1);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(65, 34);
-            this.toolStripMenuItem3.Text = "Справка";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click_1);
             // 
             // земельныеУчасткиToolStripMenuItem
             // 
@@ -509,11 +502,32 @@ namespace BuildingProgram.Forms
             this.поСтроительнымКомпаниямToolStripMenuItem.Text = "По строительным компаниям";
             this.поСтроительнымКомпаниямToolStripMenuItem.Click += new System.EventHandler(this.поСтроительнымКомпаниямToolStripMenuItem_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(60, 499);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 19);
+            this.label7.TabIndex = 83;
+            this.label7.Text = "Владелец:";
+            // 
+            // lb_LandOrg
+            // 
+            this.lb_LandOrg.AutoSize = true;
+            this.lb_LandOrg.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_LandOrg.Location = new System.Drawing.Point(137, 499);
+            this.lb_LandOrg.Name = "lb_LandOrg";
+            this.lb_LandOrg.Size = new System.Drawing.Size(0, 19);
+            this.lb_LandOrg.TabIndex = 84;
+            // 
             // AddNewObject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 552);
+            this.Controls.Add(this.lb_LandOrg);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.cb_BuildingCompany);
             this.Controls.Add(this.label13);
@@ -602,12 +616,13 @@ namespace BuildingProgram.Forms
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem toolStripMenuItem3;
         private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
         private ToolStripMenuItem xToolStripMenuItem;
         private ToolStripMenuItem строительныеКомпанииToolStripMenuItem;
         private ToolStripMenuItem отчетыToolStripMenuItem;
         private ToolStripMenuItem поЗемельнымУчасткамToolStripMenuItem;
         private ToolStripMenuItem поСтроительнымКомпаниямToolStripMenuItem;
+        private Label label7;
+        private Label lb_LandOrg;
     }
 }

@@ -32,7 +32,7 @@ namespace BuildingProgram
             }
 
             //this.Hide();
-            MainMenu mmForm = new MainMenu();
+            MainMenu mmForm = new MainMenu(user.Id);
             mmForm.ShowDialog();
         }
 

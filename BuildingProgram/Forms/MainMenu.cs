@@ -10,17 +10,21 @@ namespace BuildingProgram.Forms
     {
         private AppDbContext _context;
         private int _objNum = 0;
-        public MainMenu()
+        private int _userId;
+        public MainMenu(int userId = 0)
         {
             InitializeComponent();
             menuStrip1.Renderer = new NoHighlightRenderer();
-
+            _userId = userId;
             _context = new AppDbContext();
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
-            var buildingObjects = _context.BuildingObjects.Include(x => x.Land).ToList();
+            var buildingObjects = _context.BuildingObjects
+                .Include(x => x.Land)
+                .Where(x => x.UserId == _userId)
+                .ToList();
 
             var data = buildingObjects.Select(x => new
             {
@@ -42,7 +46,7 @@ namespace BuildingProgram.Forms
 
         private void btn_AddObject_Click(object sender, EventArgs e)
         {
-            AddNewObject addObjForm = new AddNewObject();
+            AddNewObject addObjForm = new AddNewObject(_userId);
             addObjForm.ShowDialog();
         }
 
@@ -72,8 +76,18 @@ namespace BuildingProgram.Forms
 
         private void btn_ChangeBtn_Click(object sender, EventArgs e)
         {
-            AddNewObject addLandForm = new AddNewObject(_objNum);
-            addLandForm.ShowDialog();
+            var buildingObjectForChange = _context.BuildingObjects
+                .FirstOrDefault(x => x.ObjectNumber == _objNum);
+
+            if(_userId == buildingObjectForChange.UserId)
+            {
+                AddNewObject addLandForm = new AddNewObject(_userId, _objNum);
+                addLandForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("У вас нет прав для редактирования данного объекта.");
+            }
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -88,7 +102,7 @@ namespace BuildingProgram.Forms
 
         private void btn_AboutObject_Click(object sender, EventArgs e)
         {
-            ObjectForm objForm = new ObjectForm(_objNum);
+            ObjectForm objForm = new ObjectForm(_objNum,_userId);
             objForm.ShowDialog();
         }
 
@@ -129,11 +143,6 @@ namespace BuildingProgram.Forms
             return _context.BuildingObjects.Include(x => x.Land)
                 .Where(x => isNumber ? x.ObjectNumber.ToString().Contains(searchText) : x.Land.Address.Contains(searchText))
                 .ToList();
-        }
-
-        private void отчетыToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void xToolStripMenuItem_Click(object sender, EventArgs e)
@@ -358,6 +367,36 @@ namespace BuildingProgram.Forms
         {
             BuildingCompanyReportForm buildingCompanyReportForm = new BuildingCompanyReportForm();
             buildingCompanyReportForm.ShowDialog();
+        }
+
+        private void cb_OnlyOne_CheckedChanged(object sender, EventArgs e)
+        {
+            var data = _context.BuildingObjects
+                .Include(x => x.Land)
+                .ToList();
+
+            if (cb_OnlyOne.Checked)
+            {
+                dataGridView1.DataSource =  data
+                    .Where(x => x.UserId == _userId)
+                    .Select(x => new
+                    {
+                        x.ObjectNumber,
+                        x.Land.Address,
+                        isChecked = x.IsChecked ? "Да" : "Нет",
+                        isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                    }).ToList();
+            }
+            else
+            {
+                dataGridView1.DataSource = data.Select(x => new
+                {
+                    x.ObjectNumber,
+                    x.Land.Address,
+                    isChecked = x.IsChecked ? "Да" : "Нет",
+                    isEnded = x.IsBuildingEnded ? "Да" : "Нет",
+                }).ToList(); ;
+            }
         }
     }
 }

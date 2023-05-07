@@ -7,13 +7,10 @@
         public decimal SellPrice { get; set; }
         public decimal BuyPrice { get; set; }
         public string CadastralNumber { get; set; }
-        public bool IsSold { get; set; }
         public int? LandType { get; set; }
         public string Address { get; set; }
 
-        public Organization Seller { get; set; }
-        public int SellerId { get; set; }
-        public Organization? Buyer { get; set; }
-        public int? BuyerId { get; set;}
+        public Organization Owner { get; set; }
+        public int OwnerId { get; set; }
     }
 }

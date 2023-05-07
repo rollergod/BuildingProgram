@@ -10,13 +10,15 @@ namespace BuildingProgram.Forms
     {
         private AppDbContext _context;
         private int _objNum;
+        private int _userId;
         public string imagePath;
-        public AddNewObject(int objNum = 0)
+        public AddNewObject(int userId,int objNum = 0)
         {
             InitializeComponent();
             _context = new AppDbContext();
             menuStrip1.Renderer = new NoHighlightRenderer();
             _objNum = objNum;
+            _userId = userId;
             imagePath = null;
         }
 
@@ -75,6 +77,7 @@ namespace BuildingProgram.Forms
 
             if(_objNum == 0)
             {
+                var user = _context.Users.FirstOrDefault(x => x.Id == _userId);
                 var addedBuilding = new BuildingObject
                 {
                     ObjectName = objName,
@@ -87,9 +90,9 @@ namespace BuildingProgram.Forms
                     BuildingStatus = buildingStatus,
                     IsChecked = isChecked,
                     Land = land,
-                    Organization = organization,
                     BuildingCompany = buildingCompany,
-                    ImageName = imageName
+                    ImageName = imageName,
+                    User = user
                 };
 
                 File.Copy(imagePath, Path.Combine(@"D:\Projects\2023\BuildingProgram\BuildingProgram\Images\", Path.GetFileName(imagePath)), true);
@@ -109,7 +112,6 @@ namespace BuildingProgram.Forms
                 objForChange.IsChecked = isChecked;
                 objForChange.BuildingStatus= buildingStatus;
                 objForChange.Land = land;
-                objForChange.Organization = organization;
                 objForChange.BuildingCompany = buildingCompany;
 
                 if(pictureBox1.Image != null && imageName != null)
@@ -127,10 +129,10 @@ namespace BuildingProgram.Forms
         private void AddNewObject_Load(object sender, EventArgs e)
         {
             //Занятые земельные уастки
-            var buildingObjectsWithLands = _context.BuildingObjects.Where(x => x.LandId > 0).Select(x => x.LandId).ToList();
+            var buildingObjectsWithLands = _context.BuildingObjects.Where(x => x.LandId > 0 && x.ObjectNumber != _objNum).Select(x => x.LandId).ToList();
 
             cb_Land.DataSource = _context.Lands
-                .Where(x => !x.IsSold && !buildingObjectsWithLands.Contains(x.Id))
+                .Where(x => !buildingObjectsWithLands.Contains(x.Id))
                 .Select(x => x.Address)
                 .ToList();
 
@@ -147,7 +149,6 @@ namespace BuildingProgram.Forms
                 this.Text = "Изменение объекта";
 
                 var buildingObject = _context.BuildingObjects
-                    .Include(x => x.Organization)
                     .Include(x => x.BuildingCompany)
                     .Include(x => x.Land)
                     .FirstOrDefault(x => x.ObjectNumber == _objNum);
@@ -163,7 +164,6 @@ namespace BuildingProgram.Forms
                 cb_isBuildingChecked.Checked = buildingObject.IsChecked;
 
                 cb_buildingStatus.SelectedIndex = buildingObject.BuildingStatus;
-                cb_Organization.Text = buildingObject.Organization.OrganizationName;
                 cb_BuildingCompany.Text = buildingObject.BuildingCompany.Name;
                 cb_Land.Text = buildingObject.Land.Address;
 
@@ -232,6 +232,16 @@ namespace BuildingProgram.Forms
         private void xToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cb_Land_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string landAddress = cb_Land.SelectedValue.ToString();
+
+            var landOwner = _context.Lands.Include(x => x.Owner)
+                .FirstOrDefault(x => x.Address== landAddress).Owner;
+
+            lb_LandOrg.Text = landOwner.OrganizationName;
         }
     }
 }

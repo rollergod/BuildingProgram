@@ -21,10 +21,11 @@
         /// </summary>
         public Land Land { get; set; }
         public int LandId { get; set; }
-        public Organization? Organization { get; set; }
-        public int? OrganizationId { get; set;}
-        public BuildingCompany? BuildingCompany { get; set; }
+        public BuildingCompany? BuildingCompany { get; set; } //убрать ?
         public int? BuildingCompanyId { get; set; }
         public List<Note> Notes { get; set; }
+
+        public User? User { get; set; } //убрать ?
+        public int? UserId { get; set; }
     }
 }

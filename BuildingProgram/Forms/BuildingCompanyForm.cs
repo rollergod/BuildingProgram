@@ -88,8 +88,6 @@ namespace BuildingProgram.Forms
 
         private void строительныеКомпанииToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BuildingCompanyForm buildingCompanyForm = new BuildingCompanyForm();
-            buildingCompanyForm.ShowDialog();
         }
 
         private void поЗемельнымУчасткамToolStripMenuItem_Click(object sender, EventArgs e)

@@ -51,18 +51,21 @@ namespace BuildingProgram.Forms
                 lb_TotalSum.Visible = true;
 
                 btn_ChangeOrg.Enabled = true;
-                var data = _context.BuildingObjects
-                    .Include(x => x.Organization)
-                    .Where(x => x.Organization.Id == _orgId);
 
+                var data = _context.Lands.Include(x => x.Owner).Where(x => x.Owner.Id == _orgId);
+
+                var landIds = data.Select(x => x.Id);
+                var buildingObjects = _context.BuildingObjects
+                    .Include(x => x.Land)
+                    .Where(x => landIds.Contains(x.LandId)).ToList();
+               
                 var buildingsCount = data.Count();
 
-                var totalSum = data
-                    .Include(x => x.Land)
+                var totalSum = buildingObjects
                     .Sum(x => x.Land.BuyPrice);
 
                 var today = DateOnly.FromDateTime(DateTime.Today);
-                var latestObject = data
+                var latestObject = buildingObjects
                     .Where(x => x.IsBuildingEnded)
                     .OrderByDescending(x => x.EndDate)
                     .FirstOrDefault();
@@ -117,8 +120,6 @@ namespace BuildingProgram.Forms
 
         private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
         {
-            OrganizationForm orgForm = new OrganizationForm();
-            orgForm.ShowDialog();
         }
 
         private void toolStripMenuItem3_Click_1(object sender, EventArgs e)

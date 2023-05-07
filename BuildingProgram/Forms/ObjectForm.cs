@@ -9,13 +9,15 @@ namespace BuildingProgram.Forms
     {
         private int _objNum;
         private int _noteId;
+        private int _userId;
         private AppDbContext _context;
-        public ObjectForm(int objNum = 0)
+        public ObjectForm(int objNum = 0,int userId = 0)
         {
             InitializeComponent();
             menuStrip1.Renderer = new NoHighlightRenderer();
             _context = new AppDbContext();
             _objNum = objNum;
+            _userId = userId;
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -80,30 +82,57 @@ namespace BuildingProgram.Forms
 
         private void btn_AddNote_Click(object sender, EventArgs e)
         {
-            AddNoteForm addNoteForm = new AddNoteForm(_objNum);
-            addNoteForm.ShowDialog();
+            var currentObject = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objNum);
+
+            if(currentObject.UserId == _userId)
+            {
+                AddNoteForm addNoteForm = new AddNoteForm(_objNum);
+                addNoteForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("У вас нет прав для добавления заметок к этому объекту.");
+            }
         }
 
         private void btn_ChangeNote_Click(object sender, EventArgs e)
         {
-            AddNoteForm addNoteForm = new AddNoteForm(_objNum,_noteId);
-            addNoteForm.ShowDialog();
+            var currentObject = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objNum);
+
+            if (currentObject.UserId == _userId)
+            {
+                AddNoteForm addNoteForm = new AddNoteForm(_objNum, _noteId);
+                addNoteForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("У вас нет прав для изменения заметки у этого объекта.");
+            }
         }
 
         private void btn_DeleteNote_Click(object sender, EventArgs e)
         {
-            var noteForDelete = _context.Notes.FirstOrDefault(x => x.Id == _noteId);
+            var currentObject = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objNum);
 
-            var confirmResult = MessageBox.Show("Вы действительно хотите удалить записку?","Подтвердите удаление",MessageBoxButtons.YesNo);
-            if (confirmResult == DialogResult.Yes)
+            if (currentObject.UserId == _userId)
             {
-                _context.Notes.Remove(noteForDelete);
-                _context.SaveChanges();
-                MessageBox.Show("Записка удалена");
+                var noteForDelete = _context.Notes.FirstOrDefault(x => x.Id == _noteId);
 
-                var notes = _context.Notes.ToList();
+                var confirmResult = MessageBox.Show("Вы действительно хотите удалить записку?", "Подтвердите удаление", MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    _context.Notes.Remove(noteForDelete);
+                    _context.SaveChanges();
+                    MessageBox.Show("Записка удалена");
 
-                dataGridView1.DataSource = notes;
+                    var notes = _context.Notes.ToList();
+
+                    dataGridView1.DataSource = notes;
+                }
+            }
+            else
+            {
+                MessageBox.Show("У вас нет прав для удаления заметок у этого объекта.");
             }
         }
 

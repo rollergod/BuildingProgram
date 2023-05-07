@@ -3,6 +3,7 @@ using System;
 using BuildingProgram.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BuildingProgram.Context.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230507191507_DeleteSomeColumns")]
+    partial class DeleteSomeColumns
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,7 +38,7 @@ namespace BuildingProgram.Context.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BuildingCompanies", (string)null);
+                    b.ToTable("BuildingCompanies");
                 });
 
             modelBuilder.Entity("BuildingProgram.Models.BuildingObject", b =>
@@ -95,7 +97,7 @@ namespace BuildingProgram.Context.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("BuildingObjects", (string)null);
+                    b.ToTable("BuildingObjects");
                 });
 
             modelBuilder.Entity("BuildingProgram.Models.Land", b =>
@@ -133,7 +135,7 @@ namespace BuildingProgram.Context.Migrations
 
                     b.HasIndex("OwnerId");
 
-                    b.ToTable("Lands", (string)null);
+                    b.ToTable("Lands");
                 });
 
             modelBuilder.Entity("BuildingProgram.Models.Note", b =>
@@ -158,7 +160,7 @@ namespace BuildingProgram.Context.Migrations
 
                     b.HasIndex("BuildingObjectId");
 
-                    b.ToTable("Notes", (string)null);
+                    b.ToTable("Notes");
                 });
 
             modelBuilder.Entity("BuildingProgram.Models.Organization", b =>
@@ -179,7 +181,7 @@ namespace BuildingProgram.Context.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Organizations", (string)null);
+                    b.ToTable("Organizations");
                 });
 
             modelBuilder.Entity("BuildingProgram.Models.User", b =>
@@ -203,7 +205,7 @@ namespace BuildingProgram.Context.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("BuildingProgram.Models.BuildingObject", b =>

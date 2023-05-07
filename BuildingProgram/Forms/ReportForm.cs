@@ -24,15 +24,14 @@ namespace BuildingProgram.Forms
 
         private void ReportForm_Load(object sender, EventArgs e)
         {
-            var lands = _context.Lands.Include(x => x.Seller).ToList();
+            var lands = _context.Lands.Include(x => x.Owner).ToList();
 
             var data = lands.Select(x => new
             {
                 x.Id,
                 x.CadastralNumber,
                 x.Square,
-                x.Seller.OrganizationName,
-                isSold = x.IsSold ? "Да" : "Нет"
+                x.Owner.OrganizationName,
             }).ToList();
 
             dataGridView1.DataSource = data;
@@ -41,8 +40,7 @@ namespace BuildingProgram.Forms
 
             dataGridView1.Columns[1].HeaderText = "Кадастровый номер";
             dataGridView1.Columns[2].HeaderText = "Площадь(М^2)";
-            dataGridView1.Columns[3].HeaderText = "Продавец";
-            dataGridView1.Columns[4].HeaderText = "Продан";
+            dataGridView1.Columns[3].HeaderText = "Владелец";
 
             dataGridView1.Columns[1].Width = 130;
             dataGridView1.Columns[2].Width = 200;
@@ -54,8 +52,7 @@ namespace BuildingProgram.Forms
             cbType = cb_LandType.SelectedIndex;
 
             var data = (IQueryable<Land>)_context.Lands
-                .Include(x => x.Seller)
-                .Include(X => X.Buyer);
+                .Include(x => x.Owner);
 
             switch (cbType)
             {
@@ -69,40 +66,10 @@ namespace BuildingProgram.Forms
                             x.Id,
                             x.CadastralNumber,
                             x.Square,
-                            x.Seller.OrganizationName,
-                            isSold = x.IsSold ? "Да" : "Нет",
+                            x.Owner.OrganizationName,
                         }).ToList();
                     break;
-                case 3:
-                    data = data.Where(x => x.IsSold);
-                    dataGridView1.DataSource = data.
-                    Select(x => new
-                    {
-                        x.Id,
-                        x.CadastralNumber,
-                        x.Square,
-                        x.Seller.OrganizationName,
-                        isSold = x.IsSold ? "Да" : "Нет",
-                        BuyerName = x.IsSold ? x.Buyer.OrganizationName : ""
-                    }).ToList();
-                    dataGridView1.Columns[5].HeaderText = "Покупатель";
-                    dataGridView1.Columns[5].Width = 200;
-                    break;
-                case 4:
-                    data = data.Where(x => !x.IsSold);
-                    dataGridView1.DataSource = data.
-                   Select(x => new
-                   {
-                       x.Id,
-                       x.CadastralNumber,
-                       x.Square,
-                       x.Seller.OrganizationName,
-                       isSold = x.IsSold ? "Да" : "Нет",
-                       BuyerName = x.IsSold ? x.Buyer.OrganizationName : ""
-                   }).ToList();
-                    break;
             }
-          
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -143,6 +110,11 @@ namespace BuildingProgram.Forms
         private void xToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void поЗемельнымУчасткамToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

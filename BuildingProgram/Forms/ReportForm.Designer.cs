@@ -38,7 +38,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,7 +71,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(66, 138);
+            this.dataGridView1.Location = new System.Drawing.Point(68, 129);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -101,9 +100,7 @@
             this.cb_LandType.Items.AddRange(new object[] {
             "земли сельскохозяйственного назначения",
             "земли промышленности",
-            "земли населенных пунктов",
-            "продан",
-            "не продан"});
+            "земли населенных пунктов"});
             this.cb_LandType.Location = new System.Drawing.Point(365, 90);
             this.cb_LandType.Name = "cb_LandType";
             this.cb_LandType.Size = new System.Drawing.Size(160, 23);
@@ -128,7 +125,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
             this.земельныеУчасткиToolStripMenuItem,
             this.xToolStripMenuItem,
             this.строительныеКомпанииToolStripMenuItem,
@@ -155,14 +151,6 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(92, 34);
             this.toolStripMenuItem2.Text = "Организации";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(65, 34);
-            this.toolStripMenuItem3.Text = "Справка";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // земельныеУчасткиToolStripMenuItem
             // 
@@ -205,6 +193,7 @@
             this.поЗемельнымУчасткамToolStripMenuItem.Name = "поЗемельнымУчасткамToolStripMenuItem";
             this.поЗемельнымУчасткамToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this.поЗемельнымУчасткамToolStripMenuItem.Text = "По земельным участкам";
+            this.поЗемельнымУчасткамToolStripMenuItem.Click += new System.EventHandler(this.поЗемельнымУчасткамToolStripMenuItem_Click);
             // 
             // поСтроительнымКомпаниямToolStripMenuItem
             // 
@@ -240,7 +229,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem toolStripMenuItem3;
         private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
         private ToolStripMenuItem xToolStripMenuItem;
         private ToolStripMenuItem строительныеКомпанииToolStripMenuItem;
