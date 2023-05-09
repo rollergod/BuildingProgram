@@ -6,7 +6,7 @@ using System.Data;
 
 namespace BuildingProgram.Forms
 {
-    public partial class AddNewObject : BaseForm
+    public partial class AddNewObject : OldBaseForm
     {
         private AppDbContext _context;
         private int _objNum;

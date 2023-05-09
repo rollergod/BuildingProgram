@@ -5,7 +5,7 @@ using BuildingProgram.Tools;
 
 namespace BuildingProgram.Forms
 {
-    public partial class AddNoteForm : BaseForm
+    public partial class AddNoteForm : OldBaseForm
     {
         private readonly AppDbContext _context;
         private int _objNum;

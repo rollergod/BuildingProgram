@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BuildingProgram.Forms
 {
-    public partial class ReportForm : BaseForm
+    public partial class ReportForm : OldBaseForm
     {
         private AppDbContext _context;
         int cbType;

@@ -41,7 +41,6 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поЗемельнымУчасткамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +53,7 @@
             // 
             this.tb_Search.BackColor = System.Drawing.Color.LightGray;
             this.tb_Search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_Search.Location = new System.Drawing.Point(352, 67);
+            this.tb_Search.Location = new System.Drawing.Point(286, 62);
             this.tb_Search.Multiline = true;
             this.tb_Search.Name = "tb_Search";
             this.tb_Search.Size = new System.Drawing.Size(196, 13);
@@ -66,7 +65,7 @@
             this.btn_Search.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Search.Location = new System.Drawing.Point(285, 60);
+            this.btn_Search.Location = new System.Drawing.Point(219, 55);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(53, 27);
             this.btn_Search.TabIndex = 11;
@@ -77,9 +76,10 @@
             // btn_ChangeBtn
             // 
             this.btn_ChangeBtn.Enabled = false;
-            this.btn_ChangeBtn.Location = new System.Drawing.Point(41, 198);
+            this.btn_ChangeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ChangeBtn.Location = new System.Drawing.Point(41, 208);
             this.btn_ChangeBtn.Name = "btn_ChangeBtn";
-            this.btn_ChangeBtn.Size = new System.Drawing.Size(96, 54);
+            this.btn_ChangeBtn.Size = new System.Drawing.Size(96, 57);
             this.btn_ChangeBtn.TabIndex = 9;
             this.btn_ChangeBtn.Text = "Изменить строительную компанию";
             this.btn_ChangeBtn.UseVisualStyleBackColor = true;
@@ -87,6 +87,7 @@
             // 
             // btn_AddBuildingCompany
             // 
+            this.btn_AddBuildingCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddBuildingCompany.Location = new System.Drawing.Point(41, 130);
             this.btn_AddBuildingCompany.Name = "btn_AddBuildingCompany";
             this.btn_AddBuildingCompany.Size = new System.Drawing.Size(96, 62);
@@ -118,7 +119,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(183, 93);
+            this.dataGridView1.Location = new System.Drawing.Point(175, 88);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -138,7 +139,7 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(576, 229);
+            this.dataGridView1.Size = new System.Drawing.Size(352, 229);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -151,13 +152,12 @@
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.земельныеУчасткиToolStripMenuItem,
-            this.xToolStripMenuItem,
             this.строительныеКомпанииToolStripMenuItem,
             this.отчетыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(800, 38);
+            this.menuStrip1.Size = new System.Drawing.Size(591, 38);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -184,15 +184,6 @@
             this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
             this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
             this.земельныеУчасткиToolStripMenuItem.Click += new System.EventHandler(this.земельныеУчасткиToolStripMenuItem_Click);
-            // 
-            // xToolStripMenuItem
-            // 
-            this.xToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.xToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.xToolStripMenuItem.Name = "xToolStripMenuItem";
-            this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 34);
-            this.xToolStripMenuItem.Text = "X";
-            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click_1);
             // 
             // строительныеКомпанииToolStripMenuItem
             // 
@@ -231,7 +222,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 338);
+            this.ClientSize = new System.Drawing.Size(591, 338);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tb_Search);
             this.Controls.Add(this.btn_Search);
@@ -259,7 +250,6 @@
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
-        private ToolStripMenuItem xToolStripMenuItem;
         private ToolStripMenuItem строительныеКомпанииToolStripMenuItem;
         private ToolStripMenuItem отчетыToolStripMenuItem;
         private ToolStripMenuItem поЗемельнымУчасткамToolStripMenuItem;

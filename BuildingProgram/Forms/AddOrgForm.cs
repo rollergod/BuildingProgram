@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BuildingProgram.Forms
 {
-    public partial class AddOrgForm : BaseForm
+    public partial class AddOrgForm : OldBaseForm
     {
         private AppDbContext _context;
         private int _orgId;

@@ -4,7 +4,7 @@ using BuildingProgram.Tools;
 
 namespace BuildingProgram.Forms
 {
-    public partial class AddBuildingCompanyForm : BaseForm
+    public partial class AddBuildingCompanyForm : OldBaseForm
     {
         private int _companyId;
         private readonly AppDbContext _context;

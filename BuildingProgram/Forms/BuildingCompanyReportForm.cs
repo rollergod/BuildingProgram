@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BuildingProgram.Forms
 {
-    public partial class BuildingCompanyReportForm : BaseForm
+    public partial class BuildingCompanyReportForm : OldBaseForm
     {
         private readonly AppDbContext _context;
         public BuildingCompanyReportForm()

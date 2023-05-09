@@ -5,7 +5,7 @@ using System.Data;
 
 namespace BuildingProgram.Forms
 {
-    public partial class LandForm : BaseForm
+    public partial class LandForm : OldBaseForm
     {
         private AppDbContext _context;
         private int _landId;

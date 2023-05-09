@@ -3,7 +3,7 @@ using BuildingProgram.Forms;
 
 namespace BuildingProgram
 {
-    public partial class Login_Form : BaseForm
+    public partial class Login_Form : OldBaseForm
     {
         private AppDbContext _context;
         public Login_Form()
@@ -12,7 +12,13 @@ namespace BuildingProgram
             _context = new AppDbContext();
         }
 
-        private void btn_Enter_Click(object sender, EventArgs e)
+        private void btn_CreateAccount_Click(object sender, EventArgs e)
+        {
+            RegisterForm regForm = new RegisterForm();
+            regForm.ShowDialog();
+        }
+
+        private void btn_Enter2_Click(object sender, EventArgs e)
         {
             string login = tB_Login.Text;
             string password = tB_Password.Text;
@@ -32,14 +38,10 @@ namespace BuildingProgram
             }
 
             //this.Hide();
+            //TestForm test = new TestForm();
+            //test.ShowDialog();
             MainMenu mmForm = new MainMenu(user.Id);
             mmForm.ShowDialog();
-        }
-
-        private void btn_CreateAccount_Click(object sender, EventArgs e)
-        {
-            RegisterForm regForm = new RegisterForm();
-            regForm.ShowDialog();
         }
     }
 }

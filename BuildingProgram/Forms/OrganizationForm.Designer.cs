@@ -82,9 +82,9 @@
             // 
             // btn_AddOrg
             // 
-            this.btn_AddOrg.BackColor = System.Drawing.Color.Black;
+            this.btn_AddOrg.BackColor = System.Drawing.Color.White;
             this.btn_AddOrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddOrg.ForeColor = System.Drawing.Color.White;
+            this.btn_AddOrg.ForeColor = System.Drawing.Color.Black;
             this.btn_AddOrg.Location = new System.Drawing.Point(30, 204);
             this.btn_AddOrg.Name = "btn_AddOrg";
             this.btn_AddOrg.Size = new System.Drawing.Size(96, 49);
@@ -95,10 +95,10 @@
             // 
             // btn_ChangeOrg
             // 
-            this.btn_ChangeOrg.BackColor = System.Drawing.Color.Black;
+            this.btn_ChangeOrg.BackColor = System.Drawing.Color.White;
             this.btn_ChangeOrg.Enabled = false;
             this.btn_ChangeOrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ChangeOrg.ForeColor = System.Drawing.Color.White;
+            this.btn_ChangeOrg.ForeColor = System.Drawing.Color.Black;
             this.btn_ChangeOrg.Location = new System.Drawing.Point(30, 272);
             this.btn_ChangeOrg.Name = "btn_ChangeOrg";
             this.btn_ChangeOrg.Size = new System.Drawing.Size(96, 48);

@@ -58,14 +58,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="menuPicture.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAZCAYAAABzVH1EAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAE9JREFUWEft1sEJACAMBMF0pp1Zeozg06fCeezAFbAgwUgThKghRM0KGQ4L4JF6
         X91hnF81hKixCmkO20cYuK7e1/E3+ds4v2oIUWMSkjkB11xNLWkqDlgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_ObjectForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAABARJREFUWEfVmE3IFVUYx99Sg7A2fqW4UMikpaKCYKCIS78QF4JK0qoWoovMdBOp
@@ -88,7 +88,7 @@
         fQBxsg4+BZ+2WgN5dYpwEfFfV0/PAzp4UK36kAx/AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_OrgForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAYlJREFUaEPtmUFOxDAMRYcjsUAsOAocggUSS47GlbgB5Ev90ldky2mbNKXjJ1n2
@@ -101,7 +101,7 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="btn_LandForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAzhJREFUWEftl1noDVEcgP+WEBEpJMITRVlDsm/JEsoTWZIlEUKyJCKvQpYXorx4
@@ -121,7 +121,7 @@
         8Un+oZcqAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_BuildingCompanyForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAuVJREFUWEfNmNmrTVEcgE+GlAdzkcxTKPOUKTKFjNeDKZkjL4SkJFeKUB6kDBky
@@ -139,7 +139,7 @@
         BMPrpY/bI07sqsV7djom6Ke5XJmMNpB+0EnyBdpwtgOFwj8Sx7KckkweFgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btn_BuildingCompanyRep.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAJRJREFUOE+tk9ENgCAQQxnBEdxEN8QNGIkRHAX7AkQCH+LpS5oIHOXU4npSSrvk
@@ -148,7 +148,7 @@
         YII=
 </value>
   </data>
-  <data name="btn_RepForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAJRJREFUOE+tk9ENgCAQQxnBEdxEN8QNGIkRHAX7AkQCH+LpS5oIHOXU4npSSrvk
@@ -157,7 +157,7 @@
         YII=
 </value>
   </data>
-  <data name="btn_ReportForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAa5JREFUWEftmMsrBlEYh8dCWVhYSAmxYCGKhSg2KBu57FGWbmVhpQgbSwu3kKJs
@@ -170,19 +170,10 @@
         T3i9ksAmYpfYzI5sVCqLlHVBVpREkvwCtQfcZq5kUIoAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="sidebarTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>137, 17</value>
+  <metadata name="sidebar_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <metadata name="reportTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>267, 17</value>
-  </metadata>
-  <metadata name="npgsqlDataAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>388, 17</value>
-  </metadata>
-  <metadata name="kryptonContextMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>562, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>89</value>
+    <value>154, 17</value>
   </metadata>
 </root>

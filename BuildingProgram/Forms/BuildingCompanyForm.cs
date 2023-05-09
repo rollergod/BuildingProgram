@@ -4,7 +4,7 @@ using BuildingProgram.Tools;
 
 namespace BuildingProgram.Forms
 {
-    public partial class BuildingCompanyForm : BaseForm
+    public partial class BuildingCompanyForm : OldBaseForm
     {
         private readonly AppDbContext _context;
         private int _companyId;
@@ -30,7 +30,7 @@ namespace BuildingProgram.Forms
             dataGridView1.Columns[0].HeaderText = "Номер строительной компании";
             dataGridView1.Columns[1].HeaderText = "Название";
 
-            dataGridView1.Columns[1].Width = 200;
+            dataGridView1.Columns[1].Width = 250;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

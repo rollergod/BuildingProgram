@@ -67,7 +67,6 @@ namespace BuildingProgram.Forms
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поЗемельнымУчасткамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -208,11 +207,11 @@ namespace BuildingProgram.Forms
             // 
             // btn_ChosePhoto
             // 
-            this.btn_ChosePhoto.BackColor = System.Drawing.Color.Black;
+            this.btn_ChosePhoto.BackColor = System.Drawing.Color.White;
             this.btn_ChosePhoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ChosePhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ChosePhoto.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_ChosePhoto.ForeColor = System.Drawing.Color.White;
+            this.btn_ChosePhoto.ForeColor = System.Drawing.Color.Black;
             this.btn_ChosePhoto.Location = new System.Drawing.Point(525, 328);
             this.btn_ChosePhoto.Name = "btn_ChosePhoto";
             this.btn_ChosePhoto.Size = new System.Drawing.Size(101, 30);
@@ -223,11 +222,11 @@ namespace BuildingProgram.Forms
             // 
             // btn_AddObject
             // 
-            this.btn_AddObject.BackColor = System.Drawing.Color.Black;
+            this.btn_AddObject.BackColor = System.Drawing.Color.White;
             this.btn_AddObject.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_AddObject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddObject.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_AddObject.ForeColor = System.Drawing.Color.White;
+            this.btn_AddObject.ForeColor = System.Drawing.Color.Black;
             this.btn_AddObject.Location = new System.Drawing.Point(471, 384);
             this.btn_AddObject.Name = "btn_AddObject";
             this.btn_AddObject.Size = new System.Drawing.Size(78, 38);
@@ -238,11 +237,11 @@ namespace BuildingProgram.Forms
             // 
             // btn_Exit
             // 
-            this.btn_Exit.BackColor = System.Drawing.Color.Black;
+            this.btn_Exit.BackColor = System.Drawing.Color.White;
             this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Exit.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_Exit.ForeColor = System.Drawing.Color.White;
+            this.btn_Exit.ForeColor = System.Drawing.Color.Black;
             this.btn_Exit.Location = new System.Drawing.Point(596, 384);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(78, 38);
@@ -426,7 +425,6 @@ namespace BuildingProgram.Forms
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.земельныеУчасткиToolStripMenuItem,
-            this.xToolStripMenuItem,
             this.строительныеКомпанииToolStripMenuItem,
             this.отчетыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -459,15 +457,6 @@ namespace BuildingProgram.Forms
             this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
             this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
             this.земельныеУчасткиToolStripMenuItem.Click += new System.EventHandler(this.земельныеУчасткиToolStripMenuItem_Click_1);
-            // 
-            // xToolStripMenuItem
-            // 
-            this.xToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.xToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.xToolStripMenuItem.Name = "xToolStripMenuItem";
-            this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 34);
-            this.xToolStripMenuItem.Text = "X";
-            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click_1);
             // 
             // строительныеКомпанииToolStripMenuItem
             // 
@@ -617,7 +606,6 @@ namespace BuildingProgram.Forms
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
-        private ToolStripMenuItem xToolStripMenuItem;
         private ToolStripMenuItem строительныеКомпанииToolStripMenuItem;
         private ToolStripMenuItem отчетыToolStripMenuItem;
         private ToolStripMenuItem поЗемельнымУчасткамToolStripMenuItem;

@@ -269,11 +269,11 @@
             // 
             // btn_AddNote
             // 
-            this.btn_AddNote.BackColor = System.Drawing.Color.Black;
+            this.btn_AddNote.BackColor = System.Drawing.Color.White;
             this.btn_AddNote.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_AddNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddNote.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_AddNote.ForeColor = System.Drawing.Color.White;
+            this.btn_AddNote.ForeColor = System.Drawing.Color.Black;
             this.btn_AddNote.Location = new System.Drawing.Point(61, 540);
             this.btn_AddNote.Name = "btn_AddNote";
             this.btn_AddNote.Size = new System.Drawing.Size(75, 42);
@@ -284,13 +284,12 @@
             // 
             // btn_DeleteNote
             // 
-            this.btn_DeleteNote.BackColor = System.Drawing.Color.Black;
+            this.btn_DeleteNote.BackColor = System.Drawing.Color.White;
             this.btn_DeleteNote.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_DeleteNote.Enabled = false;
-            this.btn_DeleteNote.FlatAppearance.BorderSize = 0;
             this.btn_DeleteNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DeleteNote.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_DeleteNote.ForeColor = System.Drawing.Color.White;
+            this.btn_DeleteNote.ForeColor = System.Drawing.Color.Black;
             this.btn_DeleteNote.Location = new System.Drawing.Point(153, 540);
             this.btn_DeleteNote.Name = "btn_DeleteNote";
             this.btn_DeleteNote.Size = new System.Drawing.Size(75, 42);
@@ -301,13 +300,12 @@
             // 
             // btn_ChangeNote
             // 
-            this.btn_ChangeNote.BackColor = System.Drawing.Color.Black;
+            this.btn_ChangeNote.BackColor = System.Drawing.Color.White;
             this.btn_ChangeNote.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ChangeNote.Enabled = false;
-            this.btn_ChangeNote.FlatAppearance.BorderSize = 0;
             this.btn_ChangeNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ChangeNote.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_ChangeNote.ForeColor = System.Drawing.Color.White;
+            this.btn_ChangeNote.ForeColor = System.Drawing.Color.Black;
             this.btn_ChangeNote.Location = new System.Drawing.Point(244, 540);
             this.btn_ChangeNote.Name = "btn_ChangeNote";
             this.btn_ChangeNote.Size = new System.Drawing.Size(75, 42);

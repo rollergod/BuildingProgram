@@ -41,7 +41,6 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поЗемельнымУчасткамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -123,10 +122,10 @@
             // 
             // btn_ChangeOrganization
             // 
-            this.btn_ChangeOrganization.BackColor = System.Drawing.Color.Black;
+            this.btn_ChangeOrganization.BackColor = System.Drawing.Color.White;
             this.btn_ChangeOrganization.Enabled = false;
             this.btn_ChangeOrganization.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ChangeOrganization.ForeColor = System.Drawing.Color.White;
+            this.btn_ChangeOrganization.ForeColor = System.Drawing.Color.Black;
             this.btn_ChangeOrganization.Location = new System.Drawing.Point(49, 234);
             this.btn_ChangeOrganization.Name = "btn_ChangeOrganization";
             this.btn_ChangeOrganization.Size = new System.Drawing.Size(96, 62);
@@ -137,9 +136,9 @@
             // 
             // btn_AddOrganization
             // 
-            this.btn_AddOrganization.BackColor = System.Drawing.Color.Black;
+            this.btn_AddOrganization.BackColor = System.Drawing.Color.White;
             this.btn_AddOrganization.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddOrganization.ForeColor = System.Drawing.Color.White;
+            this.btn_AddOrganization.ForeColor = System.Drawing.Color.Black;
             this.btn_AddOrganization.Location = new System.Drawing.Point(49, 157);
             this.btn_AddOrganization.Name = "btn_AddOrganization";
             this.btn_AddOrganization.Size = new System.Drawing.Size(96, 62);
@@ -157,7 +156,6 @@
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.земельныеУчасткиToolStripMenuItem,
-            this.xToolStripMenuItem,
             this.строительныеКомпанииToolStripMenuItem,
             this.отчетыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -190,15 +188,6 @@
             this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
             this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
             this.земельныеУчасткиToolStripMenuItem.Click += new System.EventHandler(this.земельныеУчасткиToolStripMenuItem_Click);
-            // 
-            // xToolStripMenuItem
-            // 
-            this.xToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.xToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.xToolStripMenuItem.Name = "xToolStripMenuItem";
-            this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 34);
-            this.xToolStripMenuItem.Text = "X";
-            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click_2);
             // 
             // строительныеКомпанииToolStripMenuItem
             // 
@@ -265,7 +254,6 @@
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
-        private ToolStripMenuItem xToolStripMenuItem;
         private ToolStripMenuItem строительныеКомпанииToolStripMenuItem;
         private ToolStripMenuItem отчетыToolStripMenuItem;
         private ToolStripMenuItem поЗемельнымУчасткамToolStripMenuItem;

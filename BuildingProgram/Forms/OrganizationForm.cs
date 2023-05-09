@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace BuildingProgram.Forms
 {
-    public partial class OrganizationForm : BaseForm
+    public partial class OrganizationForm : OldBaseForm
     {
         private AppDbContext _context;
         private int _orgId;
