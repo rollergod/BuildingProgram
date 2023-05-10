@@ -11,7 +11,6 @@ namespace BuildingProgram.Forms
         public AddBuildingCompanyForm(int companyId = 0)
         {
             InitializeComponent();
-            menuStrip1.Renderer = new NoHighlightRenderer();
             _context = new AppDbContext();
             _companyId = companyId;
         }

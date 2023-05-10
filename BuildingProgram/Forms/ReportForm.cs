@@ -14,7 +14,6 @@ namespace BuildingProgram.Forms
         {
             InitializeComponent();
             _context = new AppDbContext();
-            menuStrip1.Renderer = new NoHighlightRenderer();
         }
 
         private void xToolStripMenuItem_Click(object sender, EventArgs e)

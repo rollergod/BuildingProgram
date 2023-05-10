@@ -14,35 +14,13 @@ namespace BuildingProgram.Forms
         {
             InitializeComponent();
             _context = new AppDbContext();
-            menuStrip1.Renderer = new NoHighlightRenderer();
             _objNum = objNum;
             _noteId = noteId;
         }
        
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            Priority type = (Priority)cb_ProrityType.SelectedIndex;
-            string text = rtb_Text.Text;
-
-            if(_noteId == 0)
-            {
-                var buildingObject = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objNum);
-
-                var noteForAdd = new Note { Priority = type, Text = text, BuildingObjectId = buildingObject.Id };
-                _context.Add(noteForAdd);
-            }
-            else
-            {
-                var noteForChange = _context.Notes.FirstOrDefault(x => x.Id == _noteId);
-
-                noteForChange.Priority = type;
-                noteForChange.Text = text;
-
-                _context.Notes.Update(noteForChange);
-            }
             
-            _context.SaveChanges();
-            MessageBox.Show(_noteId > 0 ? "Записка успешно изменена" : "Добавлена новая записка");
         }
 
         private void xToolStripMenuItem_Click(object sender, EventArgs e)
@@ -110,6 +88,32 @@ namespace BuildingProgram.Forms
         private void xToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_Add_Click_1(object sender, EventArgs e)
+        {
+            Priority type = (Priority)cb_ProrityType.SelectedIndex;
+            string text = rtb_Text.Text;
+
+            if (_noteId == 0)
+            {
+                var buildingObject = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objNum);
+
+                var noteForAdd = new Note { Priority = type, Text = text, BuildingObjectId = buildingObject.Id };
+                _context.Add(noteForAdd);
+            }
+            else
+            {
+                var noteForChange = _context.Notes.FirstOrDefault(x => x.Id == _noteId);
+
+                noteForChange.Priority = type;
+                noteForChange.Text = text;
+
+                _context.Notes.Update(noteForChange);
+            }
+
+            _context.SaveChanges();
+            MessageBox.Show(_noteId > 0 ? "Записка успешно изменена" : "Добавлена новая записка");
         }
     }
 }

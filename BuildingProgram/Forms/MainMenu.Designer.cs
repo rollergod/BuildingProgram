@@ -57,10 +57,8 @@
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.reportTimer = new System.Windows.Forms.Timer(this.components);
             this.btn_AddObject = new Krypton.Toolkit.KryptonButton();
-            this.npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
             this.btn_ChangeBtn = new Krypton.Toolkit.KryptonButton();
             this.btn_AboutObject = new Krypton.Toolkit.KryptonButton();
-            this.kryptonContextMenu1 = new Krypton.Toolkit.KryptonContextMenu();
             this.tb_Search = new Krypton.Toolkit.KryptonTextBox();
             this.btn_Search = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -450,13 +448,6 @@
             this.btn_AddObject.Values.Text = "Добавить \r\nобъект";
             this.btn_AddObject.Click += new System.EventHandler(this.btn_AddObject_Click);
             // 
-            // npgsqlDataAdapter1
-            // 
-            this.npgsqlDataAdapter1.DeleteCommand = null;
-            this.npgsqlDataAdapter1.InsertCommand = null;
-            this.npgsqlDataAdapter1.SelectCommand = null;
-            this.npgsqlDataAdapter1.UpdateCommand = null;
-            // 
             // btn_ChangeBtn
             // 
             this.btn_ChangeBtn.CornerRoundingRadius = 5F;
@@ -718,10 +709,8 @@
         private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.Timer reportTimer;
         private Krypton.Toolkit.KryptonButton btn_AddObject;
-        private Npgsql.NpgsqlDataAdapter npgsqlDataAdapter1;
         private Krypton.Toolkit.KryptonButton btn_ChangeBtn;
         private Krypton.Toolkit.KryptonButton btn_AboutObject;
-        private Krypton.Toolkit.KryptonContextMenu kryptonContextMenu1;
         private Krypton.Toolkit.KryptonTextBox tb_Search;
         private Krypton.Toolkit.KryptonButton btn_Search;
     }

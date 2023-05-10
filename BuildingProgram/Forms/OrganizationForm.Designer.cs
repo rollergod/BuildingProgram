@@ -28,84 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tb_Search = new System.Windows.Forms.TextBox();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.btn_AddOrg = new System.Windows.Forms.Button();
-            this.btn_ChangeOrg = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrganizationForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поЗемельнымУчасткамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поСтроительнымКомпаниямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_OrgName = new System.Windows.Forms.Label();
             this.lb_ObjectsNum = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lb_TotalSum = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.reportTimer = new System.Windows.Forms.Timer(this.components);
+            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.menuPicture = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_ObjectForm = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_OrgForm = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_LandForm = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_BuildingCompanyForm = new System.Windows.Forms.Button();
+            this.reportContainer = new System.Windows.Forms.Panel();
+            this.btn_BuildingCompanyRep = new System.Windows.Forms.Button();
+            this.btn_RepForm = new System.Windows.Forms.Button();
+            this.btn_ReportForm = new System.Windows.Forms.Button();
+            this.btn_Search = new Krypton.Toolkit.KryptonButton();
+            this.tb_Search = new Krypton.Toolkit.KryptonTextBox();
+            this.btn_ChangeOrg = new Krypton.Toolkit.KryptonButton();
+            this.btn_AddOrg = new Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.sideBar.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuPicture)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.reportContainer.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tb_Search
-            // 
-            this.tb_Search.BackColor = System.Drawing.Color.LightGray;
-            this.tb_Search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_Search.Location = new System.Drawing.Point(364, 66);
-            this.tb_Search.Multiline = true;
-            this.tb_Search.Name = "tb_Search";
-            this.tb_Search.Size = new System.Drawing.Size(196, 13);
-            this.tb_Search.TabIndex = 12;
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.BackColor = System.Drawing.Color.Black;
-            this.btn_Search.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Search.Location = new System.Drawing.Point(293, 60);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(53, 27);
-            this.btn_Search.TabIndex = 11;
-            this.btn_Search.Text = "Поиск";
-            this.btn_Search.UseVisualStyleBackColor = false;
-            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
-            // btn_AddOrg
-            // 
-            this.btn_AddOrg.BackColor = System.Drawing.Color.White;
-            this.btn_AddOrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddOrg.ForeColor = System.Drawing.Color.Black;
-            this.btn_AddOrg.Location = new System.Drawing.Point(30, 204);
-            this.btn_AddOrg.Name = "btn_AddOrg";
-            this.btn_AddOrg.Size = new System.Drawing.Size(96, 49);
-            this.btn_AddOrg.TabIndex = 8;
-            this.btn_AddOrg.Text = "Добавить оганизацию";
-            this.btn_AddOrg.UseVisualStyleBackColor = false;
-            this.btn_AddOrg.Click += new System.EventHandler(this.btn_AddOrg_Click);
-            // 
-            // btn_ChangeOrg
-            // 
-            this.btn_ChangeOrg.BackColor = System.Drawing.Color.White;
-            this.btn_ChangeOrg.Enabled = false;
-            this.btn_ChangeOrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ChangeOrg.ForeColor = System.Drawing.Color.Black;
-            this.btn_ChangeOrg.Location = new System.Drawing.Point(30, 272);
-            this.btn_ChangeOrg.Name = "btn_ChangeOrg";
-            this.btn_ChangeOrg.Size = new System.Drawing.Size(96, 48);
-            this.btn_ChangeOrg.TabIndex = 9;
-            this.btn_ChangeOrg.Text = "Изменить организацию";
-            this.btn_ChangeOrg.UseVisualStyleBackColor = false;
-            this.btn_ChangeOrg.Click += new System.EventHandler(this.btn_ChangeOrg_Click);
             // 
             // dataGridView1
             // 
@@ -123,14 +90,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(167, 107);
+            this.dataGridView1.Location = new System.Drawing.Point(314, 102);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -154,95 +121,10 @@
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.Black;
-            this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.земельныеУчасткиToolStripMenuItem,
-            this.xToolStripMenuItem,
-            this.строительныеКомпанииToolStripMenuItem,
-            this.отчетыToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(800, 38);
-            this.menuStrip1.TabIndex = 14;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 34);
-            this.toolStripMenuItem1.Text = "Объекты";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click_1);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(92, 34);
-            this.toolStripMenuItem2.Text = "Организации";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click_1);
-            // 
-            // земельныеУчасткиToolStripMenuItem
-            // 
-            this.земельныеУчасткиToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.земельныеУчасткиToolStripMenuItem.Name = "земельныеУчасткиToolStripMenuItem";
-            this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
-            this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
-            this.земельныеУчасткиToolStripMenuItem.Click += new System.EventHandler(this.земельныеУчасткиToolStripMenuItem_Click_1);
-            // 
-            // xToolStripMenuItem
-            // 
-            this.xToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.xToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.xToolStripMenuItem.Name = "xToolStripMenuItem";
-            this.xToolStripMenuItem.Size = new System.Drawing.Size(26, 34);
-            this.xToolStripMenuItem.Text = "X";
-            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click_1);
-            // 
-            // строительныеКомпанииToolStripMenuItem
-            // 
-            this.строительныеКомпанииToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.строительныеКомпанииToolStripMenuItem.Name = "строительныеКомпанииToolStripMenuItem";
-            this.строительныеКомпанииToolStripMenuItem.Size = new System.Drawing.Size(158, 34);
-            this.строительныеКомпанииToolStripMenuItem.Text = "Строительные компании";
-            this.строительныеКомпанииToolStripMenuItem.Click += new System.EventHandler(this.строительныеКомпанииToolStripMenuItem_Click);
-            // 
-            // отчетыToolStripMenuItem
-            // 
-            this.отчетыToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.поЗемельнымУчасткамToolStripMenuItem,
-            this.поСтроительнымКомпаниямToolStripMenuItem});
-            this.отчетыToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
-            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 34);
-            this.отчетыToolStripMenuItem.Text = "Отчеты";
-            // 
-            // поЗемельнымУчасткамToolStripMenuItem
-            // 
-            this.поЗемельнымУчасткамToolStripMenuItem.Name = "поЗемельнымУчасткамToolStripMenuItem";
-            this.поЗемельнымУчасткамToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.поЗемельнымУчасткамToolStripMenuItem.Text = "По земельным участкам";
-            this.поЗемельнымУчасткамToolStripMenuItem.Click += new System.EventHandler(this.поЗемельнымУчасткамToolStripMenuItem_Click);
-            // 
-            // поСтроительнымКомпаниямToolStripMenuItem
-            // 
-            this.поСтроительнымКомпаниямToolStripMenuItem.Name = "поСтроительнымКомпаниямToolStripMenuItem";
-            this.поСтроительнымКомпаниямToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.поСтроительнымКомпаниямToolStripMenuItem.Text = "По строительным компаниям";
-            this.поСтроительнымКомпаниямToolStripMenuItem.Click += new System.EventHandler(this.поСтроительнымКомпаниямToolStripMenuItem_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(167, 450);
+            this.label1.Location = new System.Drawing.Point(314, 445);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(212, 15);
             this.label1.TabIndex = 15;
@@ -252,7 +134,7 @@
             // lb_OrgName
             // 
             this.lb_OrgName.AutoSize = true;
-            this.lb_OrgName.Location = new System.Drawing.Point(385, 450);
+            this.lb_OrgName.Location = new System.Drawing.Point(532, 445);
             this.lb_OrgName.Name = "lb_OrgName";
             this.lb_OrgName.Size = new System.Drawing.Size(0, 15);
             this.lb_OrgName.TabIndex = 16;
@@ -261,7 +143,7 @@
             // lb_ObjectsNum
             // 
             this.lb_ObjectsNum.AutoSize = true;
-            this.lb_ObjectsNum.Location = new System.Drawing.Point(301, 475);
+            this.lb_ObjectsNum.Location = new System.Drawing.Point(448, 470);
             this.lb_ObjectsNum.Name = "lb_ObjectsNum";
             this.lb_ObjectsNum.Size = new System.Drawing.Size(0, 15);
             this.lb_ObjectsNum.TabIndex = 18;
@@ -270,7 +152,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(167, 475);
+            this.label3.Location = new System.Drawing.Point(314, 470);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 15);
             this.label3.TabIndex = 17;
@@ -280,7 +162,7 @@
             // lb_TotalSum
             // 
             this.lb_TotalSum.AutoSize = true;
-            this.lb_TotalSum.Location = new System.Drawing.Point(302, 501);
+            this.lb_TotalSum.Location = new System.Drawing.Point(449, 496);
             this.lb_TotalSum.Name = "lb_TotalSum";
             this.lb_TotalSum.Size = new System.Drawing.Size(0, 15);
             this.lb_TotalSum.TabIndex = 20;
@@ -289,61 +171,512 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(167, 501);
+            this.label4.Location = new System.Drawing.Point(314, 496);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(160, 15);
             this.label4.TabIndex = 19;
             this.label4.Text = "Общая стоимость участков:";
             this.label4.Visible = false;
             // 
+            // reportTimer
+            // 
+            this.reportTimer.Interval = 10;
+            this.reportTimer.Tick += new System.EventHandler(this.reportTimer_Tick);
+            // 
+            // sidebarTimer
+            // 
+            this.sidebarTimer.Interval = 10;
+            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
+            // 
+            // sideBar
+            // 
+            this.sideBar.BackColor = System.Drawing.Color.DarkOrange;
+            this.sideBar.Controls.Add(this.panel1);
+            this.sideBar.Controls.Add(this.panel2);
+            this.sideBar.Controls.Add(this.panel3);
+            this.sideBar.Controls.Add(this.panel4);
+            this.sideBar.Controls.Add(this.panel5);
+            this.sideBar.Controls.Add(this.reportContainer);
+            this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sideBar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.sideBar.Location = new System.Drawing.Point(0, 0);
+            this.sideBar.MaximumSize = new System.Drawing.Size(183, 550);
+            this.sideBar.MinimumSize = new System.Drawing.Size(55, 550);
+            this.sideBar.Name = "sideBar";
+            this.sideBar.Size = new System.Drawing.Size(55, 550);
+            this.sideBar.TabIndex = 21;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.menuPicture);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(197, 81);
+            this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(62, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 21);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Меню";
+            // 
+            // menuPicture
+            // 
+            this.menuPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menuPicture.Image = ((System.Drawing.Image)(resources.GetObject("menuPicture.Image")));
+            this.menuPicture.Location = new System.Drawing.Point(0, 42);
+            this.menuPicture.Name = "menuPicture";
+            this.menuPicture.Size = new System.Drawing.Size(41, 35);
+            this.menuPicture.TabIndex = 0;
+            this.menuPicture.TabStop = false;
+            this.menuPicture.Click += new System.EventHandler(this.menuPicture_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btn_ObjectForm);
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(3, 90);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(197, 59);
+            this.panel2.TabIndex = 2;
+            // 
+            // btn_ObjectForm
+            // 
+            this.btn_ObjectForm.FlatAppearance.BorderSize = 0;
+            this.btn_ObjectForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ObjectForm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_ObjectForm.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_ObjectForm.Image = ((System.Drawing.Image)(resources.GetObject("btn_ObjectForm.Image")));
+            this.btn_ObjectForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ObjectForm.Location = new System.Drawing.Point(-25, 5);
+            this.btn_ObjectForm.Name = "btn_ObjectForm";
+            this.btn_ObjectForm.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn_ObjectForm.Size = new System.Drawing.Size(267, 51);
+            this.btn_ObjectForm.TabIndex = 1;
+            this.btn_ObjectForm.Text = "                Объекты";
+            this.btn_ObjectForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ObjectForm.UseVisualStyleBackColor = true;
+            this.btn_ObjectForm.Click += new System.EventHandler(this.btn_ObjectForm_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btn_OrgForm);
+            this.panel3.ForeColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(3, 155);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(197, 59);
+            this.panel3.TabIndex = 3;
+            // 
+            // btn_OrgForm
+            // 
+            this.btn_OrgForm.FlatAppearance.BorderSize = 0;
+            this.btn_OrgForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OrgForm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_OrgForm.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_OrgForm.Image = ((System.Drawing.Image)(resources.GetObject("btn_OrgForm.Image")));
+            this.btn_OrgForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_OrgForm.Location = new System.Drawing.Point(-25, 5);
+            this.btn_OrgForm.Name = "btn_OrgForm";
+            this.btn_OrgForm.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_OrgForm.Size = new System.Drawing.Size(267, 51);
+            this.btn_OrgForm.TabIndex = 1;
+            this.btn_OrgForm.Text = "                 Организации";
+            this.btn_OrgForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_OrgForm.UseVisualStyleBackColor = true;
+            this.btn_OrgForm.Click += new System.EventHandler(this.btn_OrgForm_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btn_LandForm);
+            this.panel4.ForeColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(3, 220);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(197, 59);
+            this.panel4.TabIndex = 4;
+            // 
+            // btn_LandForm
+            // 
+            this.btn_LandForm.FlatAppearance.BorderSize = 0;
+            this.btn_LandForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LandForm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_LandForm.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_LandForm.Image = ((System.Drawing.Image)(resources.GetObject("btn_LandForm.Image")));
+            this.btn_LandForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LandForm.Location = new System.Drawing.Point(-25, 5);
+            this.btn_LandForm.Name = "btn_LandForm";
+            this.btn_LandForm.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btn_LandForm.Size = new System.Drawing.Size(246, 51);
+            this.btn_LandForm.TabIndex = 1;
+            this.btn_LandForm.Text = "               Земельные \r\n               участки";
+            this.btn_LandForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LandForm.UseVisualStyleBackColor = true;
+            this.btn_LandForm.Click += new System.EventHandler(this.btn_LandForm_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btn_BuildingCompanyForm);
+            this.panel5.ForeColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(3, 285);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(197, 59);
+            this.panel5.TabIndex = 5;
+            // 
+            // btn_BuildingCompanyForm
+            // 
+            this.btn_BuildingCompanyForm.FlatAppearance.BorderSize = 0;
+            this.btn_BuildingCompanyForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BuildingCompanyForm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_BuildingCompanyForm.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_BuildingCompanyForm.Image = ((System.Drawing.Image)(resources.GetObject("btn_BuildingCompanyForm.Image")));
+            this.btn_BuildingCompanyForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_BuildingCompanyForm.Location = new System.Drawing.Point(-25, 5);
+            this.btn_BuildingCompanyForm.Name = "btn_BuildingCompanyForm";
+            this.btn_BuildingCompanyForm.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btn_BuildingCompanyForm.Size = new System.Drawing.Size(236, 51);
+            this.btn_BuildingCompanyForm.TabIndex = 1;
+            this.btn_BuildingCompanyForm.Text = "               Строительные \r\n               компании";
+            this.btn_BuildingCompanyForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_BuildingCompanyForm.UseVisualStyleBackColor = true;
+            this.btn_BuildingCompanyForm.Click += new System.EventHandler(this.btn_BuildingCompanyForm_Click);
+            // 
+            // reportContainer
+            // 
+            this.reportContainer.Controls.Add(this.btn_BuildingCompanyRep);
+            this.reportContainer.Controls.Add(this.btn_RepForm);
+            this.reportContainer.Controls.Add(this.btn_ReportForm);
+            this.reportContainer.ForeColor = System.Drawing.Color.White;
+            this.reportContainer.Location = new System.Drawing.Point(3, 350);
+            this.reportContainer.MaximumSize = new System.Drawing.Size(197, 168);
+            this.reportContainer.MinimumSize = new System.Drawing.Size(197, 59);
+            this.reportContainer.Name = "reportContainer";
+            this.reportContainer.Size = new System.Drawing.Size(197, 59);
+            this.reportContainer.TabIndex = 6;
+            // 
+            // btn_BuildingCompanyRep
+            // 
+            this.btn_BuildingCompanyRep.FlatAppearance.BorderSize = 0;
+            this.btn_BuildingCompanyRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BuildingCompanyRep.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_BuildingCompanyRep.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_BuildingCompanyRep.Image = ((System.Drawing.Image)(resources.GetObject("btn_BuildingCompanyRep.Image")));
+            this.btn_BuildingCompanyRep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_BuildingCompanyRep.Location = new System.Drawing.Point(-14, 114);
+            this.btn_BuildingCompanyRep.Name = "btn_BuildingCompanyRep";
+            this.btn_BuildingCompanyRep.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn_BuildingCompanyRep.Size = new System.Drawing.Size(246, 51);
+            this.btn_BuildingCompanyRep.TabIndex = 3;
+            this.btn_BuildingCompanyRep.Text = "             По строительным \r\n             компаниям\r\n";
+            this.btn_BuildingCompanyRep.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_BuildingCompanyRep.UseVisualStyleBackColor = true;
+            this.btn_BuildingCompanyRep.Click += new System.EventHandler(this.btn_BuildingCompanyRep_Click);
+            // 
+            // btn_RepForm
+            // 
+            this.btn_RepForm.FlatAppearance.BorderSize = 0;
+            this.btn_RepForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_RepForm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_RepForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_RepForm.Image = ((System.Drawing.Image)(resources.GetObject("btn_RepForm.Image")));
+            this.btn_RepForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_RepForm.Location = new System.Drawing.Point(-14, 62);
+            this.btn_RepForm.Name = "btn_RepForm";
+            this.btn_RepForm.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn_RepForm.Size = new System.Drawing.Size(246, 51);
+            this.btn_RepForm.TabIndex = 2;
+            this.btn_RepForm.Text = "             По земельным \r\n             участкам";
+            this.btn_RepForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_RepForm.UseVisualStyleBackColor = true;
+            this.btn_RepForm.Click += new System.EventHandler(this.btn_RepForm_Click);
+            // 
+            // btn_ReportForm
+            // 
+            this.btn_ReportForm.FlatAppearance.BorderSize = 0;
+            this.btn_ReportForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ReportForm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_ReportForm.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_ReportForm.Image = ((System.Drawing.Image)(resources.GetObject("btn_ReportForm.Image")));
+            this.btn_ReportForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ReportForm.Location = new System.Drawing.Point(-25, 5);
+            this.btn_ReportForm.Name = "btn_ReportForm";
+            this.btn_ReportForm.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btn_ReportForm.Size = new System.Drawing.Size(246, 51);
+            this.btn_ReportForm.TabIndex = 1;
+            this.btn_ReportForm.Text = "                Отчеты";
+            this.btn_ReportForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ReportForm.UseVisualStyleBackColor = true;
+            this.btn_ReportForm.Click += new System.EventHandler(this.btn_ReportForm_Click);
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.CornerRoundingRadius = 5F;
+            this.btn_Search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Search.Location = new System.Drawing.Point(451, 67);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.OverrideDefault.Back.Color1 = System.Drawing.Color.Black;
+            this.btn_Search.OverrideDefault.Back.Color2 = System.Drawing.Color.Black;
+            this.btn_Search.OverrideDefault.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btn_Search.OverrideDefault.Border.Color2 = System.Drawing.Color.Transparent;
+            this.btn_Search.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_Search.Size = new System.Drawing.Size(53, 28);
+            this.btn_Search.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.btn_Search.StateCommon.Back.Color2 = System.Drawing.Color.Black;
+            this.btn_Search.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_Search.StateCommon.Border.Rounding = 5F;
+            this.btn_Search.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_Search.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_Search.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_Search.StateCommon.Content.ShortText.MultiLine = Krypton.Toolkit.InheritBool.True;
+            this.btn_Search.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
+            this.btn_Search.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
+            this.btn_Search.StateNormal.Back.Color1 = System.Drawing.Color.Black;
+            this.btn_Search.StateNormal.Back.Color2 = System.Drawing.Color.Black;
+            this.btn_Search.StateNormal.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btn_Search.StateNormal.Border.Color2 = System.Drawing.Color.Transparent;
+            this.btn_Search.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_Search.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_Search.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_Search.StateNormal.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btn_Search.StatePressed.Back.Color1 = System.Drawing.Color.Black;
+            this.btn_Search.StatePressed.Back.Color2 = System.Drawing.Color.Black;
+            this.btn_Search.StatePressed.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btn_Search.StatePressed.Border.Color2 = System.Drawing.Color.Transparent;
+            this.btn_Search.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_Search.StatePressed.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btn_Search.StateTracking.Back.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_Search.StateTracking.Back.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_Search.StateTracking.Border.Color1 = System.Drawing.Color.Transparent;
+            this.btn_Search.StateTracking.Border.Color2 = System.Drawing.Color.Transparent;
+            this.btn_Search.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_Search.StateTracking.Border.Rounding = 5F;
+            this.btn_Search.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btn_Search.TabIndex = 23;
+            this.btn_Search.Values.Text = "Поиск";
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click_1);
+            // 
+            // tb_Search
+            // 
+            this.tb_Search.CueHint.Color1 = System.Drawing.Color.White;
+            this.tb_Search.CueHint.CueHintText = "Введите адрес или номер объекта";
+            this.tb_Search.CueHint.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tb_Search.CueHint.Padding = new System.Windows.Forms.Padding(0);
+            this.tb_Search.Location = new System.Drawing.Point(513, 65);
+            this.tb_Search.Name = "tb_Search";
+            this.tb_Search.Size = new System.Drawing.Size(244, 31);
+            this.tb_Search.StateCommon.Back.Color1 = System.Drawing.Color.Gray;
+            this.tb_Search.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.tb_Search.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.tb_Search.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.tb_Search.StateCommon.Border.Rounding = 5F;
+            this.tb_Search.StateCommon.Border.Width = 1;
+            this.tb_Search.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.tb_Search.StateCommon.Content.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tb_Search.TabIndex = 22;
+            // 
+            // btn_ChangeOrg
+            // 
+            this.btn_ChangeOrg.CornerRoundingRadius = 5F;
+            this.btn_ChangeOrg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ChangeOrg.Enabled = false;
+            this.btn_ChangeOrg.Location = new System.Drawing.Point(194, 274);
+            this.btn_ChangeOrg.Name = "btn_ChangeOrg";
+            this.btn_ChangeOrg.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
+            this.btn_ChangeOrg.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
+            this.btn_ChangeOrg.OverrideDefault.Border.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_ChangeOrg.OverrideDefault.Border.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_ChangeOrg.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_ChangeOrg.OverrideDefault.Border.Width = 2;
+            this.btn_ChangeOrg.Size = new System.Drawing.Size(109, 71);
+            this.btn_ChangeOrg.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
+            this.btn_ChangeOrg.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
+            this.btn_ChangeOrg.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_ChangeOrg.StateCommon.Border.Rounding = 5F;
+            this.btn_ChangeOrg.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_ChangeOrg.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_ChangeOrg.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_ChangeOrg.StateCommon.Content.ShortText.MultiLine = Krypton.Toolkit.InheritBool.True;
+            this.btn_ChangeOrg.StateDisabled.Back.Color1 = System.Drawing.Color.LightGray;
+            this.btn_ChangeOrg.StateDisabled.Back.Color2 = System.Drawing.Color.LightGray;
+            this.btn_ChangeOrg.StateDisabled.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btn_ChangeOrg.StateNormal.Back.Color1 = System.Drawing.Color.Transparent;
+            this.btn_ChangeOrg.StateNormal.Back.Color2 = System.Drawing.Color.Transparent;
+            this.btn_ChangeOrg.StateNormal.Border.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_ChangeOrg.StateNormal.Border.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_ChangeOrg.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_ChangeOrg.StateNormal.Border.Width = 2;
+            this.btn_ChangeOrg.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btn_ChangeOrg.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.btn_ChangeOrg.StateNormal.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btn_ChangeOrg.StatePressed.Back.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_ChangeOrg.StatePressed.Back.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_ChangeOrg.StatePressed.Border.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_ChangeOrg.StatePressed.Border.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_ChangeOrg.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_ChangeOrg.StatePressed.Border.Width = 2;
+            this.btn_ChangeOrg.StatePressed.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btn_ChangeOrg.StateTracking.Back.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_ChangeOrg.StateTracking.Back.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_ChangeOrg.StateTracking.Border.Color1 = System.Drawing.Color.Black;
+            this.btn_ChangeOrg.StateTracking.Border.Color2 = System.Drawing.Color.Black;
+            this.btn_ChangeOrg.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_ChangeOrg.StateTracking.Border.Rounding = 5F;
+            this.btn_ChangeOrg.StateTracking.Border.Width = 2;
+            this.btn_ChangeOrg.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btn_ChangeOrg.TabIndex = 27;
+            this.btn_ChangeOrg.Values.Text = "Изменить \r\nорганизацию";
+            this.btn_ChangeOrg.Click += new System.EventHandler(this.btn_ChangeOrg_Click_1);
+            // 
+            // btn_AddOrg
+            // 
+            this.btn_AddOrg.CornerRoundingRadius = 5F;
+            this.btn_AddOrg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_AddOrg.Location = new System.Drawing.Point(194, 195);
+            this.btn_AddOrg.Name = "btn_AddOrg";
+            this.btn_AddOrg.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
+            this.btn_AddOrg.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
+            this.btn_AddOrg.OverrideDefault.Border.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.OverrideDefault.Border.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_AddOrg.OverrideDefault.Border.Width = 2;
+            this.btn_AddOrg.Size = new System.Drawing.Size(109, 73);
+            this.btn_AddOrg.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
+            this.btn_AddOrg.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
+            this.btn_AddOrg.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_AddOrg.StateCommon.Border.Rounding = 5F;
+            this.btn_AddOrg.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_AddOrg.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_AddOrg.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_AddOrg.StateCommon.Content.ShortText.MultiLine = Krypton.Toolkit.InheritBool.True;
+            this.btn_AddOrg.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
+            this.btn_AddOrg.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
+            this.btn_AddOrg.StateNormal.Back.Color1 = System.Drawing.Color.Transparent;
+            this.btn_AddOrg.StateNormal.Back.Color2 = System.Drawing.Color.Transparent;
+            this.btn_AddOrg.StateNormal.Border.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StateNormal.Border.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_AddOrg.StateNormal.Border.Width = 2;
+            this.btn_AddOrg.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btn_AddOrg.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.btn_AddOrg.StateNormal.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btn_AddOrg.StatePressed.Back.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StatePressed.Back.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StatePressed.Border.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StatePressed.Border.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_AddOrg.StatePressed.Border.Width = 2;
+            this.btn_AddOrg.StatePressed.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btn_AddOrg.StateTracking.Back.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StateTracking.Back.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StateTracking.Border.Color1 = System.Drawing.Color.Black;
+            this.btn_AddOrg.StateTracking.Border.Color2 = System.Drawing.Color.Black;
+            this.btn_AddOrg.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_AddOrg.StateTracking.Border.Rounding = 5F;
+            this.btn_AddOrg.StateTracking.Border.Width = 2;
+            this.btn_AddOrg.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btn_AddOrg.TabIndex = 26;
+            this.btn_AddOrg.Values.Text = "Добавить\r\nорганизацию";
+            this.btn_AddOrg.Click += new System.EventHandler(this.btn_AddOrg_Click_1);
+            // 
             // OrganizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 578);
+            this.ClientSize = new System.Drawing.Size(938, 544);
+            this.Controls.Add(this.btn_ChangeOrg);
+            this.Controls.Add(this.btn_AddOrg);
+            this.Controls.Add(this.btn_Search);
+            this.Controls.Add(this.tb_Search);
+            this.Controls.Add(this.sideBar);
             this.Controls.Add(this.lb_TotalSum);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lb_ObjectsNum);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lb_OrgName);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.tb_Search);
-            this.Controls.Add(this.btn_Search);
-            this.Controls.Add(this.btn_ChangeOrg);
-            this.Controls.Add(this.btn_AddOrg);
             this.Name = "OrganizationForm";
             this.Text = "Организации";
             this.Load += new System.EventHandler(this.OrganizationForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.sideBar.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuPicture)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.reportContainer.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private TextBox tb_Search;
-        private Button btn_Search;
-        private Button btn_AddOrg;
-        private Button btn_ChangeOrg;
         private DataGridView dataGridView1;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
-        private ToolStripMenuItem xToolStripMenuItem;
-        private ToolStripMenuItem строительныеКомпанииToolStripMenuItem;
-        private ToolStripMenuItem отчетыToolStripMenuItem;
-        private ToolStripMenuItem поЗемельнымУчасткамToolStripMenuItem;
-        private ToolStripMenuItem поСтроительнымКомпаниямToolStripMenuItem;
         private Label label1;
         private Label lb_OrgName;
         private Label lb_ObjectsNum;
         private Label label3;
         private Label lb_TotalSum;
         private Label label4;
+        private System.Windows.Forms.Timer reportTimer;
+        private System.Windows.Forms.Timer sidebarTimer;
+        private FlowLayoutPanel sideBar;
+        private Panel panel1;
+        private Label label2;
+        private PictureBox menuPicture;
+        private Panel panel2;
+        private Button btn_ObjectForm;
+        private Panel panel3;
+        private Button btn_OrgForm;
+        private Panel panel4;
+        private Button btn_LandForm;
+        private Panel panel5;
+        private Button btn_BuildingCompanyForm;
+        private Panel reportContainer;
+        private Button btn_BuildingCompanyRep;
+        private Button btn_RepForm;
+        private Button btn_ReportForm;
+        private Krypton.Toolkit.KryptonButton btn_Search;
+        private Krypton.Toolkit.KryptonTextBox tb_Search;
+        private Krypton.Toolkit.KryptonButton btn_ChangeOrg;
+        private Krypton.Toolkit.KryptonButton btn_AddOrg;
     }
 }

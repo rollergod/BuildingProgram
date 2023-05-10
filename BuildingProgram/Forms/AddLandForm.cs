@@ -13,7 +13,6 @@ namespace BuildingProgram.Forms
         public AddLandForm(int landId = 0)
         {
             InitializeComponent();
-            menuStrip1.Renderer = new NoHighlightRenderer();
             _context = new AppDbContext();
             _landId = landId;
         }

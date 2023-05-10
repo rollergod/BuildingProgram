@@ -16,7 +16,6 @@ namespace BuildingProgram.Forms
         {
             InitializeComponent();
             _context = new AppDbContext();
-            menuStrip1.Renderer = new NoHighlightRenderer();
             _objNum = objNum;
             _userId = userId;
             imagePath = null;
@@ -24,106 +23,7 @@ namespace BuildingProgram.Forms
 
         private void btn_AddObject_Click(object sender, EventArgs e)
         {
-            string imageName = null;
-            int objNumber;
-
-            if(!int.TryParse(tb_ObjectNum.Texts,out objNumber))
-            {
-                MessageBox.Show("Номер объекта должен состоять только из цифр");
-                return;
-            }
-
-            string objName = tb_ObjectName.Texts;
-
-            DateOnly startPlanned = DateOnly.Parse(dtp_StartPlan.Text);
-            DateOnly startFact = DateOnly.Parse(dtp_StartFact.Text);
-            DateOnly enddate = DateOnly.Parse(dtp_EndDate.Text);
-
-            bool isPermit = cb_buildingPermit.Checked;
-            bool isEnded = cb_buildingEnded.Checked;
-            bool isChecked = cb_isBuildingChecked.Checked;
-
-            int buildingStatus = cb_buildingStatus.SelectedIndex;
-
-            var selectedBuilding = cb_Land.Text;
-            if(selectedBuilding == null)
-            {
-                MessageBox.Show("Выберите земельный участок");
-                return;
-            }
-
-            var land = _context.Lands.FirstOrDefault(x => x.Address == selectedBuilding);
-
-            var selectedOrganization = cb_Organization.SelectedValue.ToString();
-            if (selectedOrganization == null)
-            {
-                MessageBox.Show("Выберите задействованную организацию");
-                return;
-            }
-            var organization = _context.Organizations.FirstOrDefault(x => x.OrganizationName == selectedOrganization);
-
-            var selectedBuildingCompany = cb_BuildingCompany.SelectedValue.ToString();
-            if(selectedBuildingCompany == null)
-            {
-                MessageBox.Show("Выберите строительную компаниюорганизацию");
-                return;
-            }
-            var buildingCompany = _context.BuildingCompanies.FirstOrDefault(x => x.Name == selectedBuildingCompany);
-
-            if(pictureBox1.Image != null)
-            {
-               imageName = Path.GetFileName(imagePath);
-            }
-
-            if(_objNum == 0)
-            {
-                var user = _context.Users.FirstOrDefault(x => x.Id == _userId);
-                var addedBuilding = new BuildingObject
-                {
-                    ObjectName = objName,
-                    ObjectNumber = objNumber,
-                    StartPlanned = startPlanned,
-                    StartActual = startFact,
-                    EndDate = enddate,
-                    IsBuildingEnded = isEnded,
-                    IsBuildPermit = isPermit,
-                    BuildingStatus = buildingStatus,
-                    IsChecked = isChecked,
-                    Land = land,
-                    BuildingCompany = buildingCompany,
-                    ImageName = imageName,
-                    User = user
-                };
-
-                File.Copy(imagePath, Path.Combine(@"D:\Projects\2023\BuildingProgram\BuildingProgram\Images\", Path.GetFileName(imagePath)), true);
-                _context.BuildingObjects.Add(addedBuilding);
-            }
-            else
-            {
-                var objForChange = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objNum);
-
-                objForChange.ObjectName = objName;
-                objForChange.ObjectNumber = objNumber;
-                objForChange.StartPlanned = startPlanned;
-                objForChange.StartActual = startFact;
-                objForChange.EndDate = enddate;
-                objForChange.IsBuildingEnded = isEnded;
-                objForChange.IsBuildPermit = isPermit;
-                objForChange.IsChecked = isChecked;
-                objForChange.BuildingStatus= buildingStatus;
-                objForChange.Land = land;
-                objForChange.BuildingCompany = buildingCompany;
-
-                if(pictureBox1.Image != null && imageName != null)
-                {
-                    objForChange.ImageName = imageName;
-                    File.Copy(imagePath, Path.Combine(@"D:\Projects\2023\BuildingProgram\BuildingProgram\Images\", Path.GetFileName(imagePath)), true);
-                }
-
-                _context.BuildingObjects.Update(objForChange);
-            }
-            _context.SaveChanges();
-            MessageBox.Show(_objNum == 0 ? $"Объект с номером {objNumber} успешно добавлен" : $"Объект с номером {objNumber} успешно изменён");
+            
         }
 
         private void AddNewObject_Load(object sender, EventArgs e)
@@ -134,10 +34,6 @@ namespace BuildingProgram.Forms
             cb_Land.DataSource = _context.Lands
                 .Where(x => !buildingObjectsWithLands.Contains(x.Id))
                 .Select(x => x.Address)
-                .ToList();
-
-            cb_Organization.DataSource = _context.Organizations
-                .Select(x => x.OrganizationName)
                 .ToList();
 
             cb_BuildingCompany.DataSource = _context.BuildingCompanies
@@ -178,14 +74,7 @@ namespace BuildingProgram.Forms
 
         private void btn_ChosePhoto_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image Files(*.jpg, *.jpeg, *.png)|*.jpg; *.jpeg; *.png";
-
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                imagePath = openFileDialog.FileName;
-                pictureBox1.Image = new Bitmap(openFileDialog.FileName);
-            }
+            
         }
 
         private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
@@ -242,6 +131,124 @@ namespace BuildingProgram.Forms
                 .FirstOrDefault(x => x.Address== landAddress).Owner;
 
             lb_LandOrg.Text = landOwner.OrganizationName;
+        }
+
+        private void btn_AddObject_Click_1(object sender, EventArgs e)
+        {
+            string imageName = null;
+            int objNumber;
+
+            if (!int.TryParse(tb_ObjectNum.Texts, out objNumber))
+            {
+                MessageBox.Show("Номер объекта должен состоять только из цифр");
+                return;
+            }
+
+            string objName = tb_ObjectName.Texts;
+
+            DateOnly startPlanned = DateOnly.Parse(dtp_StartPlan.Text);
+            DateOnly startFact = DateOnly.Parse(dtp_StartFact.Text);
+            DateOnly enddate = DateOnly.Parse(dtp_EndDate.Text);
+
+            bool isPermit = cb_buildingPermit.Checked;
+            bool isEnded = cb_buildingEnded.Checked;
+            bool isChecked = cb_isBuildingChecked.Checked;
+
+            int buildingStatus = cb_buildingStatus.SelectedIndex;
+
+            var selectedBuilding = cb_Land.Text;
+            if (selectedBuilding == null)
+            {
+                MessageBox.Show("Выберите земельный участок");
+                return;
+            }
+
+            var land = _context.Lands.FirstOrDefault(x => x.Address == selectedBuilding);
+
+            var selectedBuildingCompany = cb_BuildingCompany.SelectedValue.ToString();
+            if (selectedBuildingCompany == null)
+            {
+                MessageBox.Show("Выберите строительную компаниюорганизацию");
+                return;
+            }
+            var buildingCompany = _context.BuildingCompanies.FirstOrDefault(x => x.Name == selectedBuildingCompany);
+
+            if (pictureBox1.Image != null)
+            {
+                imageName = Path.GetFileName(imagePath);
+            }
+
+            if (_objNum == 0)
+            {
+                var user = _context.Users.FirstOrDefault(x => x.Id == _userId);
+                var addedBuilding = new BuildingObject
+                {
+                    ObjectName = objName,
+                    ObjectNumber = objNumber,
+                    StartPlanned = startPlanned,
+                    StartActual = startFact,
+                    EndDate = enddate,
+                    IsBuildingEnded = isEnded,
+                    IsBuildPermit = isPermit,
+                    BuildingStatus = buildingStatus,
+                    IsChecked = isChecked,
+                    Land = land,
+                    BuildingCompany = buildingCompany,
+                    ImageName = imageName,
+                    User = user
+                };
+
+                File.Copy(imagePath, Path.Combine(@"D:\Projects\2023\BuildingProgram\BuildingProgram\Images\", Path.GetFileName(imagePath)), true);
+                _context.BuildingObjects.Add(addedBuilding);
+            }
+            else
+            {
+                var objForChange = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objNum);
+
+                objForChange.ObjectName = objName;
+                objForChange.ObjectNumber = objNumber;
+                objForChange.StartPlanned = startPlanned;
+                objForChange.StartActual = startFact;
+                objForChange.EndDate = enddate;
+                objForChange.IsBuildingEnded = isEnded;
+                objForChange.IsBuildPermit = isPermit;
+                objForChange.IsChecked = isChecked;
+                objForChange.BuildingStatus = buildingStatus;
+                objForChange.Land = land;
+                objForChange.BuildingCompany = buildingCompany;
+
+                if (pictureBox1.Image != null && imageName != null)
+                {
+                    objForChange.ImageName = imageName;
+                    File.Copy(imagePath, Path.Combine(@"D:\Projects\2023\BuildingProgram\BuildingProgram\Images\", Path.GetFileName(imagePath)), true);
+                }
+
+                _context.BuildingObjects.Update(objForChange);
+            }
+            _context.SaveChanges();
+            MessageBox.Show(_objNum == 0 ? $"Объект с номером {objNumber} успешно добавлен" : $"Объект с номером {objNumber} успешно изменён");
+        }
+
+        private void btn_Exit1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_ChosePhoto_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files(*.jpg, *.jpeg, *.png)|*.jpg; *.jpeg; *.png";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                imagePath = openFileDialog.FileName;
+                pictureBox1.Image = new Bitmap(openFileDialog.FileName);
+            }
         }
     }
 }

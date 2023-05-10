@@ -10,7 +10,6 @@ namespace BuildingProgram.Forms
         public BuildingCompanyReportForm()
         {
             InitializeComponent();
-            menuStrip1.Renderer = new NoHighlightRenderer();
             _context = new AppDbContext();
         }
 

@@ -32,16 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tb_Director = new BuildingProgram.Controls.CustomTextBox();
-            this.btn_AddOrg = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поЗемельнымУчасткамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поСтроительнымКомпаниямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.btn_AddOrg = new Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
             // tb_OrgName
@@ -50,7 +41,7 @@
             this.tb_OrgName.BorderColor = System.Drawing.Color.Black;
             this.tb_OrgName.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_OrgName.BorderSize = 2;
-            this.tb_OrgName.Location = new System.Drawing.Point(190, 120);
+            this.tb_OrgName.Location = new System.Drawing.Point(175, 100);
             this.tb_OrgName.Margin = new System.Windows.Forms.Padding(0);
             this.tb_OrgName.Multiline = false;
             this.tb_OrgName.Name = "tb_OrgName";
@@ -63,7 +54,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(251, 100);
+            this.label1.Location = new System.Drawing.Point(236, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 15);
             this.label1.TabIndex = 3;
@@ -72,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(189, 147);
+            this.label2.Location = new System.Drawing.Point(174, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(263, 15);
             this.label2.TabIndex = 5;
@@ -84,7 +75,7 @@
             this.tb_Director.BorderColor = System.Drawing.Color.Black;
             this.tb_Director.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_Director.BorderSize = 2;
-            this.tb_Director.Location = new System.Drawing.Point(190, 171);
+            this.tb_Director.Location = new System.Drawing.Point(175, 151);
             this.tb_Director.Margin = new System.Windows.Forms.Padding(0);
             this.tb_Director.Multiline = false;
             this.tb_Director.Name = "tb_Director";
@@ -96,98 +87,70 @@
             // 
             // btn_AddOrg
             // 
-            this.btn_AddOrg.BackColor = System.Drawing.Color.White;
-            this.btn_AddOrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddOrg.ForeColor = System.Drawing.Color.Black;
-            this.btn_AddOrg.Location = new System.Drawing.Point(265, 224);
+            this.btn_AddOrg.CornerRoundingRadius = 5F;
+            this.btn_AddOrg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_AddOrg.Location = new System.Drawing.Point(245, 206);
             this.btn_AddOrg.Name = "btn_AddOrg";
-            this.btn_AddOrg.Size = new System.Drawing.Size(105, 40);
-            this.btn_AddOrg.TabIndex = 6;
-            this.btn_AddOrg.Text = "Добавить организацию";
-            this.btn_AddOrg.UseVisualStyleBackColor = false;
-            this.btn_AddOrg.Click += new System.EventHandler(this.btn_AddOrg_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.Black;
-            this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.земельныеУчасткиToolStripMenuItem,
-            this.строительныеКомпанииToolStripMenuItem,
-            this.отчетыToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(608, 38);
-            this.menuStrip1.TabIndex = 7;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 34);
-            this.toolStripMenuItem1.Text = "Объекты";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click_1);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(92, 34);
-            this.toolStripMenuItem2.Text = "Организации";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click_1);
-            // 
-            // земельныеУчасткиToolStripMenuItem
-            // 
-            this.земельныеУчасткиToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.земельныеУчасткиToolStripMenuItem.Name = "земельныеУчасткиToolStripMenuItem";
-            this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
-            this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
-            this.земельныеУчасткиToolStripMenuItem.Click += new System.EventHandler(this.земельныеУчасткиToolStripMenuItem_Click_1);
-            // 
-            // строительныеКомпанииToolStripMenuItem
-            // 
-            this.строительныеКомпанииToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.строительныеКомпанииToolStripMenuItem.Name = "строительныеКомпанииToolStripMenuItem";
-            this.строительныеКомпанииToolStripMenuItem.Size = new System.Drawing.Size(158, 34);
-            this.строительныеКомпанииToolStripMenuItem.Text = "Строительные компании";
-            this.строительныеКомпанииToolStripMenuItem.Click += new System.EventHandler(this.строительныеКомпанииToolStripMenuItem_Click);
-            // 
-            // отчетыToolStripMenuItem
-            // 
-            this.отчетыToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.поЗемельнымУчасткамToolStripMenuItem,
-            this.поСтроительнымКомпаниямToolStripMenuItem});
-            this.отчетыToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
-            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 34);
-            this.отчетыToolStripMenuItem.Text = "Отчеты";
-            // 
-            // поЗемельнымУчасткамToolStripMenuItem
-            // 
-            this.поЗемельнымУчасткамToolStripMenuItem.Name = "поЗемельнымУчасткамToolStripMenuItem";
-            this.поЗемельнымУчасткамToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.поЗемельнымУчасткамToolStripMenuItem.Text = "По земельным участкам";
-            this.поЗемельнымУчасткамToolStripMenuItem.Click += new System.EventHandler(this.поЗемельнымУчасткамToolStripMenuItem_Click);
-            // 
-            // поСтроительнымКомпаниямToolStripMenuItem
-            // 
-            this.поСтроительнымКомпаниямToolStripMenuItem.Name = "поСтроительнымКомпаниямToolStripMenuItem";
-            this.поСтроительнымКомпаниямToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.поСтроительнымКомпаниямToolStripMenuItem.Text = "По строительным компаниям";
-            this.поСтроительнымКомпаниямToolStripMenuItem.Click += new System.EventHandler(this.поСтроительнымКомпаниямToolStripMenuItem_Click);
+            this.btn_AddOrg.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
+            this.btn_AddOrg.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
+            this.btn_AddOrg.OverrideDefault.Border.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.OverrideDefault.Border.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_AddOrg.OverrideDefault.Border.Width = 2;
+            this.btn_AddOrg.Size = new System.Drawing.Size(109, 48);
+            this.btn_AddOrg.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
+            this.btn_AddOrg.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
+            this.btn_AddOrg.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_AddOrg.StateCommon.Border.Rounding = 5F;
+            this.btn_AddOrg.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_AddOrg.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_AddOrg.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_AddOrg.StateCommon.Content.ShortText.MultiLine = Krypton.Toolkit.InheritBool.True;
+            this.btn_AddOrg.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
+            this.btn_AddOrg.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
+            this.btn_AddOrg.StateNormal.Back.Color1 = System.Drawing.Color.Transparent;
+            this.btn_AddOrg.StateNormal.Back.Color2 = System.Drawing.Color.Transparent;
+            this.btn_AddOrg.StateNormal.Border.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StateNormal.Border.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StateNormal.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_AddOrg.StateNormal.Border.Width = 2;
+            this.btn_AddOrg.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.btn_AddOrg.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.btn_AddOrg.StateNormal.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btn_AddOrg.StatePressed.Back.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StatePressed.Back.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StatePressed.Border.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StatePressed.Border.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StatePressed.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_AddOrg.StatePressed.Border.Width = 2;
+            this.btn_AddOrg.StatePressed.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btn_AddOrg.StateTracking.Back.Color1 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StateTracking.Back.Color2 = System.Drawing.Color.DarkOrange;
+            this.btn_AddOrg.StateTracking.Border.Color1 = System.Drawing.Color.Black;
+            this.btn_AddOrg.StateTracking.Border.Color2 = System.Drawing.Color.Black;
+            this.btn_AddOrg.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_AddOrg.StateTracking.Border.Rounding = 5F;
+            this.btn_AddOrg.StateTracking.Border.Width = 2;
+            this.btn_AddOrg.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btn_AddOrg.TabIndex = 29;
+            this.btn_AddOrg.Values.Text = "Добавить \r\nорганизацию";
+            this.btn_AddOrg.Click += new System.EventHandler(this.btn_AddOrg_Click_1);
             // 
             // AddOrgForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 305);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btn_AddOrg);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tb_Director);
@@ -196,8 +159,6 @@
             this.Name = "AddOrgForm";
             this.Text = "Добавление организации";
             this.Load += new System.EventHandler(this.AddOrgForm_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,14 +169,6 @@
         private Label label1;
         private Label label2;
         private Controls.CustomTextBox tb_Director;
-        private Button btn_AddOrg;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
-        private ToolStripMenuItem строительныеКомпанииToolStripMenuItem;
-        private ToolStripMenuItem отчетыToolStripMenuItem;
-        private ToolStripMenuItem поЗемельнымУчасткамToolStripMenuItem;
-        private ToolStripMenuItem поСтроительнымКомпаниямToolStripMenuItem;
+        private Krypton.Toolkit.KryptonButton btn_AddOrg;
     }
 }

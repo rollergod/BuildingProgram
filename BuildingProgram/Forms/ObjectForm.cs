@@ -12,36 +12,14 @@ namespace BuildingProgram.Forms
         private int _noteId;
         private int _userId;
         private AppDbContext _context;
+        bool siderbarExpand = false;
+        bool reportCollapse = true;
         public ObjectForm(int objNum = 0,int userId = 0)
         {
             InitializeComponent();
-            menuStrip1.Renderer = new NoHighlightRenderer();
             _context = new AppDbContext();
             _objNum = objNum;
             _userId = userId;
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            MainMenu objForm = new MainMenu();
-            objForm.ShowDialog();
-        }
-
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            OrganizationForm orgForm = new OrganizationForm();
-            orgForm.ShowDialog();
-        }
-
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-            //справка
-        }
-
-        private void земельныеУчасткиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LandForm landForm = new LandForm();
-            landForm.ShowDialog();  
         }
 
         private void ObjectForm_Load(object sender, EventArgs e)
@@ -74,18 +52,135 @@ namespace BuildingProgram.Forms
             dataGridView1.Columns[0].HeaderText = "Номер заметки";
             dataGridView1.Columns[1].HeaderText = "Важность";
             dataGridView1.Columns[2].HeaderText = "Текст заметки";
-        }
 
-        private void xToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[4].Visible = false;
 
+            dataGridView1.Columns[1].Width = 200;
+            dataGridView1.Columns[2].Width = 500;
+        }
+    
         private void btn_AddNote_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btn_ChangeNote_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_DeleteNote_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            _noteId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+
+            if (_noteId > 0)
+            {
+                btn_ChangeNote.Enabled = true;
+                btn_DeleteNote.Enabled = true;
+            }
+        }
+
+        private void btn_ObjectForm_Click(object sender, EventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.ShowDialog();
+        }
+
+        private void btn_OrgForm_Click(object sender, EventArgs e)
+        {
+            OrganizationForm orgForm = new OrganizationForm();
+            orgForm.ShowDialog();
+        }
+
+        private void btn_LandForm_Click(object sender, EventArgs e)
+        {
+            LandForm landForm = new LandForm();
+            landForm.ShowDialog();
+        }
+
+        private void btn_BuildingCompanyForm_Click(object sender, EventArgs e)
+        {
+            BuildingCompanyForm buildingCompanyForm = new BuildingCompanyForm();
+            buildingCompanyForm.ShowDialog();
+        }
+
+        private void btn_RepForm_Click(object sender, EventArgs e)
+        {
+            ReportForm repForm = new ReportForm();
+            repForm.ShowDialog();
+        }
+
+        private void btn_BuildingCompanyRep_Click(object sender, EventArgs e)
+        {
+            BuildingCompanyReportForm buildingCompanyReportForm = new BuildingCompanyReportForm();
+            buildingCompanyReportForm.ShowDialog();
+        }
+
+        private void sidebarTimer_Tick(object sender, EventArgs e)
+        {
+            if (siderbarExpand)
+            {
+                sideBar.Width -= 10;
+                if (sideBar.Width == sideBar.MinimumSize.Width)
+                {
+                    siderbarExpand = false;
+                    sidebarTimer.Stop();
+                }
+            }
+            else
+            {
+                sideBar.Width += 10;
+                if (sideBar.Width == sideBar.MaximumSize.Width)
+                {
+                    siderbarExpand = true;
+                    sidebarTimer.Stop();
+                }
+            }
+        }
+
+        private void reportTimer_Tick(object sender, EventArgs e)
+        {
+            if (reportCollapse)
+            {
+                reportContainer.Height += 10;
+                if (reportContainer.Height == reportContainer.MaximumSize.Height)
+                {
+                    reportCollapse = false;
+                    reportTimer.Stop();
+                }
+            }
+            else
+            {
+                reportContainer.Height -= 10;
+                if (reportContainer.Height == reportContainer.MinimumSize.Height)
+                {
+                    reportCollapse = true;
+                    reportTimer.Stop();
+                }
+            }
+        }
+
+        private void menuPicture_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+        private void btn_ReportForm_Click(object sender, EventArgs e)
+        {
+            reportTimer.Start();
+        }
+
+        private void btn_AddNote_Click_1(object sender, EventArgs e)
         {
             var currentObject = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objNum);
 
-            if(currentObject.UserId == _userId)
+            if (currentObject.UserId == _userId)
             {
                 AddNoteForm addNoteForm = new AddNoteForm(_objNum);
                 addNoteForm.ShowDialog();
@@ -96,22 +191,7 @@ namespace BuildingProgram.Forms
             }
         }
 
-        private void btn_ChangeNote_Click(object sender, EventArgs e)
-        {
-            var currentObject = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objNum);
-
-            if (currentObject.UserId == _userId)
-            {
-                AddNoteForm addNoteForm = new AddNoteForm(_objNum, _noteId);
-                addNoteForm.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("У вас нет прав для изменения заметки у этого объекта.");
-            }
-        }
-
-        private void btn_DeleteNote_Click(object sender, EventArgs e)
+        private void btn_DeleteNote_Click_1(object sender, EventArgs e)
         {
             var currentObject = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objNum);
 
@@ -137,32 +217,18 @@ namespace BuildingProgram.Forms
             }
         }
 
-        private void поЗемельнымУчасткамToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_ChangeNote_Click_1(object sender, EventArgs e)
         {
-            ReportForm repForm = new ReportForm();
-            repForm.ShowDialog();
-        }
+            var currentObject = _context.BuildingObjects.FirstOrDefault(x => x.ObjectNumber == _objNum);
 
-        private void поСтроительнымКомпаниямToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BuildingCompanyReportForm buildingCompanyReportForm = new BuildingCompanyReportForm();
-            buildingCompanyReportForm.ShowDialog();
-        }
-
-        private void строительныеКомпанииToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BuildingCompanyForm buildingCompanyForm = new BuildingCompanyForm();
-            buildingCompanyForm.ShowDialog();
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            _noteId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-
-            if (_noteId > 0)
+            if (currentObject.UserId == _userId)
             {
-                btn_ChangeNote.Enabled = true;
-                btn_DeleteNote.Enabled = true;
+                AddNoteForm addNoteForm = new AddNoteForm(_objNum, _noteId);
+                addNoteForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("У вас нет прав для изменения заметки у этого объекта.");
             }
         }
     }

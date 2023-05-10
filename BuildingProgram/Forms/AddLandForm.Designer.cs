@@ -45,15 +45,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tb_SellPrice = new BuildingProgram.Controls.CustomTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.земельныеУчасткиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.строительныеКомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поЗемельнымУчасткамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поСтроительнымКомпаниямToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tb_Address
@@ -62,7 +53,7 @@
             this.tb_Address.BorderColor = System.Drawing.Color.Black;
             this.tb_Address.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_Address.BorderSize = 2;
-            this.tb_Address.Location = new System.Drawing.Point(84, 192);
+            this.tb_Address.Location = new System.Drawing.Point(174, 145);
             this.tb_Address.Margin = new System.Windows.Forms.Padding(0);
             this.tb_Address.Multiline = false;
             this.tb_Address.Name = "tb_Address";
@@ -78,7 +69,7 @@
             this.tb_CadastralNum.BorderColor = System.Drawing.Color.Black;
             this.tb_CadastralNum.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_CadastralNum.BorderSize = 2;
-            this.tb_CadastralNum.Location = new System.Drawing.Point(161, 164);
+            this.tb_CadastralNum.Location = new System.Drawing.Point(249, 117);
             this.tb_CadastralNum.Margin = new System.Windows.Forms.Padding(0);
             this.tb_CadastralNum.Multiline = false;
             this.tb_CadastralNum.Name = "tb_CadastralNum";
@@ -92,7 +83,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(37, 307);
+            this.label9.Location = new System.Drawing.Point(125, 260);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(142, 15);
             this.label9.TabIndex = 95;
@@ -105,7 +96,7 @@
             "земли сельскохозяйственного назначения",
             "земли промышленности",
             "земли населенных пунктов"});
-            this.cb_LandType.Location = new System.Drawing.Point(183, 306);
+            this.cb_LandType.Location = new System.Drawing.Point(271, 259);
             this.cb_LandType.Name = "cb_LandType";
             this.cb_LandType.Size = new System.Drawing.Size(184, 23);
             this.cb_LandType.TabIndex = 94;
@@ -114,7 +105,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(37, 192);
+            this.label7.Location = new System.Drawing.Point(127, 151);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 15);
             this.label7.TabIndex = 85;
@@ -124,7 +115,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(37, 164);
+            this.label11.Location = new System.Drawing.Point(125, 117);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(121, 15);
             this.label11.TabIndex = 79;
@@ -134,7 +125,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(39, 135);
+            this.label12.Location = new System.Drawing.Point(127, 88);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(139, 19);
             this.label12.TabIndex = 78;
@@ -144,7 +135,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(203, 78);
+            this.label1.Location = new System.Drawing.Point(132, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(305, 25);
             this.label1.TabIndex = 74;
@@ -155,7 +146,7 @@
             this.btn_AddLand.BackColor = System.Drawing.Color.Black;
             this.btn_AddLand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddLand.ForeColor = System.Drawing.Color.White;
-            this.btn_AddLand.Location = new System.Drawing.Point(284, 396);
+            this.btn_AddLand.Location = new System.Drawing.Point(227, 352);
             this.btn_AddLand.Name = "btn_AddLand";
             this.btn_AddLand.Size = new System.Drawing.Size(140, 42);
             this.btn_AddLand.TabIndex = 102;
@@ -167,7 +158,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(37, 284);
+            this.label8.Location = new System.Drawing.Point(125, 237);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 15);
             this.label8.TabIndex = 104;
@@ -179,7 +170,7 @@
             this.cb_OwnerId.Items.AddRange(new object[] {
             "строится",
             "сдан под заселение"});
-            this.cb_OwnerId.Location = new System.Drawing.Point(183, 279);
+            this.cb_OwnerId.Location = new System.Drawing.Point(271, 232);
             this.cb_OwnerId.Name = "cb_OwnerId";
             this.cb_OwnerId.Size = new System.Drawing.Size(184, 23);
             this.cb_OwnerId.TabIndex = 103;
@@ -190,7 +181,7 @@
             this.tb_BuyPrice.BorderColor = System.Drawing.Color.Black;
             this.tb_BuyPrice.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_BuyPrice.BorderSize = 2;
-            this.tb_BuyPrice.Location = new System.Drawing.Point(164, 226);
+            this.tb_BuyPrice.Location = new System.Drawing.Point(252, 179);
             this.tb_BuyPrice.Margin = new System.Windows.Forms.Padding(0);
             this.tb_BuyPrice.Multiline = false;
             this.tb_BuyPrice.Name = "tb_BuyPrice";
@@ -204,7 +195,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(37, 226);
+            this.label3.Location = new System.Drawing.Point(125, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 15);
             this.label3.TabIndex = 105;
@@ -216,7 +207,7 @@
             this.tb_Square.BorderColor = System.Drawing.Color.Black;
             this.tb_Square.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_Square.BorderSize = 2;
-            this.tb_Square.Location = new System.Drawing.Point(139, 337);
+            this.tb_Square.Location = new System.Drawing.Point(227, 290);
             this.tb_Square.Margin = new System.Windows.Forms.Padding(0);
             this.tb_Square.Multiline = false;
             this.tb_Square.Name = "tb_Square";
@@ -230,7 +221,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(39, 337);
+            this.label4.Location = new System.Drawing.Point(127, 290);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 15);
             this.label4.TabIndex = 107;
@@ -242,7 +233,7 @@
             this.tb_SellPrice.BorderColor = System.Drawing.Color.Black;
             this.tb_SellPrice.BorderFocusColor = System.Drawing.Color.HotPink;
             this.tb_SellPrice.BorderSize = 2;
-            this.tb_SellPrice.Location = new System.Drawing.Point(143, 252);
+            this.tb_SellPrice.Location = new System.Drawing.Point(231, 205);
             this.tb_SellPrice.Margin = new System.Windows.Forms.Padding(0);
             this.tb_SellPrice.Multiline = false;
             this.tb_SellPrice.Name = "tb_SellPrice";
@@ -256,93 +247,17 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(37, 258);
+            this.label6.Location = new System.Drawing.Point(125, 211);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 15);
             this.label6.TabIndex = 111;
             this.label6.Text = "Продажная цена:";
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.Black;
-            this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.земельныеУчасткиToolStripMenuItem,
-            this.строительныеКомпанииToolStripMenuItem,
-            this.отчетыToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(710, 38);
-            this.menuStrip1.TabIndex = 116;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 34);
-            this.toolStripMenuItem1.Text = "Объекты";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(92, 34);
-            this.toolStripMenuItem2.Text = "Организации";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
-            // земельныеУчасткиToolStripMenuItem
-            // 
-            this.земельныеУчасткиToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.земельныеУчасткиToolStripMenuItem.Name = "земельныеУчасткиToolStripMenuItem";
-            this.земельныеУчасткиToolStripMenuItem.Size = new System.Drawing.Size(128, 34);
-            this.земельныеУчасткиToolStripMenuItem.Text = "Земельные участки";
-            this.земельныеУчасткиToolStripMenuItem.Click += new System.EventHandler(this.земельныеУчасткиToolStripMenuItem_Click);
-            // 
-            // строительныеКомпанииToolStripMenuItem
-            // 
-            this.строительныеКомпанииToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.строительныеКомпанииToolStripMenuItem.Name = "строительныеКомпанииToolStripMenuItem";
-            this.строительныеКомпанииToolStripMenuItem.Size = new System.Drawing.Size(158, 34);
-            this.строительныеКомпанииToolStripMenuItem.Text = "Строительные компании";
-            this.строительныеКомпанииToolStripMenuItem.Click += new System.EventHandler(this.строительныеКомпанииToolStripMenuItem_Click);
-            // 
-            // отчетыToolStripMenuItem
-            // 
-            this.отчетыToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.поЗемельнымУчасткамToolStripMenuItem,
-            this.поСтроительнымКомпаниямToolStripMenuItem});
-            this.отчетыToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
-            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 34);
-            this.отчетыToolStripMenuItem.Text = "Отчеты";
-            // 
-            // поЗемельнымУчасткамToolStripMenuItem
-            // 
-            this.поЗемельнымУчасткамToolStripMenuItem.Name = "поЗемельнымУчасткамToolStripMenuItem";
-            this.поЗемельнымУчасткамToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.поЗемельнымУчасткамToolStripMenuItem.Text = "По земельным участкам";
-            this.поЗемельнымУчасткамToolStripMenuItem.Click += new System.EventHandler(this.поЗемельнымУчасткамToolStripMenuItem_Click);
-            // 
-            // поСтроительнымКомпаниямToolStripMenuItem
-            // 
-            this.поСтроительнымКомпаниямToolStripMenuItem.Name = "поСтроительнымКомпаниямToolStripMenuItem";
-            this.поСтроительнымКомпаниямToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.поСтроительнымКомпаниямToolStripMenuItem.Text = "По строительным компаниям";
-            this.поСтроительнымКомпаниямToolStripMenuItem.Click += new System.EventHandler(this.поСтроительнымКомпаниямToolStripMenuItem_Click);
-            // 
             // AddLandForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 479);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(597, 429);
             this.Controls.Add(this.tb_SellPrice);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tb_Square);
@@ -363,8 +278,6 @@
             this.Name = "AddLandForm";
             this.Text = "Добавление земельного участка";
             this.Load += new System.EventHandler(this.AddLandForm_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,13 +301,5 @@
         private Label label4;
         private Controls.CustomTextBox tb_SellPrice;
         private Label label6;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem земельныеУчасткиToolStripMenuItem;
-        private ToolStripMenuItem строительныеКомпанииToolStripMenuItem;
-        private ToolStripMenuItem отчетыToolStripMenuItem;
-        private ToolStripMenuItem поЗемельнымУчасткамToolStripMenuItem;
-        private ToolStripMenuItem поСтроительнымКомпаниямToolStripMenuItem;
     }
 }

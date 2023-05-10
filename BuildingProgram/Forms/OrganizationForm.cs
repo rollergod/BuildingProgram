@@ -1,16 +1,7 @@
 ﻿using BuildingProgram.Context;
 using BuildingProgram.Models;
-using BuildingProgram.Tools;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BuildingProgram.Forms
 {
@@ -18,10 +9,11 @@ namespace BuildingProgram.Forms
     {
         private AppDbContext _context;
         private int _orgId;
+        bool siderbarExpand = false;
+        bool reportCollapse = true;
         public OrganizationForm(int orgId = 0)
         {
             InitializeComponent();
-            menuStrip1.Renderer = new NoHighlightRenderer();
             _context = new AppDbContext();
             _orgId = orgId;
         }
@@ -78,17 +70,117 @@ namespace BuildingProgram.Forms
 
         private void btn_AddOrg_Click(object sender, EventArgs e)
         {
-            AddOrgForm addOrgForm = new AddOrgForm();
-            addOrgForm.ShowDialog();
+           
         }
 
         private void btn_ChangeOrg_Click(object sender, EventArgs e)
         {
-            AddOrgForm changeOrgForm = new AddOrgForm(_orgId);
-            changeOrgForm.ShowDialog();
+            
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private List<Organization> SearchData(string searchText)
+        {
+            return _context.Organizations
+                .Where(x => x.OrganizationName.Contains(searchText) || x.DirectorName.Contains(searchText))
+                .ToList();
+        }
+
+        private void btn_ObjectForm_Click(object sender, EventArgs e)
+        {
+            MainMenu objForm = new MainMenu();
+            objForm.ShowDialog();
+        }
+
+        private void btn_OrgForm_Click(object sender, EventArgs e)
+        {
+            OrganizationForm orgForm = new OrganizationForm();
+            orgForm.ShowDialog();
+        }
+
+        private void btn_LandForm_Click(object sender, EventArgs e)
+        {
+            LandForm landForm = new LandForm();
+            landForm.ShowDialog();
+        }
+
+        private void btn_BuildingCompanyForm_Click(object sender, EventArgs e)
+        {
+            BuildingCompanyForm buildingCompanyForm = new BuildingCompanyForm();
+            buildingCompanyForm.ShowDialog();
+        }
+
+        private void btn_RepForm_Click(object sender, EventArgs e)
+        {
+            ReportForm repForm = new ReportForm();
+            repForm.ShowDialog();
+        }
+
+        private void btn_BuildingCompanyRep_Click(object sender, EventArgs e)
+        {
+            BuildingCompanyReportForm buildingCompanyReportForm = new BuildingCompanyReportForm();
+            buildingCompanyReportForm.ShowDialog();
+        }
+
+        private void menuPicture_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+        private void btn_ReportForm_Click(object sender, EventArgs e)
+        {
+            reportTimer.Start();
+        }
+
+        private void sidebarTimer_Tick(object sender, EventArgs e)
+        {
+            if (siderbarExpand)
+            {
+                sideBar.Width -= 10;
+                if (sideBar.Width == sideBar.MinimumSize.Width)
+                {
+                    siderbarExpand = false;
+                    sidebarTimer.Stop();
+                }
+            }
+            else
+            {
+                sideBar.Width += 10;
+                if (sideBar.Width == sideBar.MaximumSize.Width)
+                {
+                    siderbarExpand = true;
+                    sidebarTimer.Stop();
+                }
+            }
+        }
+
+        private void reportTimer_Tick(object sender, EventArgs e)
+        {
+            if (reportCollapse)
+            {
+                reportContainer.Height += 10;
+                if (reportContainer.Height == reportContainer.MaximumSize.Height)
+                {
+                    reportCollapse = false;
+                    reportTimer.Stop();
+                }
+            }
+            else
+            {
+                reportContainer.Height -= 10;
+                if (reportContainer.Height == reportContainer.MinimumSize.Height)
+                {
+                    reportCollapse = true;
+                    reportTimer.Stop();
+                }
+            }
+        }
+
+        private void btn_Search_Click_1(object sender, EventArgs e)
         {
             string searchText = tb_Search.Text;
 
@@ -100,60 +192,16 @@ namespace BuildingProgram.Forms
             dataGridView1.DataSource = searchedObjects;
         }
 
-        private List<Organization> SearchData(string searchText)
+        private void btn_ChangeOrg_Click_1(object sender, EventArgs e)
         {
-            return _context.Organizations
-                .Where(x => x.OrganizationName.Contains(searchText) || x.DirectorName.Contains(searchText))
-                .ToList();
+            AddOrgForm changeOrgForm = new AddOrgForm(_orgId);
+            changeOrgForm.ShowDialog();
         }
 
-        private void xToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_AddOrg_Click_1(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
-        {
-            MainMenu objForm = new MainMenu();
-            objForm.ShowDialog();
-        }
-
-        private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
-        {
-        }
-
-        private void toolStripMenuItem3_Click_1(object sender, EventArgs e)
-        {
-            //справка
-        }
-
-        private void земельныеУчасткиToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            LandForm landForm = new LandForm();
-            landForm.ShowDialog();
-        }
-
-        private void строительныеКомпанииToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BuildingCompanyForm buildingCompanyForm = new BuildingCompanyForm();
-            buildingCompanyForm.ShowDialog();   
-        }
-
-        private void поЗемельнымУчасткамToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ReportForm reportForm = new ReportForm();
-            reportForm.ShowDialog();
-        }
-
-        private void поСтроительнымКомпаниямToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BuildingCompanyReportForm buildingCompanyReportForm = new BuildingCompanyReportForm();
-            buildingCompanyReportForm.ShowDialog();
-        }
-
-        private void xToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
+            AddOrgForm addOrgForm = new AddOrgForm();
+            addOrgForm.ShowDialog();
         }
     }
 }
