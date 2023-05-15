@@ -1,4 +1,5 @@
 ﻿using BuildingProgram.Context;
+using BuildingProgram.Forms.AdminForms;
 using BuildingProgram.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
@@ -600,20 +601,47 @@ namespace BuildingProgram.Forms
 
         private void btn_OrgForm_Click(object sender, EventArgs e)
         {
-            OrganizationForm orgForm = new OrganizationForm();
-            orgForm.ShowDialog();
+            var user = _context.Users.FirstOrDefault(x => x.Id == _userId);
+            if (user.IsAdmin)
+            {
+                AdminOrganizationForm orgForm = new AdminOrganizationForm();
+                orgForm.ShowDialog();
+            }
+            else
+            {
+                OrganizationForm orgForm = new OrganizationForm();
+                orgForm.ShowDialog();
+            }
         }
 
         private void btn_LandForm_Click(object sender, EventArgs e)
         {
-            LandForm landForm = new LandForm();
-            landForm.ShowDialog();
+            var user = _context.Users.FirstOrDefault(x => x.Id == _userId);
+            if (user.IsAdmin)
+            {
+                AdminLandForm landForm = new AdminLandForm();
+                landForm.ShowDialog();
+            }
+            else
+            {
+                LandForm landForm = new LandForm();
+                landForm.ShowDialog();
+            }
         }
 
         private void btn_BuildingCompanyForm_Click(object sender, EventArgs e)
         {
-            BuildingCompanyForm buildingCompanyForm = new BuildingCompanyForm();
-            buildingCompanyForm.ShowDialog();
+            var user = _context.Users.FirstOrDefault(x => x.Id == _userId);
+            if (user.IsAdmin)
+            {
+                AdminBuildingCompanyForm admBuildingCompanyForm = new AdminBuildingCompanyForm();
+                admBuildingCompanyForm.ShowDialog();
+            }
+            else
+            {
+                BuildingCompanyForm buildingCompanyForm = new BuildingCompanyForm();
+                buildingCompanyForm.ShowDialog();
+            }
         }
 
         private void btn_RepForm_Click(object sender, EventArgs e)

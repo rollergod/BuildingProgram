@@ -487,6 +487,7 @@
             this.btn_ChangeBtn.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btn_ChangeBtn.TabIndex = 29;
             this.btn_ChangeBtn.Values.Text = "Изменить \r\nстроительную \r\nкомпанию";
+            this.btn_ChangeBtn.Visible = false;
             this.btn_ChangeBtn.Click += new System.EventHandler(this.btn_ChangeBtn_Click_1);
             // 
             // btn_AddBuildingCompany
@@ -548,6 +549,7 @@
             this.btn_AddBuildingCompany.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btn_AddBuildingCompany.TabIndex = 28;
             this.btn_AddBuildingCompany.Values.Text = "Добавить \r\nстроительную \r\nкомпанию";
+            this.btn_AddBuildingCompany.Visible = false;
             this.btn_AddBuildingCompany.Click += new System.EventHandler(this.btn_AddBuildingCompany_Click_1);
             // 
             // BuildingCompanyForm
@@ -562,7 +564,7 @@
             this.Controls.Add(this.sideBar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "BuildingCompanyForm";
-            this.Text = "BuildingCompanyForm";
+            this.Text = "Строительные компании";
             this.Load += new System.EventHandler(this.BuildingCompanyForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.sideBar.ResumeLayout(false);

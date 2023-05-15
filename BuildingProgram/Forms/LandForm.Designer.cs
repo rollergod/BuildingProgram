@@ -487,6 +487,7 @@
             this.btn_ChangeOrganization.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btn_ChangeOrganization.TabIndex = 25;
             this.btn_ChangeOrganization.Values.Text = "Изменить \r\nземельный \r\nучасток";
+            this.btn_ChangeOrganization.Visible = false;
             this.btn_ChangeOrganization.Click += new System.EventHandler(this.btn_ChangeOrganization_Click_1);
             // 
             // btn_AddOrganization
@@ -548,6 +549,7 @@
             this.btn_AddOrganization.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btn_AddOrganization.TabIndex = 24;
             this.btn_AddOrganization.Values.Text = "Добавить \r\nземельный \r\nучасток";
+            this.btn_AddOrganization.Visible = false;
             this.btn_AddOrganization.Click += new System.EventHandler(this.btn_AddOrganization_Click_1);
             // 
             // LandForm

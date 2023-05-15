@@ -550,6 +550,7 @@
             this.btn_ChangeOrg.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btn_ChangeOrg.TabIndex = 27;
             this.btn_ChangeOrg.Values.Text = "Изменить \r\nорганизацию";
+            this.btn_ChangeOrg.Visible = false;
             this.btn_ChangeOrg.Click += new System.EventHandler(this.btn_ChangeOrg_Click_1);
             // 
             // btn_AddOrg
@@ -611,6 +612,7 @@
             this.btn_AddOrg.StateTracking.Content.ShortText.MultiLineH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btn_AddOrg.TabIndex = 26;
             this.btn_AddOrg.Values.Text = "Добавить\r\nорганизацию";
+            this.btn_AddOrg.Visible = false;
             this.btn_AddOrg.Click += new System.EventHandler(this.btn_AddOrg_Click_1);
             // 
             // OrganizationForm
