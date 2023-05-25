@@ -97,7 +97,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(314, 102);
+            this.dataGridView1.Location = new System.Drawing.Point(206, 69);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -124,7 +124,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(314, 445);
+            this.label1.Location = new System.Drawing.Point(206, 412);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(212, 15);
             this.label1.TabIndex = 15;
@@ -134,7 +134,7 @@
             // lb_OrgName
             // 
             this.lb_OrgName.AutoSize = true;
-            this.lb_OrgName.Location = new System.Drawing.Point(532, 445);
+            this.lb_OrgName.Location = new System.Drawing.Point(424, 412);
             this.lb_OrgName.Name = "lb_OrgName";
             this.lb_OrgName.Size = new System.Drawing.Size(0, 15);
             this.lb_OrgName.TabIndex = 16;
@@ -143,7 +143,7 @@
             // lb_ObjectsNum
             // 
             this.lb_ObjectsNum.AutoSize = true;
-            this.lb_ObjectsNum.Location = new System.Drawing.Point(448, 470);
+            this.lb_ObjectsNum.Location = new System.Drawing.Point(340, 437);
             this.lb_ObjectsNum.Name = "lb_ObjectsNum";
             this.lb_ObjectsNum.Size = new System.Drawing.Size(0, 15);
             this.lb_ObjectsNum.TabIndex = 18;
@@ -152,7 +152,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(314, 470);
+            this.label3.Location = new System.Drawing.Point(206, 437);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 15);
             this.label3.TabIndex = 17;
@@ -162,7 +162,7 @@
             // lb_TotalSum
             // 
             this.lb_TotalSum.AutoSize = true;
-            this.lb_TotalSum.Location = new System.Drawing.Point(449, 496);
+            this.lb_TotalSum.Location = new System.Drawing.Point(372, 463);
             this.lb_TotalSum.Name = "lb_TotalSum";
             this.lb_TotalSum.Size = new System.Drawing.Size(0, 15);
             this.lb_TotalSum.TabIndex = 20;
@@ -171,7 +171,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(314, 496);
+            this.label4.Location = new System.Drawing.Point(206, 463);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(160, 15);
             this.label4.TabIndex = 19;
@@ -415,7 +415,7 @@
             // 
             this.btn_Search.CornerRoundingRadius = 5F;
             this.btn_Search.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Search.Location = new System.Drawing.Point(451, 67);
+            this.btn_Search.Location = new System.Drawing.Point(343, 34);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.OverrideDefault.Back.Color1 = System.Drawing.Color.Black;
             this.btn_Search.OverrideDefault.Back.Color2 = System.Drawing.Color.Black;
@@ -474,7 +474,7 @@
             this.tb_Search.CueHint.CueHintText = "Введите адрес или номер объекта";
             this.tb_Search.CueHint.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tb_Search.CueHint.Padding = new System.Windows.Forms.Padding(0);
-            this.tb_Search.Location = new System.Drawing.Point(513, 65);
+            this.tb_Search.Location = new System.Drawing.Point(405, 32);
             this.tb_Search.Name = "tb_Search";
             this.tb_Search.Size = new System.Drawing.Size(244, 31);
             this.tb_Search.StateCommon.Back.Color1 = System.Drawing.Color.Gray;
@@ -494,7 +494,7 @@
             this.btn_ChangeOrg.CornerRoundingRadius = 5F;
             this.btn_ChangeOrg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ChangeOrg.Enabled = false;
-            this.btn_ChangeOrg.Location = new System.Drawing.Point(194, 274);
+            this.btn_ChangeOrg.Location = new System.Drawing.Point(686, 504);
             this.btn_ChangeOrg.Name = "btn_ChangeOrg";
             this.btn_ChangeOrg.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
             this.btn_ChangeOrg.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
@@ -557,7 +557,7 @@
             // 
             this.btn_AddOrg.CornerRoundingRadius = 5F;
             this.btn_AddOrg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_AddOrg.Location = new System.Drawing.Point(194, 195);
+            this.btn_AddOrg.Location = new System.Drawing.Point(686, 425);
             this.btn_AddOrg.Name = "btn_AddOrg";
             this.btn_AddOrg.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
             this.btn_AddOrg.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;

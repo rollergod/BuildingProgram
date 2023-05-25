@@ -631,7 +631,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "AdminOrganizationForm";
-            this.Text = "AdminOrganizationForm";
+            this.Text = "Организации(Админ)";
             this.Load += new System.EventHandler(this.AdminOrganizationForm_Load);
             this.reportContainer.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

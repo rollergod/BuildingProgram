@@ -145,6 +145,11 @@ namespace BuildingProgram.Forms
             }
 
             string objName = tb_ObjectName.Texts;
+            if (string.IsNullOrEmpty(objName))
+            {
+                MessageBox.Show("Введите название объекта");
+                return;
+            }
 
             DateOnly startPlanned = DateOnly.Parse(dtp_StartPlan.Text);
             DateOnly startFact = DateOnly.Parse(dtp_StartFact.Text);
@@ -155,9 +160,14 @@ namespace BuildingProgram.Forms
             bool isChecked = cb_isBuildingChecked.Checked;
 
             int buildingStatus = cb_buildingStatus.SelectedIndex;
+            if (buildingStatus <= 0)
+            {
+                MessageBox.Show("Выберите статус стройки");
+                return;
+            }
 
             var selectedBuilding = cb_Land.Text;
-            if (selectedBuilding == null)
+            if (string.IsNullOrEmpty(selectedBuilding))
             {
                 MessageBox.Show("Выберите земельный участок");
                 return;
@@ -166,7 +176,7 @@ namespace BuildingProgram.Forms
             var land = _context.Lands.FirstOrDefault(x => x.Address == selectedBuilding);
 
             var selectedBuildingCompany = cb_BuildingCompany.SelectedValue.ToString();
-            if (selectedBuildingCompany == null)
+            if (string.IsNullOrEmpty(selectedBuildingCompany))
             {
                 MessageBox.Show("Выберите строительную компаниюорганизацию");
                 return;
@@ -181,6 +191,14 @@ namespace BuildingProgram.Forms
             if (_objNum == 0)
             {
                 var user = _context.Users.FirstOrDefault(x => x.Id == _userId);
+                var isObjExist = _context.BuildingObjects.Any(x => x.ObjectNumber == objNumber);
+
+                if (isObjExist)
+                {
+                    MessageBox.Show($"Объект с таким {objNumber} номером уже существует");
+                    return;
+                }
+
                 var addedBuilding = new BuildingObject
                 {
                     ObjectName = objName,
@@ -198,6 +216,11 @@ namespace BuildingProgram.Forms
                     User = user
                 };
 
+                if (string.IsNullOrEmpty(imagePath))
+                {
+                    MessageBox.Show("Выберите изображение");
+                    return;
+                }
                 File.Copy(imagePath, Path.Combine(@"D:\Projects\2023\BuildingProgram\BuildingProgram\Images\", Path.GetFileName(imagePath)), true);
                 _context.BuildingObjects.Add(addedBuilding);
             }
@@ -227,6 +250,7 @@ namespace BuildingProgram.Forms
             }
             _context.SaveChanges();
             MessageBox.Show(_objNum == 0 ? $"Объект с номером {objNumber} успешно добавлен" : $"Объект с номером {objNumber} успешно изменён");
+            this.Close();
         }
 
         private void btn_Exit1_Click(object sender, EventArgs e)

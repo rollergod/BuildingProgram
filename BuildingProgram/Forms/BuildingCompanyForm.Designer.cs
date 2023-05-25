@@ -91,7 +91,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(340, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(206, 115);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -352,7 +352,7 @@
             // 
             this.btn_Search.CornerRoundingRadius = 5F;
             this.btn_Search.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Search.Location = new System.Drawing.Point(365, 48);
+            this.btn_Search.Location = new System.Drawing.Point(231, 80);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.OverrideDefault.Back.Color1 = System.Drawing.Color.Black;
             this.btn_Search.OverrideDefault.Back.Color2 = System.Drawing.Color.Black;
@@ -411,7 +411,7 @@
             this.tb_Search.CueHint.CueHintText = "Введите адрес или номер объекта";
             this.tb_Search.CueHint.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tb_Search.CueHint.Padding = new System.Windows.Forms.Padding(0);
-            this.tb_Search.Location = new System.Drawing.Point(427, 46);
+            this.tb_Search.Location = new System.Drawing.Point(293, 78);
             this.tb_Search.Name = "tb_Search";
             this.tb_Search.Size = new System.Drawing.Size(244, 31);
             this.tb_Search.StateCommon.Back.Color1 = System.Drawing.Color.Gray;
@@ -431,7 +431,7 @@
             this.btn_ChangeBtn.CornerRoundingRadius = 5F;
             this.btn_ChangeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ChangeBtn.Enabled = false;
-            this.btn_ChangeBtn.Location = new System.Drawing.Point(206, 200);
+            this.btn_ChangeBtn.Location = new System.Drawing.Point(354, 479);
             this.btn_ChangeBtn.Name = "btn_ChangeBtn";
             this.btn_ChangeBtn.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
             this.btn_ChangeBtn.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
@@ -494,7 +494,7 @@
             // 
             this.btn_AddBuildingCompany.CornerRoundingRadius = 5F;
             this.btn_AddBuildingCompany.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_AddBuildingCompany.Location = new System.Drawing.Point(206, 121);
+            this.btn_AddBuildingCompany.Location = new System.Drawing.Point(354, 400);
             this.btn_AddBuildingCompany.Name = "btn_AddBuildingCompany";
             this.btn_AddBuildingCompany.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
             this.btn_AddBuildingCompany.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
